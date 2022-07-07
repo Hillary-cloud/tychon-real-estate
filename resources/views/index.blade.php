@@ -143,7 +143,7 @@
 <h4><a href="property-detail.html">Royal Inn</a></h4>
 <p class="price">Price: $234,900</p>
 <div class="listing-detail"><span data-toggle="tooltip" data-placement="bottom" data-original-title="Bed Room">5</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Living Room">2</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Parking">2</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Kitchen">1</span> </div>
-<a class="btn btn-primary" href="property-detail.html">View Details</a>
+<a class="btn btn-primary" href="{{route('property-detail')}}">View Details</a>
 </div>
 <div class="properties">
 <div class="image-holder"><img src="images/properties/2.jpg" class="img-responsive" alt="properties"/>

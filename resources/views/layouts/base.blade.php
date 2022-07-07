@@ -54,11 +54,11 @@
             <!-- Nav Starts -->
             <div class="navbar-collapse  collapse">
               <ul class="nav navbar-nav navbar-right">
-               <li class="active"><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="agents.html">Agents</a></li>         
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
+               <li class="active"><a href="{{route('/')}}">Home</a></li>
+                <li><a href="{{route('about')}}">About</a></li>
+                <li><a href="{{route('agent')}}">Agents</a></li>         
+                <li><a href="{{route('blog')}}">Blog</a></li>
+                <li><a href="{{route('contact')}}">Contact</a></li>
               </ul>
             </div>
             <!-- #Nav Ends -->
@@ -77,12 +77,11 @@
 
 <!-- Header Starts -->
 <div class="header">
-<a href="index.html"><img src="images/logo.png" alt="Realestate"></a>
+<a href="index"><img src="images/logo.png" alt="Realestate"></a>
 
               <ul class="pull-right">
-                <li><a href="buysalerent.html">Buy</a></li>
-                <li><a href="buysalerent.html">Sale</a></li>         
-                <li><a href="buysalerent.html">Rent</a></li>
+                <li><a href="{{route('buy')}}">Buy</a></li>        
+                <li><a href="{{route('rent')}}">Rent</a></li>
               </ul>
 </div>
 <!-- #Header Starts -->
@@ -102,10 +101,10 @@
                 <div class="col-lg-3 col-sm-3">
                        <h4>Information</h4>
                        <ul class="row">
-                    <li class="col-lg-12 col-sm-12 col-xs-3"><a href="about.html">About</a></li>
-                    <li class="col-lg-12 col-sm-12 col-xs-3"><a href="agents.html">Agents</a></li>         
-                    <li class="col-lg-12 col-sm-12 col-xs-3"><a href="blog.html">Blog</a></li>
-                    <li class="col-lg-12 col-sm-12 col-xs-3"><a href="contact.html">Contact</a></li>
+                    <li class="col-lg-12 col-sm-12 col-xs-3"><a href="about">About</a></li>
+                    <li class="col-lg-12 col-sm-12 col-xs-3"><a href="agents">Agents</a></li>         
+                    <li class="col-lg-12 col-sm-12 col-xs-3"><a href="blog">Blog</a></li>
+                    <li class="col-lg-12 col-sm-12 col-xs-3"><a href="contact">Contact</a></li>
                   </ul>
                 </div>
                 
@@ -168,7 +167,7 @@
             <div class="col-sm-6">
               <h4>New User Sign Up</h4>
               <p>Join today and get updated with all the properties deal happening around.</p>
-              <button type="submit" class="btn btn-info"  onclick="window.location.href='register.html'">Join Now</button>
+              <button type="submit" class="btn btn-info"  onclick="window.location.href='register'">Join Now</button>
             </div>
     
           </div>
