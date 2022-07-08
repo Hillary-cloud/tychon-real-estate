@@ -54,11 +54,57 @@
             <!-- Nav Starts -->
             <div class="navbar-collapse  collapse">
               <ul class="nav navbar-nav navbar-right">
-               <li class="active"><a href="{{route('/')}}">Home</a></li>
+               <li><a href="{{route('/')}}">Home</a></li>
                 <li><a href="{{route('about')}}">About</a></li>
                 <li><a href="{{route('agent')}}">Agents</a></li>         
                 <li><a href="{{route('blog')}}">Blog</a></li>
                 <li><a href="{{route('contact')}}">Contact</a></li>
+                @if (Route::has('login'))
+                @auth
+                 @if (Auth::user()->user_type === 'ADM')
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-success" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"> <span class="nav-label">User ({{Auth::user()->name}})</a>
+                    <ul class="dropdown-menu">
+                       <li><a href="">Rent</a></li>
+                       <li><a href="">Buy</a></li>
+                       <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+
+                        <a class="text-dark" href="route('logout')"
+                                onclick="event.preventDefault();
+                                            this.closest('form').submit();">
+                            {{ __('Logout') }}
+                        </a>
+                    </form>
+                    </ul>
+                 </li>
+                 @else
+                 <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-success" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"> <span class="nav-label">{{Auth::user()->name}}</a>
+                    <ul class="dropdown-menu">
+                       <li><a href="testimonial.html">User</a></li>
+                       <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+
+                        <a class="text-dark" href="route('logout')"
+                                onclick="event.preventDefault();
+                                            this.closest('form').submit();">
+                            {{ __('Logout') }}
+                        </a>
+                    </form>
+                    </ul>
+                 </li>
+                
+                {{-- @else
+                        <a href="{{ route('login') }}" class="text-light"><button class="btn btn-success mr-1">Login</button></a>
+
+                    @if (Route::has('register'))
+                   
+                        <a href="{{ route('register') }}" class=" text-light"> <button class="btn btn-success ">Register</button></a> --}}
+                    @endif
+                @endauth
+        @endif
+
               </ul>
             </div>
             <!-- #Nav Ends -->

@@ -18,6 +18,10 @@ use App\Http\Controllers\HomeController;
 //     return view('welcome');
 // });
 
+Route::get('/', function () {
+    return view('index');
+})->middleware(['auth'])->name('/');
+
 Route::get('/', [HomeController::class, 'index'])->name('/');
 Route::get('/about', [HomeController::class, 'about'])->name('about');
 Route::get('/buy', [HomeController::class, 'buy'])->name('buy');
@@ -26,3 +30,5 @@ Route::get('/agent', [HomeController::class, 'agent'])->name('agent');
 Route::get('/blog', [HomeController::class, 'blog'])->name('blog');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::get('/property-detail', [HomeController::class, 'propertyDetail'])->name('property-detail');
+
+require __DIR__.'/auth.php';
