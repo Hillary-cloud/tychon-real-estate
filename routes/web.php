@@ -33,8 +33,12 @@ Route::get('/blog', [HomeController::class, 'blog'])->name('blog');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::get('/property-detail', [HomeController::class, 'propertyDetail'])->name('property-detail');
 
+//admin/controller
+
 Route::middleware(['auth'])->group(function () {
     Route::get('/admin/categories', [CategoryController::class, 'index'])->name('admin.categories');
+    Route::get('/admin/category/add', [CategoryController::class, 'create'])->name('admin.addCategory');
+    Route::post('/admin/category/add', [CategoryController::class, 'storeCategory'])->name('admin.storeCategory');
 });
 
 

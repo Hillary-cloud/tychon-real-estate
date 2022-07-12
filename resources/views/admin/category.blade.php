@@ -18,16 +18,16 @@
                     <div class="row">
                         <div class="col-md">All Categories</div>
                         <div class="col-md">
-                            <a href="" class="pull-right btn btn-primary">Add Category</a>
+                            <a href="{{route('admin.addCategory')}}" class="pull-right btn btn-primary">Add Category</a>
                         </div>
                     </div>
                 </div>
                     <div class="panel-body">
-                        {{-- @if (session('message'))
+                        @if (session('message'))
                             <div class="alert alert-success">
                             {{ session('message') }}
                             </div>
-                        @endif --}}
+                        @endif
                         <table class="table table-striped table-hover">
                             <thead>
                                 <tr>
