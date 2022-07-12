@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Admin\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,6 +32,10 @@ Route::get('/agent', [HomeController::class, 'agent'])->name('agent');
 Route::get('/blog', [HomeController::class, 'blog'])->name('blog');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::get('/property-detail', [HomeController::class, 'propertyDetail'])->name('property-detail');
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/admin/categories', [CategoryController::class, 'index'])->name('admin.categories');
+});
 
 
 require __DIR__.'/auth.php';

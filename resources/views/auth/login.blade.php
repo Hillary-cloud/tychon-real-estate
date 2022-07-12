@@ -1,6 +1,7 @@
 <base href="/public">
 @extends('layouts.base')
 @section('content')
+<br><br><br>
 <x-guest-layout>
     <x-auth-card>
         <x-slot name="logo">

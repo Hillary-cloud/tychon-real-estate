@@ -179,7 +179,7 @@
               <a class="nav-link dropdown-toggle text-success" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"> <span class="nav-label">User ({{Auth::user()->name}})</a>
               <ul class="">
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="{{route('buy')}}">Buy Property</a>
+                  <a class="dropdown-item" href="{{route('admin.categories')}}">Categories</a>
                   <a class="dropdown-item" href="{{route('rent')}}">Rent Property</a>
                   <a class="dropdown-item" href="{{route('all-properties')}}">All Properties</a>
                   <form method="POST" action="{{ route('logout') }}">
