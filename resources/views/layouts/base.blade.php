@@ -1,232 +1,417 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Realestate Bootstrap Theme </title>
-<meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="utf-8">
+  <title>EstateAgency Bootstrap Template</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
 
- 	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css" />
-  <link rel="stylesheet" href="assets/style.css"/>
-  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-	<script src="assets/bootstrap/js/bootstrap.js"></script>
-  <script src="assets/script.js"></script>
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
+  <!-- Google Fonts -->
+  <link href="assets/https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
 
+  <!-- Bootstrap CSS File -->
+  <link href="assets/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-<!-- Owl stylesheet -->
-<link rel="stylesheet" href="assets/owl-carousel/owl.carousel.css">
-<link rel="stylesheet" href="assets/owl-carousel/owl.theme.css">
-<script src="assets/owl-carousel/owl.carousel.js"></script>
-<!-- Owl stylesheet -->
+  <!-- Libraries CSS Files -->
+  <link href="assets/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="assets/lib/animate/animate.min.css" rel="stylesheet">
+  <link href="assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="assets/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
+  <!-- Main Stylesheet File -->
+  <link href="assets/css/style.css" rel="stylesheet">
 
-<!-- slitslider -->
-    <link rel="stylesheet" type="text/css" href="assets/slitslider/css/style.css" />
-    <link rel="stylesheet" type="text/css" href="assets/slitslider/css/custom.css" />
-    <script type="text/javascript" src="assets/slitslider/js/modernizr.custom.79639.js"></script>
-    <script type="text/javascript" src="assets/slitslider/js/jquery.ba-cond.min.js"></script>
-    <script type="text/javascript" src="assets/slitslider/js/jquery.slitslider.js"></script>
-<!-- slitslider -->
-
+  <!-- =======================================================
+    Theme Name: EstateAgency
+    Theme URL: https://bootstrapmade.com/real-estate-agency-bootstrap-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= -->
 </head>
 
 <body>
 
-
-<!-- Header Starts -->
-<div class="navbar-wrapper">
-
-        <div class="navbar-inverse" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-
-
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-
+  <div class="click-closed"></div>
+  <!--/ Form Search Star /-->
+  <div class="box-collapse">
+    <div class="title-box-d">
+      <h3 class="title-d">Search Property</h3>
+    </div>
+    <span class="close-box-collapse right-boxed ion-ios-close"></span>
+    <div class="box-collapse-wrap form">
+      <form class="form-a">
+        <div class="row">
+          <div class="col-md-12 mb-2">
+            <div class="form-group">
+              <label for="Type">Keyword</label>
+              <input type="text" class="form-control form-control-lg form-control-a" placeholder="Keyword">
             </div>
-
-
-            <!-- Nav Starts -->
-            <div class="navbar-collapse  collapse">
-              <ul class="nav navbar-nav navbar-right">
-               <li><a href="{{route('/')}}">Home</a></li>
-                <li><a href="{{route('about')}}">About</a></li>
-                <li><a href="{{route('agent')}}">Agents</a></li>         
-                <li><a href="{{route('blog')}}">Blog</a></li>
-                <li><a href="{{route('contact')}}">Contact</a></li>
-                @if (Route::has('login'))
-                @auth
-                 @if (Auth::user()->user_type === 'ADM')
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-success" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"> <span class="nav-label">User ({{Auth::user()->name}})</a>
-                    <ul class="dropdown-menu">
-                       <li><a href="">Rent</a></li>
-                       <li><a href="">Buy</a></li>
-                       <form method="POST" action="{{ route('logout') }}">
-                        @csrf
-
-                        <a class="text-dark" href="route('logout')"
-                                onclick="event.preventDefault();
-                                            this.closest('form').submit();">
-                            {{ __('Logout') }}
-                        </a>
-                    </form>
-                    </ul>
-                 </li>
-                 @else
-                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-success" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"> <span class="nav-label">{{Auth::user()->name}}</a>
-                    <ul class="dropdown-menu">
-                       <li><a href="testimonial.html">User</a></li>
-                       <form method="POST" action="{{ route('logout') }}">
-                        @csrf
-
-                        <a class="text-dark" href="route('logout')"
-                                onclick="event.preventDefault();
-                                            this.closest('form').submit();">
-                            {{ __('Logout') }}
-                        </a>
-                    </form>
-                    </ul>
-                 </li>
-                
-                {{-- @else
-                        <a href="{{ route('login') }}" class="text-light"><button class="btn btn-success mr-1">Login</button></a>
-
-                    @if (Route::has('register'))
-                   
-                        <a href="{{ route('register') }}" class=" text-light"> <button class="btn btn-success ">Register</button></a> --}}
-                    @endif
-                @endauth
-        @endif
-
-              </ul>
+          </div>
+          <div class="col-md-6 mb-2">
+            <div class="form-group">
+              <label for="Type">Type</label>
+              <select class="form-control form-control-lg form-control-a" id="Type">
+                <option>All Type</option>
+                <option>For Rent</option>
+                <option>For Sale</option>
+                <option>Open House</option>
+              </select>
             </div>
-            <!-- #Nav Ends -->
-
+          </div>
+          <div class="col-md-6 mb-2">
+            <div class="form-group">
+              <label for="city">City</label>
+              <select class="form-control form-control-lg form-control-a" id="city">
+                <option>All City</option>
+                <option>Alabama</option>
+                <option>Arizona</option>
+                <option>California</option>
+                <option>Colorado</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-6 mb-2">
+            <div class="form-group">
+              <label for="bedrooms">Bedrooms</label>
+              <select class="form-control form-control-lg form-control-a" id="bedrooms">
+                <option>Any</option>
+                <option>01</option>
+                <option>02</option>
+                <option>03</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-6 mb-2">
+            <div class="form-group">
+              <label for="garages">Garages</label>
+              <select class="form-control form-control-lg form-control-a" id="garages">
+                <option>Any</option>
+                <option>01</option>
+                <option>02</option>
+                <option>03</option>
+                <option>04</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-6 mb-2">
+            <div class="form-group">
+              <label for="bathrooms">Bathrooms</label>
+              <select class="form-control form-control-lg form-control-a" id="bathrooms">
+                <option>Any</option>
+                <option>01</option>
+                <option>02</option>
+                <option>03</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-6 mb-2">
+            <div class="form-group">
+              <label for="price">Min Price</label>
+              <select class="form-control form-control-lg form-control-a" id="price">
+                <option>Unlimite</option>
+                <option>$50,000</option>
+                <option>$100,000</option>
+                <option>$150,000</option>
+                <option>$200,000</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <button type="submit" class="btn btn-b">Search Property</button>
           </div>
         </div>
-
+      </form>
     </div>
-<!-- #Header Starts -->
+  </div>
+  <!--/ Form Search End /-->
 
-
-
-
-
-<div class="container">
-
-<!-- Header Starts -->
-<div class="header">
-<a href="index"><img src="images/logo.png" alt="Realestate"></a>
-
-              <ul class="pull-right">
-                <li><a href="{{route('buy')}}">Buy</a></li>        
-                <li><a href="{{route('rent')}}">Rent</a></li>
+  <!--/ Nav Star /-->
+  <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
+    <div class="container">
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
+        aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <a class="navbar-brand text-brand" href="{{route('/')}}"><img src="assets/img/logo.png" alt=""></a>
+      <button type="button" class="btn btn-link nav-search navbar-toggle-box-collapse d-md-none" data-toggle="collapse"
+        data-target="#navbarTogglerDemo01" aria-expanded="false">
+        <span class="fa fa-search" aria-hidden="true"></span>
+      </button>
+      <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('/')}}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('about')}}">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('agent')}}">Agent</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('blog')}}">Blog</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Property
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="{{route('buy')}}">Buy Property</a>
+              <a class="dropdown-item" href="{{route('rent')}}">Rent Property</a>
+              <a class="dropdown-item" href="{{route('all-properties')}}">All Properties</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('contact')}}">Contact</a>
+          </li>
+          @if (Route::has('login'))
+          @auth
+           @if (Auth::user()->user_type === 'ADM')
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-success" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"> <span class="nav-label">User ({{Auth::user()->name}})</a>
+              <ul class="">
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="{{route('buy')}}">Buy Property</a>
+                  <a class="dropdown-item" href="{{route('rent')}}">Rent Property</a>
+                  <a class="dropdown-item" href="{{route('all-properties')}}">All Properties</a>
+                  <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+  
+                    <a class="dropdown-item" href="route('logout')"
+                            onclick="event.preventDefault();
+                                        this.closest('form').submit();">
+                        {{ __('Logout') }}
+                    </a>
+                </form>
+                </div>
               </ul>
-</div>
-<!-- #Header Starts -->
-</div>
+           </li>
+           @else
+           <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-success" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"> <span class="nav-label">{{Auth::user()->name}}</a>
+              <ul class="dropdown-menu">
+                 <li><a href="testimonial.html">User</a></li>
+                 <form method="POST" action="{{ route('logout') }}">
+                  @csrf
+
+                  <a class="text-dark" href="route('logout')"
+                          onclick="event.preventDefault();
+                                      this.closest('form').submit();">
+                      {{ __('Logout') }}
+                  </a>
+              </form>
+              </ul>
+           </li>
+          
+          {{-- @else
+                  <a href="{{ route('login') }}" class="text-light"><button class="btn btn-success mr-1">Login</button></a>
+
+              @if (Route::has('register'))
+             
+                  <a href="{{ route('register') }}" class=" text-light"> <button class="btn btn-success ">Register</button></a> --}}
+              @endif
+          @endauth
+  @endif
+
+        </ul>
+      </div>
+      <button type="button" class="btn btn-b-n navbar-toggle-box-collapse d-none d-md-block" data-toggle="collapse"
+        data-target="#navbarTogglerDemo01" aria-expanded="false">
+        <span class="fa fa-search" aria-hidden="true"></span>
+      </button>
+    </div>
+  </nav>
+  <!--/ Nav End /-->
 
 
 @yield("content")
 
 
-<div class="footer">
-
-    <div class="container">
-    
-    
-    
+ <!--/ footer Star /-->
+ <section class="section-footer">
+  <div class="container">
     <div class="row">
-                <div class="col-lg-3 col-sm-3">
-                       <h4>Information</h4>
-                       <ul class="row">
-                    <li class="col-lg-12 col-sm-12 col-xs-3"><a href="about">About</a></li>
-                    <li class="col-lg-12 col-sm-12 col-xs-3"><a href="agents">Agents</a></li>         
-                    <li class="col-lg-12 col-sm-12 col-xs-3"><a href="blog">Blog</a></li>
-                    <li class="col-lg-12 col-sm-12 col-xs-3"><a href="contact">Contact</a></li>
-                  </ul>
-                </div>
-                
-                <div class="col-lg-3 col-sm-3">
-                        <h4>Newsletter</h4>
-                        <p>Get notified about the latest properties in our marketplace.</p>
-                        <form class="form-inline" role="form">
-                                <input type="text" placeholder="Enter Your email address" class="form-control">
-                                    <button class="btn btn-success" type="button">Notify Me!</button></form>
-                </div>
-                
-                <div class="col-lg-3 col-sm-3">
-                        <h4>Follow us</h4>
-                        <a href="#"><img src="images/facebook.png" alt="facebook"></a>
-                        <a href="#"><img src="images/twitter.png" alt="twitter"></a>
-                        <a href="#"><img src="images/linkedin.png" alt="linkedin"></a>
-                        <a href="#"><img src="images/instagram.png" alt="instagram"></a>
-                </div>
-    
-                 <div class="col-lg-3 col-sm-3">
-                        <h4>Contact us</h4>
-                        <p><b>Bootstrap Realestate Inc.</b><br>
-    <span class="glyphicon glyphicon-map-marker"></span> 8290 Walk Street, Australia <br>
-    <span class="glyphicon glyphicon-envelope"></span> hello@bootstrapreal.com<br>
-    <span class="glyphicon glyphicon-earphone"></span> (123) 456-7890</p>
-                </div>
+      <div class="col-sm-12 col-md-4">
+        <div class="widget-a">
+          <div class="w-header-a">
+            <h3 class="w-title-a text-brand">EstateAgency</h3>
+          </div>
+          <div class="w-body-a">
+            <p class="w-text-a color-text-a">
+              Enim minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip exea commodo consequat duis
+              sed aute irure.
+            </p>
+          </div>
+          <div class="w-footer-a">
+            <ul class="list-unstyled">
+              <li class="color-a">
+                <span class="color-text-a">Phone .</span> contact@example.com</li>
+              <li class="color-a">
+                <span class="color-text-a">Email .</span> +54 356 945234</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-4 section-md-t3">
+        <div class="widget-a">
+          <div class="w-header-a">
+            <h3 class="w-title-a text-brand">The Company</h3>
+          </div>
+          <div class="w-body-a">
+            <div class="w-body-a">
+              <ul class="list-unstyled">
+                <li class="item-list-a">
+                  <i class="fa fa-angle-right"></i> <a href="#">Site Map</a>
+                </li>
+                <li class="item-list-a">
+                  <i class="fa fa-angle-right"></i> <a href="#">Legal</a>
+                </li>
+                <li class="item-list-a">
+                  <i class="fa fa-angle-right"></i> <a href="#">Agent Admin</a>
+                </li>
+                <li class="item-list-a">
+                  <i class="fa fa-angle-right"></i> <a href="#">Careers</a>
+                </li>
+                <li class="item-list-a">
+                  <i class="fa fa-angle-right"></i> <a href="#">Affiliate</a>
+                </li>
+                <li class="item-list-a">
+                  <i class="fa fa-angle-right"></i> <a href="#">Privacy Policy</a>
+                </li>
+              </ul>
             </div>
-    <p class="copyright">Copyright 2013. All rights reserved.	</p>
-    
-    
-    </div></div>
-    
-    
-    
-    
-    <!-- Modal -->
-    <div id="loginpop" class="modal fade">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="row">
-            <div class="col-sm-6 login">
-            <h4>Login</h4>
-              <form class="" role="form">
-            <div class="form-group">
-              <label class="sr-only" for="exampleInputEmail2">Email address</label>
-              <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
-            </div>
-            <div class="form-group">
-              <label class="sr-only" for="exampleInputPassword2">Password</label>
-              <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password">
-            </div>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox"> Remember me
-              </label>
-            </div>
-            <button type="submit" class="btn btn-success">Sign in</button>
-          </form>          
-            </div>
-            <div class="col-sm-6">
-              <h4>New User Sign Up</h4>
-              <p>Join today and get updated with all the properties deal happening around.</p>
-              <button type="submit" class="btn btn-info"  onclick="window.location.href='register'">Join Now</button>
-            </div>
-    
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-4 section-md-t3">
+        <div class="widget-a">
+          <div class="w-header-a">
+            <h3 class="w-title-a text-brand">International sites</h3>
+          </div>
+          <div class="w-body-a">
+            <ul class="list-unstyled">
+              <li class="item-list-a">
+                <i class="fa fa-angle-right"></i> <a href="#">Venezuela</a>
+              </li>
+              <li class="item-list-a">
+                <i class="fa fa-angle-right"></i> <a href="#">China</a>
+              </li>
+              <li class="item-list-a">
+                <i class="fa fa-angle-right"></i> <a href="#">Hong Kong</a>
+              </li>
+              <li class="item-list-a">
+                <i class="fa fa-angle-right"></i> <a href="#">Argentina</a>
+              </li>
+              <li class="item-list-a">
+                <i class="fa fa-angle-right"></i> <a href="#">Singapore</a>
+              </li>
+              <li class="item-list-a">
+                <i class="fa fa-angle-right"></i> <a href="#">Philippines</a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
-    <!-- /.modal -->
-    
-    
-    
-    </body>
-    </html>
-    
-    
-    
-    
+  </div>
+</section>
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <nav class="nav-footer">
+          <ul class="list-inline">
+            <li class="list-inline-item">
+              <a href="#">Home</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">About</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">Property</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">Blog</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="socials-a">
+          <ul class="list-inline">
+            <li class="list-inline-item">
+              <a href="#">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                <i class="fa fa-dribbble" aria-hidden="true"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="copyright-footer">
+          <p class="copyright color-text-a">
+            &copy; Copyright
+            <span class="color-a">EstateAgency</span> All Rights Reserved.
+          </p>
+        </div>
+        <div class="credits">
+          <!--
+            All the links in the footer should remain intact.
+            You can delete the links only if you purchased the pro version.
+            Licensing information: https://bootstrapmade.com/license/
+            Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=EstateAgency
+          -->
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!--/ Footer End /-->
+
+<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+<div id="preloader"></div>
+
+<!-- JavaScript Libraries -->
+<script src="assets/lib/jquery/jquery.min.js"></script>
+<script src="assets/lib/jquery/jquery-migrate.min.js"></script>
+<script src="assets/lib/popper/popper.min.js"></script>
+<script src="assets/lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/lib/easing/easing.min.js"></script>
+<script src="assets/lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="assets/lib/scrollreveal/scrollreveal.min.js"></script>
+<!-- Contact Form JavaScript File -->
+<script src="assets/contactform/contactform.js"></script>
+
+<!-- Template Main Javascript File -->
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>

@@ -1,63 +1,420 @@
 @extends('layouts.base')
 @section('content')
-<div class="inside-banner">
-    <div class="container"> 
-      <span class="pull-right"><a href="#">Home</a> / Agents</span>
-      <h2>Agents</h2>
-  </div>
-  </div>
-  <!-- banner -->
-  
-  
+ <!--/ Intro Single star /-->
+ <section class="intro-single">
   <div class="container">
-  <div class="spacer agents">
-  
-  <div class="row">
-    <div class="col-lg-8  col-lg-offset-2 col-sm-12">
-        <!-- agents -->
-        <div class="row">
-          <div class="col-lg-2 col-sm-2 "><a href="#"><img src="images/agents/1.jpg" class="img-responsive"  alt="agent name"></a></div>
-          <div class="col-lg-7 col-sm-7 "><h4>John Smith</h4><p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.</p></div>
-          <div class="col-lg-3 col-sm-3 "><span class="glyphicon glyphicon-envelope"></span> <a href="mailto:abc@realestate.com">abc@realestete.com</a><br>
-          <span class="glyphicon glyphicon-earphone"></span> (9009) 899 889</div>
+    <div class="row">
+      <div class="col-md-12 col-lg-8">
+        <div class="title-single-box">
+          <h1 class="title-single">Our Amazing Agents</h1>
+          <span class="color-text-a">Grid Properties</span>
         </div>
-        <!-- agents -->
-        
-         <!-- agents -->
-        <div class="row">
-          <div class="col-lg-2 col-sm-2 "><a href="#"><img src="images/agents/2.jpg" class="img-responsive" alt="agent name"></a></div>
-          <div class="col-lg-7 col-sm-7 "><h4>John Smith</h4><p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.</p></div>
-          <div class="col-lg-3 col-sm-3 "><span class="glyphicon glyphicon-envelope"></span> <a href="mailto:abc@realestate.com">abc@realestete.com</a><br>
-          <span class="glyphicon glyphicon-earphone"></span> (9009) 899 889</div>
-        </div>
-        <!-- agents -->
-        
-  
-         <!-- agents -->
-        <div class="row">
-          <div class="col-lg-2 col-sm-2 "><a href="#"><img src="images/agents/3.jpg" class="img-responsive" alt="agent name"></a></div>
-          <div class="col-lg-7 col-sm-7 "><h4>John Smith</h4><p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.</p></div>
-          <div class="col-lg-3 col-sm-3 "><span class="glyphicon glyphicon-envelope"></span> <a href="mailto:abc@realestate.com">abc@realestete.com</a><br>
-          <span class="glyphicon glyphicon-earphone"></span> (9009) 899 889</div>
-        </div>
-        <!-- agents -->
-        
-  
-         <!-- agents -->
-        <div class="row">
-          <div class="col-lg-2 col-sm-2 "><a href="#"><img src="images/agents/4.jpg" class="img-responsive" alt="agent name"></a></div>
-          <div class="col-lg-7 col-sm-7 "><h4>John Smith</h4><p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.</p></div>
-          <div class="col-lg-3 col-sm-3 "><span class="glyphicon glyphicon-envelope"></span> <a href="mailto:abc@realestate.com">abc@realestete.com</a><br>
-          <span class="glyphicon glyphicon-earphone"></span> (9009) 899 889</div>
-        </div>
-        <!-- agents -->
-        
-       
+      </div>
+      <div class="col-md-12 col-lg-4">
+        <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a href="{{route('/')}}">Home</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Agents Grid
+            </li>
+          </ol>
+        </nav>
+      </div>
     </div>
   </div>
-  
-  
+</section>
+<!--/ Intro Single End /-->
+
+<!--/ Agents Grid Star /-->
+<section class="agents-grid grid">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card-box-d">
+          <div class="card-img-d">
+            <img src="assets/img/agent-4.jpg" alt="" class="img-d img-fluid">
+          </div>
+          <div class="card-overlay card-overlay-hover">
+            <div class="card-header-d">
+              <div class="card-title-d align-self-center">
+                <h3 class="title-d">
+                  <a href="#" class="link-two">Margaret Sotillo
+                    <br> Escala</a>
+                </h3>
+              </div>
+            </div>
+            <div class="card-body-d">
+              <p class="content-d color-text-a">
+                Sed porttitor lectus nibh, Cras ultricies ligula sed magna dictum porta two.
+              </p>
+              <div class="info-agents color-a">
+                <p>
+                  <strong>Phone: </strong> +54 356 945234</p>
+                <p>
+                  <strong>Email: </strong> agents@example.com</p>
+              </div>
+            </div>
+            <div class="card-footer-d">
+              <div class="socials-footer d-flex justify-content-center">
+                <ul class="list-inline">
+                  <li class="list-inline-item">
+                    <a href="#" class="link-one">
+                      <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" class="link-one">
+                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" class="link-one">
+                      <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" class="link-one">
+                      <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" class="link-one">
+                      <i class="fa fa-dribbble" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card-box-d">
+          <div class="card-img-d">
+            <img src="assets/img/agent-2.jpg" alt="" class="img-d img-fluid">
+          </div>
+          <div class="card-overlay card-overlay-hover">
+            <div class="card-header-d">
+              <div class="card-title-d align-self-center">
+                <h3 class="title-d">
+                  <a href="#" class="link-two">Margaret Sotillo
+                    <br> Escala</a>
+                </h3>
+              </div>
+            </div>
+            <div class="card-body-d">
+              <p class="content-d color-text-a">
+                Sed porttitor lectus nibh, Cras ultricies ligula sed magna dictum porta two.
+              </p>
+              <div class="info-agents color-a">
+                <p>
+                  <strong>Phone: </strong> +54 356 945234</p>
+                <p>
+                  <strong>Email: </strong> agents@example.com</p>
+              </div>
+            </div>
+            <div class="card-footer-d">
+              <div class="socials-footer d-flex justify-content-center">
+                <ul class="list-inline">
+                  <li class="list-inline-item">
+                    <a href="#" class="link-one">
+                      <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" class="link-one">
+                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" class="link-one">
+                      <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" class="link-one">
+                      <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" class="link-one">
+                      <i class="fa fa-dribbble" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card-box-d">
+          <div class="card-img-d">
+            <img src="assets/img/agent-3.jpg" alt="" class="img-d img-fluid">
+          </div>
+          <div class="card-overlay card-overlay-hover">
+            <div class="card-header-d">
+              <div class="card-title-d align-self-center">
+                <h3 class="title-d">
+                  <a href="#" class="link-two">Margaret Sotillo
+                    <br> Escala</a>
+                </h3>
+              </div>
+            </div>
+            <div class="card-body-d">
+              <p class="content-d color-text-a">
+                Sed porttitor lectus nibh, Cras ultricies ligula sed magna dictum porta two.
+              </p>
+              <div class="info-agents color-a">
+                <p>
+                  <strong>Phone: </strong> +54 356 945234</p>
+                <p>
+                  <strong>Email: </strong> agents@example.com</p>
+              </div>
+            </div>
+            <div class="card-footer-d">
+              <div class="socials-footer d-flex justify-content-center">
+                <ul class="list-inline">
+                  <li class="list-inline-item">
+                    <a href="#" class="link-one">
+                      <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" class="link-one">
+                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" class="link-one">
+                      <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" class="link-one">
+                      <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" class="link-one">
+                      <i class="fa fa-dribbble" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card-box-d">
+          <div class="card-img-d">
+            <img src="assets/img/agent-5.jpg" alt="" class="img-d img-fluid">
+          </div>
+          <div class="card-overlay card-overlay-hover">
+            <div class="card-header-d">
+              <div class="card-title-d align-self-center">
+                <h3 class="title-d">
+                  <a href="#" class="link-two">Margaret Sotillo
+                    <br> Escala</a>
+                </h3>
+              </div>
+            </div>
+            <div class="card-body-d">
+              <p class="content-d color-text-a">
+                Sed porttitor lectus nibh, Cras ultricies ligula sed magna dictum porta two.
+              </p>
+              <div class="info-agents color-a">
+                <p>
+                  <strong>Phone: </strong> +54 356 945234</p>
+                <p>
+                  <strong>Email: </strong> agents@example.com</p>
+              </div>
+            </div>
+            <div class="card-footer-d">
+              <div class="socials-footer d-flex justify-content-center">
+                <ul class="list-inline">
+                  <li class="list-inline-item">
+                    <a href="#" class="link-one">
+                      <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" class="link-one">
+                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" class="link-one">
+                      <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" class="link-one">
+                      <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" class="link-one">
+                      <i class="fa fa-dribbble" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card-box-d">
+          <div class="card-img-d">
+            <img src="assets/img/agent-1.jpg" alt="" class="img-d img-fluid">
+          </div>
+          <div class="card-overlay card-overlay-hover">
+            <div class="card-header-d">
+              <div class="card-title-d align-self-center">
+                <h3 class="title-d">
+                  <a href="#" class="link-two">Margaret Sotillo
+                    <br> Escala</a>
+                </h3>
+              </div>
+            </div>
+            <div class="card-body-d">
+              <p class="content-d color-text-a">
+                Sed porttitor lectus nibh, Cras ultricies ligula sed magna dictum porta two.
+              </p>
+              <div class="info-agents color-a">
+                <p>
+                  <strong>Phone: </strong> +54 356 945234</p>
+                <p>
+                  <strong>Email: </strong> agents@example.com</p>
+              </div>
+            </div>
+            <div class="card-footer-d">
+              <div class="socials-footer d-flex justify-content-center">
+                <ul class="list-inline">
+                  <li class="list-inline-item">
+                    <a href="#" class="link-one">
+                      <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" class="link-one">
+                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" class="link-one">
+                      <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" class="link-one">
+                      <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" class="link-one">
+                      <i class="fa fa-dribbble" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card-box-d">
+          <div class="card-img-d">
+            <img src="assets/img/agent-6.jpg" alt="" class="img-d img-fluid">
+          </div>
+          <div class="card-overlay card-overlay-hover">
+            <div class="card-header-d">
+              <div class="card-title-d align-self-center">
+                <h3 class="title-d">
+                  <a href="#" class="link-two">Margaret Sotillo
+                    <br> Escala</a>
+                </h3>
+              </div>
+            </div>
+            <div class="card-body-d">
+              <p class="content-d color-text-a">
+                Sed porttitor lectus nibh, Cras ultricies ligula sed magna dictum porta two.
+              </p>
+              <div class="info-agents color-a">
+                <p>
+                  <strong>Phone: </strong> +54 356 945234</p>
+                <p>
+                  <strong>Email: </strong> agents@example.com</p>
+              </div>
+            </div>
+            <div class="card-footer-d">
+              <div class="socials-footer d-flex justify-content-center">
+                <ul class="list-inline">
+                  <li class="list-inline-item">
+                    <a href="#" class="link-one">
+                      <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" class="link-one">
+                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" class="link-one">
+                      <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" class="link-one">
+                      <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" class="link-one">
+                      <i class="fa fa-dribbble" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <nav class="pagination-a">
+          <ul class="pagination justify-content-end">
+            <li class="page-item disabled">
+              <a class="page-link" href="#" tabindex="-1">
+                <span class="ion-ios-arrow-back"></span>
+              </a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">1</a>
+            </li>
+            <li class="page-item active">
+              <a class="page-link" href="#">2</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">3</a>
+            </li>
+            <li class="page-item next">
+              <a class="page-link" href="#">
+                <span class="ion-ios-arrow-forward"></span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
   </div>
-  </div>
+</section>
+<!--/ Agents Grid End /-->
   
 @endsection

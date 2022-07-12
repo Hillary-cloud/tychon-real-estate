@@ -16,12 +16,12 @@ class HomeController extends Controller
 
     
     public function buy(){
-        return view('buy');
+        return view('buy-property');
     }
 
     
     public function rent(){
-        return view('rent');
+        return view('rent-property');
     }
 
     public function agent(){
@@ -38,4 +38,9 @@ class HomeController extends Controller
     public function propertyDetail(){
         return view('property-detail');
     }
+
+    public function allProperties(){
+        return view('all-properties');
+    }
+    
 }

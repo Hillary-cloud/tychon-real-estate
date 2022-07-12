@@ -24,11 +24,13 @@ Route::get('/', function () {
 
 Route::get('/', [HomeController::class, 'index'])->name('/');
 Route::get('/about', [HomeController::class, 'about'])->name('about');
-Route::get('/buy', [HomeController::class, 'buy'])->name('buy');
-Route::get('/rent', [HomeController::class, 'rent'])->name('rent');
+Route::get('/buy-property', [HomeController::class, 'buy'])->name('buy');
+Route::get('/rent-property', [HomeController::class, 'rent'])->name('rent');
+Route::get('/property', [HomeController::class, 'allProperties'])->name('all-properties');
 Route::get('/agent', [HomeController::class, 'agent'])->name('agent');
 Route::get('/blog', [HomeController::class, 'blog'])->name('blog');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::get('/property-detail', [HomeController::class, 'propertyDetail'])->name('property-detail');
+
 
 require __DIR__.'/auth.php';

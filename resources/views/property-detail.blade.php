@@ -1,156 +1,288 @@
 @extends('layouts.base')
 @section('content')
-<div class="inside-banner">
-    <div class="container"> 
-      <span class="pull-right"><a href="#">Home</a> / Buy</span>
-      <h2>Buy</h2>
-  </div>
-  </div>
-  <!-- banner -->
-  
-  
+ <!--/ Intro Single star /-->
+ <section class="intro-single">
   <div class="container">
-  <div class="properties-listing spacer">
-  
-  <div class="row">
-  <div class="col-lg-3 col-sm-4 hidden-xs">
-  
-  <div class="hot-properties hidden-xs">
-  <h4>Hot Properties</h4>
-  <div class="row">
-                  <div class="col-lg-4 col-sm-5"><img src="images/properties/4.jpg" class="img-responsive img-circle" alt="properties"/></div>
-                  <div class="col-lg-8 col-sm-7">
-                    <h5><a href="property-detail.html">Integer sed porta quam</a></h5>
-                    <p class="price">$300,000</p> </div>
-                </div>
-  <div class="row">
-                  <div class="col-lg-4 col-sm-5"><img src="images/properties/1.jpg" class="img-responsive img-circle" alt="properties"/></div>
-                  <div class="col-lg-8 col-sm-7">
-                    <h5><a href="property-detail.html">Integer sed porta quam</a></h5>
-                    <p class="price">$300,000</p> </div>
-                </div>
-  
-  <div class="row">
-                  <div class="col-lg-4 col-sm-5"><img src="images/properties/3.jpg" class="img-responsive img-circle" alt="properties"/></div>
-                  <div class="col-lg-8 col-sm-7">
-                    <h5><a href="property-detail.html">Integer sed porta quam</a></h5>
-                    <p class="price">$300,000</p> </div>
-                </div>
-  
-  <div class="row">
-                  <div class="col-lg-4 col-sm-5"><img src="images/properties/2.jpg" class="img-responsive img-circle" alt="properties"/></div>
-                  <div class="col-lg-8 col-sm-7">
-                    <h5><a href="property-detail.html">Integer sed porta quam</a></h5>
-                    <p class="price">$300,000</p> </div>
-                </div>
-  
-  </div>
-  
-  
-  
-  <div class="advertisement">
-    <h4>Advertisements</h4>
-    <img src="images/advertisements.jpg" class="img-responsive" alt="advertisement">
-  
-  </div>
-  
-  </div>
-  
-  <div class="col-lg-9 col-sm-8 ">
-  
-  <h2>2 room and 1 kitchen apartment</h2>
-  <div class="row">
-    <div class="col-lg-8">
-    <div class="property-images">
-      <!-- Slider Starts -->
-  <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
-        <ol class="carousel-indicators hidden-xs">
-          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-          <li data-target="#myCarousel" data-slide-to="1" class=""></li>
-          <li data-target="#myCarousel" data-slide-to="2" class=""></li>
-          <li data-target="#myCarousel" data-slide-to="3" class=""></li>
-        </ol>
-        <div class="carousel-inner">
-          <!-- Item 1 -->
-          <div class="item active">
-            <img src="images/properties/4.jpg" class="properties" alt="properties" />
-          </div>
-          <!-- #Item 1 -->
-  
-          <!-- Item 2 -->
-          <div class="item">
-            <img src="images/properties/2.jpg" class="properties" alt="properties" />
-           
-          </div>
-          <!-- #Item 2 -->
-  
-          <!-- Item 3 -->
-           <div class="item">
-            <img src="images/properties/1.jpg" class="properties" alt="properties" />
-          </div>
-          <!-- #Item 3 -->
-  
-          <!-- Item 4 -->
-          <div class="item ">
-            <img src="images/properties/3.jpg" class="properties" alt="properties" />
-            
-          </div>
-          <!-- # Item 4 -->
+    <div class="row">
+      <div class="col-md-12 col-lg-8">
+        <div class="title-single-box">
+          <h1 class="title-single">304 Blaster Up</h1>
+          <span class="color-text-a">Chicago, IL 606543</span>
         </div>
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-        <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
       </div>
-  <!-- #Slider Ends -->
-  
-    </div>
-    
-  
-  
-  
-    <div class="spacer"><h4><span class="glyphicon glyphicon-th-list"></span> Properties Detail</h4>
-    <p>Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas. Dramatically maintain clicks-and-mortar solutions without functional solutions.</p>
-    <p>Completely synergize resource sucking relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the art customer service</p>
-  
-    </div>
-    <div><h4><span class="glyphicon glyphicon-map-marker"></span> Location</h4>
-  <div class="well"><iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Pulchowk,+Patan,+Central+Region,+Nepal&amp;aq=0&amp;oq=pulch&amp;sll=37.0625,-95.677068&amp;sspn=39.371738,86.572266&amp;ie=UTF8&amp;hq=&amp;hnear=Pulchowk,+Patan+Dhoka,+Patan,+Bagmati,+Central+Region,+Nepal&amp;ll=27.678236,85.316853&amp;spn=0.001347,0.002642&amp;t=m&amp;z=14&amp;output=embed"></iframe></div>
-    </div>
-  
-    </div>
-    <div class="col-lg-4">
-    <div class="col-lg-12  col-sm-6">
-  <div class="property-info">
-  <p class="price">$ 200,000,000</p>
-    <p class="area"><span class="glyphicon glyphicon-map-marker"></span> 344 Villa, Syndey, Australia</p>
-    
-    <div class="profile">
-    <span class="glyphicon glyphicon-user"></span> Agent Details
-    <p>John Parker<br>009 229 2929</p>
+      <div class="col-md-12 col-lg-4">
+        <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a href="{{route('/')}}">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="property-grid.html">Properties</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              304 Blaster Up
+            </li>
+          </ol>
+        </nav>
+      </div>
     </div>
   </div>
-  
-      <h6><span class="glyphicon glyphicon-home"></span> Availabilty</h6>
-      <div class="listing-detail">
-      <span data-toggle="tooltip" data-placement="bottom" data-original-title="Bed Room">5</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Living Room">2</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Parking">2</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Kitchen">1</span> </div>
-  
-  </div>
-  <div class="col-lg-12 col-sm-6 ">
-  <div class="enquiry">
-    <h6><span class="glyphicon glyphicon-envelope"></span> Post Enquiry</h6>
-    <form role="form">
-                  <input type="text" class="form-control" placeholder="Full Name"/>
-                  <input type="text" class="form-control" placeholder="you@yourdomain.com"/>
-                  <input type="text" class="form-control" placeholder="your number"/>
-                  <textarea rows="6" class="form-control" placeholder="Whats on your mind?"></textarea>
-        <button type="submit" class="btn btn-primary" name="Submit">Send Message</button>
-        </form>
-   </div>         
-  </div>
+</section>
+<!--/ Intro Single End /-->
+
+<!--/ Property Single Star /-->
+<section class="property-single nav-arrow-b">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div id="property-single-carousel" class="owl-carousel owl-arrow gallery-property">
+          <div class="carousel-item-b">
+            <img src="assets/img/slide-2.jpg" alt="">
+          </div>
+          <div class="carousel-item-b">
+            <img src="assets/img/slide-3.jpg" alt="">
+          </div>
+          <div class="carousel-item-b">
+            <img src="assets/img/slide-1.jpg" alt="">
+          </div>
+        </div>
+        <div class="row justify-content-between">
+          <div class="col-md-5 col-lg-4">
+            <div class="property-price d-flex justify-content-center foo">
+              <div class="card-header-c d-flex">
+                <div class="card-box-ico">
+                  <span class="ion-money">$</span>
+                </div>
+                <div class="card-title-c align-self-center">
+                  <h5 class="title-c">15000</h5>
+                </div>
+              </div>
+            </div>
+            <div class="property-summary">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="title-box-d section-t4">
+                    <h3 class="title-d">Quick Summary</h3>
+                  </div>
+                </div>
+              </div>
+              <div class="summary-list">
+                <ul class="list">
+                  <li class="d-flex justify-content-between">
+                    <strong>Property ID:</strong>
+                    <span>1134</span>
+                  </li>
+                  <li class="d-flex justify-content-between">
+                    <strong>Location:</strong>
+                    <span>Chicago, IL 606543</span>
+                  </li>
+                  <li class="d-flex justify-content-between">
+                    <strong>Property Type:</strong>
+                    <span>House</span>
+                  </li>
+                  <li class="d-flex justify-content-between">
+                    <strong>Status:</strong>
+                    <span>Sale</span>
+                  </li>
+                  <li class="d-flex justify-content-between">
+                    <strong>Area:</strong>
+                    <span>340m
+                      <sup>2</sup>
+                    </span>
+                  </li>
+                  <li class="d-flex justify-content-between">
+                    <strong>Beds:</strong>
+                    <span>4</span>
+                  </li>
+                  <li class="d-flex justify-content-between">
+                    <strong>Baths:</strong>
+                    <span>2</span>
+                  </li>
+                  <li class="d-flex justify-content-between">
+                    <strong>Garage:</strong>
+                    <span>1</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-7 col-lg-7 section-md-t3">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="title-box-d">
+                  <h3 class="title-d">Property Description</h3>
+                </div>
+              </div>
+            </div>
+            <div class="property-description">
+              <p class="description color-text-a">
+                Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit
+                neque, auctor sit amet
+                aliquam vel, ullamcorper sit amet ligula. Cras ultricies ligula sed magna dictum porta.
+                Curabitur aliquet quam id dui posuere blandit. Mauris blandit aliquet elit, eget tincidunt
+                nibh pulvinar quam id dui posuere blandit.
+              </p>
+              <p class="description color-text-a no-margin">
+                Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec rutrum congue leo eget
+                malesuada. Quisque velit nisi,
+                pretium ut lacinia in, elementum id enim. Donec sollicitudin molestie malesuada.
+              </p>
+            </div>
+            <div class="row section-t3">
+              <div class="col-sm-12">
+                <div class="title-box-d">
+                  <h3 class="title-d">Amenities</h3>
+                </div>
+              </div>
+            </div>
+            <div class="amenities-list color-text-a">
+              <ul class="list-a no-margin">
+                <li>Balcony</li>
+                <li>Outdoor Kitchen</li>
+                <li>Cable Tv</li>
+                <li>Deck</li>
+                <li>Tennis Courts</li>
+                <li>Internet</li>
+                <li>Parking</li>
+                <li>Sun Room</li>
+                <li>Concrete Flooring</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-10 offset-md-1">
+        <ul class="nav nav-pills-a nav-pills mb-3 section-t3" id="pills-tab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="pills-video-tab" data-toggle="pill" href="#pills-video" role="tab"
+              aria-controls="pills-video" aria-selected="true">Video</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="pills-plans-tab" data-toggle="pill" href="#pills-plans" role="tab" aria-controls="pills-plans"
+              aria-selected="false">Floor Plans</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="pills-map-tab" data-toggle="pill" href="#pills-map" role="tab" aria-controls="pills-map"
+              aria-selected="false">Ubication</a>
+          </li>
+        </ul>
+        <div class="tab-content" id="pills-tabContent">
+          <div class="tab-pane fade show active" id="pills-video" role="tabpanel" aria-labelledby="pills-video-tab">
+            <iframe src="https://player.vimeo.com/video/73221098" width="100%" height="460" frameborder="0"
+              webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          </div>
+          <div class="tab-pane fade" id="pills-plans" role="tabpanel" aria-labelledby="pills-plans-tab">
+            <img src="assets/img/plan2.jpg" alt="" class="img-fluid">
+          </div>
+          <div class="tab-pane fade" id="pills-map" role="tabpanel" aria-labelledby="pills-map-tab">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.1422937950147!2d-73.98731968482413!3d40.75889497932681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes+Square!5e0!3m2!1ses-419!2sve!4v1510329142834"
+              width="100%" height="460" frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="row section-t3">
+          <div class="col-sm-12">
+            <div class="title-box-d">
+              <h3 class="title-d">Contact Agent</h3>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-lg-4">
+            <img src="assets/img/agent-4.jpg" alt="" class="img-fluid">
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="property-agent">
+              <h4 class="title-agent">Anabella Geller</h4>
+              <p class="color-text-a">
+                Nulla porttitor accumsan tincidunt. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet
+                dui. Quisque velit nisi,
+                pretium ut lacinia in, elementum id enim.
+              </p>
+              <ul class="list-unstyled">
+                <li class="d-flex justify-content-between">
+                  <strong>Phone:</strong>
+                  <span class="color-text-a">(222) 4568932</span>
+                </li>
+                <li class="d-flex justify-content-between">
+                  <strong>Mobile:</strong>
+                  <span class="color-text-a">777 287 378 737</span>
+                </li>
+                <li class="d-flex justify-content-between">
+                  <strong>Email:</strong>
+                  <span class="color-text-a">annabella@example.com</span>
+                </li>
+                <li class="d-flex justify-content-between">
+                  <strong>Skype:</strong>
+                  <span class="color-text-a">Annabela.ge</span>
+                </li>
+              </ul>
+              <div class="socials-a">
+                <ul class="list-inline">
+                  <li class="list-inline-item">
+                    <a href="#">
+                      <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#">
+                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#">
+                      <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#">
+                      <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#">
+                      <i class="fa fa-dribbble" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12 col-lg-4">
+            <div class="property-contact">
+              <form class="form-a">
+                <div class="row">
+                  <div class="col-md-12 mb-1">
+                    <div class="form-group">
+                      <input type="text" class="form-control form-control-lg form-control-a" id="inputName"
+                        placeholder="Name *" required>
+                    </div>
+                  </div>
+                  <div class="col-md-12 mb-1">
+                    <div class="form-group">
+                      <input type="email" class="form-control form-control-lg form-control-a" id="inputEmail1"
+                        placeholder="Email *" required>
+                    </div>
+                  </div>
+                  <div class="col-md-12 mb-1">
+                    <div class="form-group">
+                      <textarea id="textMessage" class="form-control" placeholder="Comment *" name="message" cols="45"
+                        rows="8" required></textarea>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <button type="submit" class="btn btn-a">Send Message</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  </div>
-  </div>
-  </div>
-  </div>
+</section>
+<!--/ Property Single End /-->
+
 @endsection

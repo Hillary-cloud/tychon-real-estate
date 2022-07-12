@@ -1,154 +1,204 @@
 @extends('layouts.base')
 @section('content')
-<div class="inside-banner">
-    <div class="container"> 
-      <span class="pull-right"><a href="#">Home</a> / Blogs</span>
-      <h2>Blogs</h2>
-  </div>
-  </div>
-  <!-- banner -->
-  
-  
+<!--/ Intro Single star /-->
+<section class="intro-single">
   <div class="container">
-  <div class="spacer blog">
-  <div class="row">
-    <div class="col-lg-8 col-sm-12 ">
-  
-    <!-- blog list -->
     <div class="row">
-                              <div class="col-lg-4 col-sm-4 "><a href="blogdetail.html" class="thumbnail"><img src="images/blog/4.jpg" alt="blog title"></a></div>
-                              <div class="col-lg-8 col-sm-8 ">
-                              <h3><a href="blogdetail.html">Creative business to takeover the market</a></h3>
-                              <div class="info">Posted on: Jan 20, 2013</div>                                               
-                              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                              <a href="blogdetail.html" class="more">Read More</a>
-                              </div>
+      <div class="col-md-12 col-lg-8">
+        <div class="title-single-box">
+          <h1 class="title-single">Our Amazing Posts</h1>
+          <span class="color-text-a">Grid News</span>
+        </div>
+      </div>
+      <div class="col-md-12 col-lg-4">
+        <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a href="{{route('/')}}">Home</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              News Grid
+            </li>
+          </ol>
+        </nav>
+      </div>
     </div>
-    <!-- blog list -->
-  
-  
-  <!-- blog list -->
+  </div>
+</section>
+<!--/ Intro Single End /-->
+
+<!--/ News Grid Star /-->
+<section class="news-grid grid">
+  <div class="container">
     <div class="row">
-                              <div class="col-lg-4 col-sm-4 "><a href="blogdetail.html" class="thumbnail"><img src="images/blog/2.jpg" alt="blog title"></a></div>
-                              <div class="col-lg-8 col-sm-8 ">
-                              <h3><a href="blogdetail.html">Creative business to takeover the market</a></h3>
-                              <div class="info">Posted on: Jan 20, 2013</div>                                               
-                              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                              <a href="blogdetail.html" class="more">Read More</a>
-                              </div>
-    </div>
-    <!-- blog list -->
-  
-  
-    <!-- blog list -->
-    <div class="row">
-                              <div class="col-lg-4 col-sm-4 "><a href="blogdetail.html" class="thumbnail"><img src="images/blog/1.jpg" alt="blog title"></a></div>
-                              <div class="col-lg-8 col-sm-8 ">
-                              <h3><a href="blogdetail.html">Creative business to takeover the market</a></h3>
-                              <div class="info">Posted on: Jan 20, 2013</div>                                               
-                              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                              <a href="blogdetail.html" class="more">Read More</a>
-                              </div>
-    </div>
-    <!-- blog list -->
-  
-  
-    <!-- blog list -->
-    <div class="row">
-                              <div class="col-lg-4 col-sm-4 "><a href="blogdetail.html" class="thumbnail"><img src="images/blog/4.jpg" alt="blog title"></a></div>
-                              <div class="col-lg-8 col-sm-8 ">
-                              <h3><a href="blogdetail.html">Creative business to takeover the market</a></h3>
-                              <div class="info">Posted on: Jan 20, 2013</div>                                               
-                              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                              <a href="blogdetail.html" class="more">Read More</a>
-                              </div>
-    </div>
-    <!-- blog list -->
-  
-  
-    <!-- blog list -->
-    <div class="row">
-                              <div class="col-lg-4 col-sm-4 "><a href="blogdetail.html" class="thumbnail"><img src="images/blog/3.jpg" alt="blog title"></a></div>
-                              <div class="col-lg-8 col-sm-8 ">
-                              <h3><a href="blogdetail.html">Creative business to takeover the market</a></h3>
-                              <div class="info">Posted on: Jan 20, 2013</div>                                               
-                              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                              <a href="blogdetail.html" class="more">Read More</a>
-                              </div>
-    </div>
-    <!-- blog list -->
-  
-  
-  
-  
-    </div>
-    <div class="col-lg-4 visible-lg">
-  
-    <!-- tabs -->
-    <div class="tabbable">
-                <ul class="nav nav-tabs">
-                  <li class=""><a href="#tab1" data-toggle="tab">Recent Post</a></li>
-                  <li class=""><a href="#tab2" data-toggle="tab">Most Popular</a></li>
-                  <li class="active"><a href="#tab3" data-toggle="tab">Most Commented</a></li>
-                </ul>
-                <div class="tab-content">
-                  <div class="tab-pane" id="tab1">
-                    <ul class="list-unstyled">
-                    <li>
-                    <h5><a href="blogdetail.html">Real estate marketing growing</a></h5>
-                              <div class="info">Posted on: Jan 20, 2013</div>  
-                              </li>
-                               <li>
-                    <h5><a href="blogdetail.html">Real estate marketing growing</a></h5>
-                              <div class="info">Posted on: Jan 20, 2013</div>  
-                              </li>
-                               <li>
-                    <h5><a href="blogdetail.html">Real estate marketing growing</a></h5>
-                              <div class="info">Posted on: Jan 20, 2013</div>  
-                              </li>
-                              </ul>
-                  </div>
-                  <div class="tab-pane" id="tab2">
-                  <ul  class="list-unstyled">
-                    <li>
-                    <h5><a href="blogdetail.html">Market update on new apartments</a></h5>
-                              <div class="info">Posted on: Jan 20, 2013</div>  
-                              </li>
-  
-                    <li>
-                    <h5><a href="blogdetail.html">Market update on new apartments</a></h5>
-                              <div class="info">Posted on: Jan 20, 2013</div>  
-                              </li>
-  
-                    <li>
-                    <h5><a href="blogdetail.html">Market update on new apartments</a></h5>
-                              <div class="info">Posted on: Jan 20, 2013</div>  
-                              </li>
-                              </ul>
-                  </div>
-                  <div class="tab-pane active" id="tab3">
-                  <ul class="list-unstyled">      
-                              <li>
-                    <h5><a href="blogdetail.html">Creative business to takeover the market</a></h5>
-                              <div class="info">Posted on: Jan 20, 2013</div>  
-                              </li>
-                              
-                              <li>
-                    <h5><a href="blogdetail.html">Creative business to takeover the market</a></h5>
-                              <div class="info">Posted on: Jan 20, 2013</div>  
-                              </li>
-                              </ul>
-                  </div>
-                </div>
-                
-                
-                
+      <div class="col-md-4">
+        <div class="card-box-b card-shadow news-box">
+          <div class="img-box-b">
+            <img src="assets/img/post-1.jpg" alt="" class="img-b img-fluid">
+          </div>
+          <div class="card-overlay">
+            <div class="card-header-b">
+              <div class="card-category-b">
+                <a href="#" class="category-b">Travel</a>
               </div>
-    <!-- tabs -->
-  
+              <div class="card-title-b">
+                <h2 class="title-2">
+                  <a href="blog-single.html">Travel is comming
+                    <br> new</a>
+                </h2>
+              </div>
+              <div class="card-date">
+                <span class="date-b">18 Sep. 2017</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card-box-b card-shadow news-box">
+          <div class="img-box-b">
+            <img src="assets/img/post-2.jpg" alt="" class="img-b img-fluid">
+          </div>
+          <div class="card-overlay">
+            <div class="card-header-b">
+              <div class="card-category-b">
+                <a href="blog-single.html" class="category-b">Travel</a>
+              </div>
+              <div class="card-title-b">
+                <h2 class="title-2">
+                  <a href="blog-single.html">Travel is comming
+                    <br> new</a>
+                </h2>
+              </div>
+              <div class="card-date">
+                <span class="date-b">18 Sep. 2017</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card-box-b card-shadow news-box">
+          <div class="img-box-b">
+            <img src="assets/img/post-3.jpg" alt="" class="img-b img-fluid">
+          </div>
+          <div class="card-overlay">
+            <div class="card-header-b">
+              <div class="card-category-b">
+                <a href="#" class="category-b">Travel</a>
+              </div>
+              <div class="card-title-b">
+                <h2 class="title-2">
+                  <a href="blog-single.html">Travel is comming
+                    <br> new</a>
+                </h2>
+              </div>
+              <div class="card-date">
+                <span class="date-b">18 Sep. 2017</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card-box-b card-shadow news-box">
+          <div class="img-box-b">
+            <img src="assets/img/post-4.jpg" alt="" class="img-b img-fluid">
+          </div>
+          <div class="card-overlay">
+            <div class="card-header-b">
+              <div class="card-category-b">
+                <a href="#" class="category-b">Travel</a>
+              </div>
+              <div class="card-title-b">
+                <h2 class="title-2">
+                  <a href="blog-single.html">Travel is comming
+                    <br> new</a>
+                </h2>
+              </div>
+              <div class="card-date">
+                <span class="date-b">18 Sep. 2017</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card-box-b card-shadow news-box">
+          <div class="img-box-b">
+            <img src="assets/img/post-5.jpg" alt="" class="img-b img-fluid">
+          </div>
+          <div class="card-overlay">
+            <div class="card-header-b">
+              <div class="card-category-b">
+                <a href="#" class="category-b">Travel</a>
+              </div>
+              <div class="card-title-b">
+                <h2 class="title-2">
+                  <a href="blog-single.html">Travel is comming
+                    <br> new</a>
+                </h2>
+              </div>
+              <div class="card-date">
+                <span class="date-b">18 Sep. 2017</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card-box-b card-shadow news-box">
+          <div class="img-box-b">
+            <img src="assets/img/post-6.jpg" alt="" class="img-b img-fluid">
+          </div>
+          <div class="card-overlay">
+            <div class="card-header-b">
+              <div class="card-category-b">
+                <a href="#" class="category-b">Travel</a>
+              </div>
+              <div class="card-title-b">
+                <h2 class="title-2">
+                  <a href="blog-single.html">Travel is comming
+                    <br> new</a>
+                </h2>
+              </div>
+              <div class="card-date">
+                <span class="date-b">18 Sep. 2017</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <nav class="pagination-a">
+          <ul class="pagination justify-content-end">
+            <li class="page-item disabled">
+              <a class="page-link" href="#" tabindex="-1">
+                <span class="ion-ios-arrow-back"></span>
+              </a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">1</a>
+            </li>
+            <li class="page-item active">
+              <a class="page-link" href="#">2</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">3</a>
+            </li>
+            <li class="page-item next">
+              <a class="page-link" href="#">
+                <span class="ion-ios-arrow-forward"></span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </div>
-  </div>
-  </div>
+</section>
+<!--/ News Grid End /-->
   
 @endsection
