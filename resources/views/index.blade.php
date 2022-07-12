@@ -208,12 +208,7 @@
               </div>
               <div class="card-footer-a">
                 <ul class="card-info d-flex justify-content-around">
-                  <li>
-                    <h4 class="card-info-title">Area</h4>
-                    <span>340m
-                      <sup>2</sup>
-                    </span>
-                  </li>
+                  
                   <li>
                     <h4 class="card-info-title">Beds</h4>
                     <span>2</span>
