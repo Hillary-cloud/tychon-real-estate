@@ -38,17 +38,17 @@
                                 </tr>
                             </thead>
                             <tbody>
-                            {{-- @foreach ($categories as $category) --}}
+                            @foreach ($categories as $category)
                             <tr>
-                                <td>$category->id</td>
-                                <td>fgsgsgdf</td>
-                                <td>gdsfgsfgsfgf</td>
+                                <td>{{$category->id}}</td>
+                                <td>{{$category->name}}</td>
+                                <td>{{$category->slug}}</td>
                                 <td>
                                     <a href=""><i class="fa fa-edit fa-1x"></i></a>
                                     <a href="" onclick="return confirm('You are about to delete this category')" style="margin-left: 10px;"><i class="fa fa-trash fa-1x"></i></a>
                                 </td>
                             </tr>
-                            {{-- @endforeach --}}
+                            @endforeach
                             </tbody>
                         </table>
                         {{-- {{$categories->links()}} --}}

@@ -10,7 +10,8 @@ use Illuminate\Support\Str;
 class CategoryController extends Controller
 {
     public function index(){
-        return view('admin.category');
+        $categories = Category::orderBy('created_at', 'DESC')->paginate(10);
+        return view('admin.category',compact('categories'));
     }
 
     public function create(){
