@@ -30,4 +30,26 @@ class CategoryController extends Controller
         
         return redirect()->back()->with('message','Category added successfully');
     }
+
+    public function editCategory($id){
+        $category = Category::find($id);
+        return view('admin.edit-category',compact('category'));
+ 
+     }
+
+     public function updateCategory(Request $request, $id){
+        $category = Category::find($id);
+        $category->name = $request->name;
+        $category->slug = $request->slug;
+        $category->save();
+
+        return redirect()->back()->with('message','Category updated successfully');
+    }
+
+    public function deleteCategory($id){
+        $category = Category::find($id);
+        $category->delete();
+
+        return redirect()->back()->with('message','Category removed successfully');
+    }
 }

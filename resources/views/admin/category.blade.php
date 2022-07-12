@@ -38,20 +38,23 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                @php
+                                    $i = 1;
+                                @endphp
                             @foreach ($categories as $category)
                             <tr>
-                                <td>{{$category->id}}</td>
+                                <td>{{$i++}}</td>
                                 <td>{{$category->name}}</td>
                                 <td>{{$category->slug}}</td>
                                 <td>
-                                    <a href=""><i class="fa fa-edit fa-1x"></i></a>
-                                    <a href="" onclick="return confirm('You are about to delete this category')" style="margin-left: 10px;"><i class="fa fa-trash fa-1x"></i></a>
+                                    <a href="{{route('admin.editCategory',$category->id)}}"><i class="fa fa-edit fa-1x"></i></a>
+                                    <a href="{{route('admin.deleteCategory', $category->id)}}" onclick="return confirm('You are about to delete this category')" style="margin-left: 10px;"><i class="fa fa-trash fa-1x"></i></a>
                                 </td>
                             </tr>
                             @endforeach
                             </tbody>
                         </table>
-                        {{-- {{$categories->links()}} --}}
+                        {{$categories->links()}}
                     </div>
                 </div>
             </div>
