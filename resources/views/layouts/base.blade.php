@@ -180,7 +180,7 @@
               <ul class="">
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <a class="dropdown-item" href="{{route('admin.categories')}}">Categories</a>
-                  <a class="dropdown-item" href="{{route('rent')}}">Rent Property</a>
+                  <a class="dropdown-item" href="{{route('admin.locations')}}">Locations</a>
                   <a class="dropdown-item" href="{{route('all-properties')}}">All Properties</a>
                   <form method="POST" action="{{ route('logout') }}">
                     @csrf
@@ -242,7 +242,7 @@
       <div class="col-sm-12 col-md-4">
         <div class="widget-a">
           <div class="w-header-a">
-            <h3 class="w-title-a text-brand">EstateAgency</h3>
+            <a class="navbar-brand text-brand" href="{{route('/')}}"><img src="assets/img/logo.png" alt=""></a>
           </div>
           <div class="w-body-a">
             <p class="w-text-a color-text-a">
