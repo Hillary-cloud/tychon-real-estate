@@ -13,8 +13,8 @@ use App\Models\Image;
 class PropertyController extends Controller
 {
     public function index(){
-
-        return view('admin.property');
+        $properties = Property::orderBy('created_at', 'DESC')->paginate(10);
+        return view('admin.property',compact('properties'));
     }
 
     public function create(){
