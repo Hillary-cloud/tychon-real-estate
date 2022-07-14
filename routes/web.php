@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\LocationController;
+use App\Http\Controllers\Admin\PropertyController;
 
 /*
 |--------------------------------------------------------------------------
@@ -52,6 +53,11 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/admin/location/edit/{id}', [LocationController::class, 'editLocation'])->name('admin.editLocation');
     Route::put('/admin/location/edit/{id}', [LocationController::class, 'updateLocation'])->name('admin.updateLocation');
     Route::get('/admin/location/delete/{id}', [LocationController::class, 'deleteLocation'])->name('admin.deleteLocation');
+
+    //property
+    Route::get('/admin/properties', [PropertyController::class, 'index'])->name('admin.properties');
+    Route::get('/admin/property/add', [PropertyController::class, 'create'])->name('admin.addProperty');
+    Route::post('/admin/property/add', [PropertyController::class, 'storeProperty'])->name('admin.storeProperty');
 });
 
 

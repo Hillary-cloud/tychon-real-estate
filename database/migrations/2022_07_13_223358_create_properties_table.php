@@ -25,15 +25,12 @@ return new class extends Migration
             $table->string('price');
             $table->foreignIdFor(Category::class);
             $table->string('property_type');
-            $table->string('bed_room')->nullable();
-            $table->string('bath_room')->nullable();
-            $table->string('kitchen')->nullable();
             $table->enum('status', ['instock','outofstock']);
             $table->string('landlord_name')->nullable();
             $table->string('landlord_phone')->nullable();
             $table->string('agent_name')->nullable();
             $table->string('agent_phone')->nullable();
-            $table->string('main_image')->nullable();
+            $table->string('main_image');
 
             $table->timestamps();
         });

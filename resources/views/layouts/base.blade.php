@@ -181,7 +181,7 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <a class="dropdown-item" href="{{route('admin.categories')}}">Categories</a>
                   <a class="dropdown-item" href="{{route('admin.locations')}}">Locations</a>
-                  <a class="dropdown-item" href="{{route('all-properties')}}">All Properties</a>
+                  <a class="dropdown-item" href="{{route('admin.properties')}}">Properties</a>
                   <form method="POST" action="{{ route('logout') }}">
                     @csrf
   

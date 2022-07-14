@@ -17,7 +17,7 @@ return new class extends Migration
         Schema::create('images', function (Blueprint $table) {
             $table->id();
             $table->foreignIdFor(Property::class);
-            $table->string('image');
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }
