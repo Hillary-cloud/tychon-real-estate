@@ -9,8 +9,12 @@ use Illuminate\Support\Str;
 
 class LocationController extends Controller
 {
-    public function index(){
-        $locations = Location::orderBy('created_at', 'DESC')->paginate(10);
+    public function index(Request $request){
+        $locations = Location::
+        where('name', 'like', '%'.$request->input('query').'%')
+        ->orWhere('slug', 'like', '%'.$request->input('query').'%')
+        ->orWhere('created_at', 'like', '%'.$request->input('query').'%')
+        ->orderBy('created_at', 'DESC')->paginate(10);
         return view('admin.location',compact('locations'));
     }
 

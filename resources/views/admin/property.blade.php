@@ -18,6 +18,11 @@
                     <div class="row">
                         <div class="col-md-6">All Properties</div>
                         <div class="col-md-6">
+                            <form action="{{route('admin.properties')}}" method="GET">
+                                @csrf
+                                <input type="text" name="query" class="form-control">
+                                <button type="submit" class="btn btn-default">Search</button>
+                            </form>
                             <a href="{{route('admin.addProperty')}}" class="pull-right btn btn-primary">Add Property</a>
                         </div>
                     </div>
@@ -41,18 +46,14 @@
                                     <tr>
                                         <th class="text-center">Image</th>
                                         <th class="text-center">Title</th>
-                                        <th class="text-center">Slug</th>
-                                        <th class="text-center">Description</th>
                                         <th class="text-center">Price</th>
                                         <th class="text-center">Location</th>
-                                        <th class="text-center">Address</th>
                                         <th class="text-center">Category</th>
                                         <th class="text-center">Property Type</th>
                                         <th class="text-center">Landlord</th>
-                                        <th class="text-center">Landlord's Phone</th>
                                         <th class="text-center">Agent</th>
-                                        <th class="text-center">Agent's Phone</th>
                                         <th class="text-center">Status</th>
+                                         <th class="text-center">Date Created</th>
                                         <th class="text-center">Actions</th>
                                     </tr>
                                 </thead>
@@ -62,18 +63,14 @@
                                 <tr>
                                     <td class="text-center"><img src="/property_main_images/{{$property->main_image}}" width="50px" alt=""></td>
                                     <td class="text-center">{{$property->title}}</td>
-                                    <td class="text-center">{{$property->slug}}</td>
-                                    <td class="text-center">{{$property->description}}</td>
                                     <td class="text-center">{{$property->price}}</td>
                                     <td class="text-center">{{$property->location_id}}</td>
-                                    <td class="text-center">{{$property->address}}</td>
-                                    <td class="text-center">{{$property->category->name}}</td>
+                                    <td class="text-center">{{$property->category_id}}</td>
                                     <td class="text-center">{{$property->property_type}}</td>
                                     <td class="text-center">{{$property->landlord_name}}</td>
-                                    <td class="text-center">{{$property->landlord_phone}}</td>
                                     <td class="text-center">{{$property->agent_name}}</td>
-                                    <td class="text-center">{{$property->agent_phone}}</td>
                                     <td class="text-center">{{$property->status}}</td>
+                                    <td class="text-center">{{$property->created_at}}</td>
                                     <td class="text-center">
                                         <a href="{{route('admin.viewProperty',$property->id)}}" class="ml-2"><i class="fa fa-eye fa-1x text-primary"></i></a>
                                         <a href="" class="ml-2"><i class="fa fa-edit fa-1x text-success"></i></a>

@@ -19,7 +19,7 @@
               <a href="{{route('/')}}">Home</a>
             </li>
             <li class="breadcrumb-item">
-              <a href="{{route('all-properties')}}">Properties</a>
+              <a href="{{route('admin.properties')}}">Properties</a>
             </li>
             <li class="breadcrumb-item active" aria-current="page">
                 {{$property->title}}
@@ -37,11 +37,9 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
-        <div id="property-single-carousel" class="owl-carousel owl-arrow gallery-property">
-          <div class="carousel-item-b">
-            <img src="/property_main_images/{{$property->main_image}}" alt="">
+          <div class="mb-5">
+            <img src="/property_main_images/{{$property->main_image}}" class="mr-auto ml-auto" style="display: block" width="50%" alt="">
           </div>
-        </div>
         <div class="row justify-content-between">
           <div class="col-md-5 col-lg-4">
             <div class="property-price d-flex justify-content-center foo">
@@ -108,6 +106,14 @@
                     <strong>Agent Number:</strong>
                     <span>{{$property->agent_phone}}</span>
                   </li>
+                  <li class="d-flex justify-content-between">
+                    <strong>Date Created:</strong>
+                    <span>{{$property->created_at}}</span>
+                  </li>
+                  <li class="d-flex justify-content-between">
+                    <strong>Date Updated:</strong>
+                    <span>{{$property->updated_at}}</span>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -126,7 +132,7 @@
               </p>
               <h3 class="mt-5"><strong>Sub Images</strong></h3>
               @foreach ($images as $image)
-              <img src="/property_sub_images/{{$image->image}}" class="img-responsive" width="200px" alt="">
+              <img src="/property_sub_images/{{$image->image}}" width="200px" alt="">
              @endforeach
             </div>
           </div>

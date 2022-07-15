@@ -13,10 +13,21 @@ use Illuminate\Support\Str;
 
 class PropertyController extends Controller
 {
-    public function index(){
-        $properties = Property::orderBy('created_at', 'DESC')->paginate(10);
+    public function index(Request $request){
+        $properties = Property::
+        where('title', 'like', '%'.$request->input('query').'%')
+        ->orWhere('title', 'like', '%'.$request->input('query').'%')
+        ->orWhere('price', 'like', '%'.$request->input('query').'%')
+        ->orWhere('location_id', 'like', '%'.$request->input('query').'%')
+        ->orWhere('category_id', 'like', '%'.$request->input('query').'%')
+        ->orWhere('property_type', 'like', '%'.$request->input('query').'%')
+        ->orWhere('landlord_name', 'like', '%'.$request->input('query').'%')
+        ->orWhere('agent_name', 'like', '%'.$request->input('query').'%')
+        ->orWhere('status', 'like', '%'.$request->input('query').'%')
+        ->orWhere('created_at', 'like', '%'.$request->input('query').'%')
+        ->orderBy('created_at', 'DESC')->paginate(10);
         // $category = Category::where('category_id',$properties->id)->get();
-        return view('admin.property',compact('properties','category'));
+        return view('admin.property',compact('properties'));
     }
 
     public function create(){

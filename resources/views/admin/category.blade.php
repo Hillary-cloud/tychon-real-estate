@@ -18,6 +18,11 @@
                     <div class="row">
                         <div class="col-md-6">All Categories</div>
                         <div class="col-md-6">
+                            <form action="{{route('admin.categories')}}" method="GET">
+                                @csrf
+                                <input type="text" name="query" class="form-control">
+                                <button type="submit" class="btn btn-default">Search</button>
+                            </form>
                             <a href="{{route('admin.addCategory')}}" class="pull-right btn btn-primary">Add Category</a>
                         </div>
                     </div>
@@ -41,6 +46,7 @@
                                     <th>Id</th>
                                     <th>Category Name</th>
                                     <th>Slug</th>
+                                    <th>Date Created</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -53,9 +59,10 @@
                                 <td>{{$i++}}</td>
                                 <td>{{$category->name}}</td>
                                 <td>{{$category->slug}}</td>
+                                <td>{{$category->created_at}}</td>
                                 <td>
-                                    <a href="{{route('admin.editCategory',$category->id)}}"><i class="fa fa-edit fa-1x"></i></a>
-                                    <a href="{{route('admin.deleteCategory', $category->id)}}" onclick="return confirm('You are about to delete this category')" style="margin-left: 10px;"><i class="fa fa-trash fa-1x"></i></a>
+                                    <a href="{{route('admin.editCategory',$category->id)}}"><i class="fa fa-edit fa-1x text-success"></i></a>
+                                    <a href="{{route('admin.deleteCategory', $category->id)}}" onclick="return confirm('You are about to delete this category')" style="margin-left: 10px;"><i class="fa fa-trash fa-1x text-danger"></i></a>
                                 </td>
                             </tr>
                             @endforeach

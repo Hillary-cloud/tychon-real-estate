@@ -9,8 +9,12 @@ use Illuminate\Support\Str;
 
 class CategoryController extends Controller
 {
-    public function index(){
-        $categories = Category::orderBy('created_at', 'DESC')->paginate(10);
+    public function index(Request $request){
+        $categories = Category::
+        where('name', 'like', '%'.$request->input('query').'%')
+        ->orWhere('slug', 'like', '%'.$request->input('query').'%')
+        ->orWhere('created_at', 'like', '%'.$request->input('query').'%')
+        ->orderBy('created_at', 'DESC')->paginate(10);
         return view('admin.category',compact('categories'));
     }
 
