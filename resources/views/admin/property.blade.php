@@ -67,7 +67,7 @@
                                     <td class="text-center">{{$property->price}}</td>
                                     <td class="text-center">{{$property->location_id}}</td>
                                     <td class="text-center">{{$property->address}}</td>
-                                    <td class="text-center">{{$property->category_id}}</td>
+                                    <td class="text-center">{{$property->category->name}}</td>
                                     <td class="text-center">{{$property->property_type}}</td>
                                     <td class="text-center">{{$property->landlord_name}}</td>
                                     <td class="text-center">{{$property->landlord_phone}}</td>
@@ -75,9 +75,9 @@
                                     <td class="text-center">{{$property->agent_phone}}</td>
                                     <td class="text-center">{{$property->status}}</td>
                                     <td class="text-center">
-                                        <a href=""><i class="fa fa-edit fa-1x text-primary"></i></a>
-                                        <a href=""><i class="fa fa-edit fa-1x text-success"></i></a>
-                                        <a href="" onclick="return confirm('You are about to delete this property')" style="margin-left: 10px;"><i class="fa fa-trash fa-1x text-danger"></i></a>
+                                        <a href="{{route('admin.viewProperty',$property->id)}}" class="ml-2"><i class="fa fa-eye fa-1x text-primary"></i></a>
+                                        <a href="" class="ml-2"><i class="fa fa-edit fa-1x text-success"></i></a>
+                                        <a href="{{route('admin.deleteProperty',$property->id)}}" class="ml-2" onclick="return confirm('You are about to delete this property')" style="margin-left: 10px;"><i class="fa fa-trash fa-1x text-danger"></i></a>
                                     </td>
                                 </tr>
                                 @endforeach

@@ -9,12 +9,14 @@ use App\Models\Category;
 use App\Models\Property;
 use Carbon\Carbon;
 use App\Models\Image;
+use Illuminate\Support\Str;
 
 class PropertyController extends Controller
 {
     public function index(){
         $properties = Property::orderBy('created_at', 'DESC')->paginate(10);
-        return view('admin.property',compact('properties'));
+        // $category = Category::where('category_id',$properties->id)->get();
+        return view('admin.property',compact('properties','category'));
     }
 
     public function create(){
@@ -42,7 +44,7 @@ class PropertyController extends Controller
           'main_image' => 'required',
     ]); 
         $new_property = Property::create($data);
-
+//adding main image
         if ($request->has('main_image')) {
             $image = $request->main_image;
             $imageName = $data['title'].'-image-'.Carbon::now()->timestamp.'.'. rand(1,1000).'.'.$image->extension();
@@ -50,7 +52,7 @@ class PropertyController extends Controller
             $new_property->main_image = $imageName;
             $new_property->save();
         };
-       
+//adding sub images
         if($request->has('images')){
             foreach($request->file('images') as $image){
                 $imageName = $data['title'].'-image-'.Carbon::now()->timestamp.'.'. rand(1,1000).'.'.$image->extension();
@@ -63,6 +65,20 @@ class PropertyController extends Controller
         }
  
         return redirect()->back()->with('message', 'Property added successfully');
+    }
+
+    public function deleteProperty($id){
+        $property = Property::find($id);
+        $property->delete();
+
+        return redirect()->back()->with('message','Property removed successfully');
+    }
+
+    public function viewProperty($id){
+        $property = Property::find($id);
+        if(!$property) abort(404);
+        $images = Image::where('property_id',$property->id)->get();
+        return view('admin.property-details',compact('property','images'));
     }
 
 }
