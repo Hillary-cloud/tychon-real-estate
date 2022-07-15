@@ -64,8 +64,8 @@
                                     <td class="text-center"><img src="/property_main_images/{{$property->main_image}}" width="50px" alt=""></td>
                                     <td class="text-center">{{$property->title}}</td>
                                     <td class="text-center">{{$property->price}}</td>
-                                    <td class="text-center">{{$property->location_id}}</td>
-                                    <td class="text-center">{{$property->category_id}}</td>
+                                    <td class="text-center">{{$property->location->name}}</td>
+                                    <td class="text-center">{{$property->category->name}}</td>
                                     <td class="text-center">{{$property->property_type}}</td>
                                     <td class="text-center">{{$property->landlord_name}}</td>
                                     <td class="text-center">{{$property->agent_name}}</td>

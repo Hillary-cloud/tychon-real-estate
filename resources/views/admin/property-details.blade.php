@@ -72,11 +72,11 @@
                   </li>
                   <li class="d-flex justify-content-between">
                     <strong>Category:</strong>
-                    <span>{{$property->category_id}}</span>
+                    <span>{{$property->category->name}}</span>
                   </li>
                   <li class="d-flex justify-content-between">
                     <strong>Location:</strong>
-                    <span>{{$property->location_id}}</span>
+                    <span>{{$property->location->name}}</span>
                   </li>
                   <li class="d-flex justify-content-between">
                     <strong>Address:</strong>
