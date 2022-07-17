@@ -11,16 +11,16 @@
                         <div class="col-md-6"><a class="pull-right" href="{{route('admin.locations')}}">All Locations</a></div>
                     </div>
                 </div>
-                <div class="panel-body">
+                <div class="panel-body ">
                     @if (session('message'))
                         <div class="alert alert-success">
                             {{ session('message') }}
                         </div>
                     @endif
-                    <form action="{{route('admin.storeLocation')}}" method="POST">
+                    <form action="{{route('admin.storeLocation')}}" method="POST" >
                         @csrf
                     
-                        <div class="form-group">
+                        <div class="form-group ">
                             <label class="" for="">Location Name</label>
                                 <input type="text" class="form-control" name="name" placeholder="Location Name">
                                 @error('name')

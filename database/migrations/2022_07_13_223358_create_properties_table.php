@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('slug')->unique();
             $table->string('description');
             $table->foreignIdFor(Location::class);
-            $table->string('address');
+            $table->string('address')->nullable();
             $table->string('price');
             $table->foreignIdFor(Category::class);
             $table->string('property_type');

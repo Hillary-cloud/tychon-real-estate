@@ -26,7 +26,7 @@
 
                                     <div class="form-group">
                                         <label class="" for="">Title</label>
-                                            <input type="text" class="form-control" name="title" placeholder="Enter Title">
+                                            <input type="text" class="form-control" name="title" value="{{old('title')}}" placeholder="Enter Title">
                                             @error('title')
                                                 <p class="text-danger">{{$message}}</p>
                                             @enderror
@@ -34,7 +34,7 @@
 
                                     <div class="form-group">
                                         <label class="" for="">Slug</label>
-                                            <input type="text" class="form-control" name="slug" placeholder="Enter Slug">
+                                            <input type="text" class="form-control" name="slug" value="{{old('slug')}}" placeholder="Enter Slug">
                                             @error('slug')
                                                 <p class="text-danger">{{$message}}</p>
                                             @enderror
@@ -42,7 +42,7 @@
 
                                     <div class="form-group">
                                         <label class="" for="">Description</label>
-                                            <textarea name="description" id="" cols="30" class="form-control" rows="1" placeholder="Enter Description"></textarea>
+                                            <textarea name="description" id="" cols="30" class="form-control" rows="1" placeholder="Enter Description">{{old('description')}}</textarea>
                                             @error('description')
                                                 <p class="text-danger">{{$message}}</p>
                                             @enderror
@@ -62,16 +62,13 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label class="" for="">Address</label>
-                                            <input type="text" class="form-control" name="address" placeholder="Enter Address">
-                                            @error('address')
-                                                <p class="text-danger">{{$message}}</p>
-                                            @enderror
+                                        <label class="" for="">Address(Optional)</label>
+                                            <input type="text" class="form-control" name="address" value="{{old('address')}}" placeholder="Enter Address">
                                     </div>
 
                                     <div class="form-group">
                                         <label class="" for="">Price</label>
-                                            <input type="number" class="form-control" name="price" placeholder="Enter Price">
+                                            <input type="number" class="form-control" name="price" value="{{old('price')}}" placeholder="Enter Price">
                                             @error('price')
                                                 <p class="text-danger">{{$message}}</p>
                                             @enderror
@@ -79,7 +76,7 @@
 
                                     <div class="form-group">
                                         <label class="" for="">Category</label>
-                                        <select name="category_id" class="form-control" id="">
+                                        <select name="category_id" lue="{{old('category_id')}}" class="form-control" id="">
                                             <option value="">--Select Category--</option>
                                             @foreach ($categories as $category)
                                                 <option value="{{$category->id}}">{{ucfirst($category->name)}}</option>
@@ -94,7 +91,7 @@
                                         <label class="" for="">Property type</label>
                                             <select name="property_type" class="form-control" id="">
                                                 <option value="">--Select Property Type--</option>
-                                                <option value="sale">Sale</option>
+                                                <option value="sale">Buy</option>
                                                 <option value="rent">Rent</option>
                                             </select>
                                             @error('property_type')
@@ -107,22 +104,22 @@
 
                                     <div class="form-group">
                                         <label class="" for="">Landlord's Name(Optional)</label>
-                                            <input type="text" class="form-control" name="landlord_name" placeholder="Enter landlord's Name">
+                                            <input type="text" class="form-control" name="landlord_name" value="{{old('landlord_name')}}" placeholder="Enter landlord's Name">
                                     </div>
 
                                     <div class="form-group">
                                         <label class="" for="">Landlord's Number(Optional)</label>
-                                            <input type="text" class="form-control" name="landlord_phone" placeholder="Enter landlord's Number">
+                                            <input type="text" class="form-control" name="landlord_phone" value="{{old('landlord_phone')}}" placeholder="Enter landlord's Number">
                                     </div>
 
                                     <div class="form-group">
                                         <label class="" for="">Agent's Name(Optional)</label>
-                                            <input type="text" class="form-control" name="agent_name" placeholder="Enter Agent's Name">
+                                            <input type="text" class="form-control" name="agent_name" value="{{old('agent_name')}}" placeholder="Enter Agent's Name">
                                     </div>
 
                                     <div class="form-group">
                                         <label class="" for="">Agent's Number(Optional)</label>
-                                            <input type="text" class="form-control" name="agent_phone" placeholder="Enter Agent's Number">
+                                            <input type="text" class="form-control" name="agent_phone" value="{{old('agent_phone')}}" placeholder="Enter Agent's Number">
                                     </div>
 
                                     <div class="form-group">

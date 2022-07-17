@@ -20,7 +20,7 @@
                         <div class="col-md-6">
                             <form action="{{route('admin.categories')}}" method="GET">
                                 @csrf
-                                <input type="text" name="query" class="form-control">
+                                <input type="text" name="query" class="form-control" placeholder="Search here...">
                                 <button type="submit" class="btn btn-default">Search</button>
                             </form>
                             <a href="{{route('admin.addCategory')}}" class="pull-right btn btn-primary">Add Category</a>

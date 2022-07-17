@@ -58,9 +58,13 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/admin/properties', [PropertyController::class, 'index'])->name('admin.properties');
     Route::get('/admin/property/add', [PropertyController::class, 'create'])->name('admin.addProperty');
     Route::post('/admin/property/add', [PropertyController::class, 'storeProperty'])->name('admin.storeProperty');
-    Route::get('/admin/property/delete/{id}', [PropertyController::class, 'deleteProperty'])->name('admin.deleteProperty');
+    Route::delete('/admin/property/delete/{id}', [PropertyController::class, 'deleteProperty'])->name('admin.deleteProperty');
     Route::get('/admin/property/property-detail/{id}', [PropertyController::class, 'viewProperty'])->name('admin.viewProperty');
-  
+    Route::get('/admin/property/edit/{id}', [PropertyController::class, 'editProperty'])->name('admin.editProperty');
+    Route::put('/admin/property/edit/{id}', [PropertyController::class, 'updateProperty'])->name('admin.updateProperty');
+    Route::delete('/admin/property/edit/delete-sub-image/{id}', [PropertyController::class, 'deleteSubImage'])->name('admin.deleteSubImage');
+    //to delete main image
+    //Route::delete('/admin/property/edit/delete-main-image/{id}', [PropertyController::class, 'deleteMainImage'])->name('admin.deleteMainImage');
 });
 
 
