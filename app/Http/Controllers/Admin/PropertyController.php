@@ -137,8 +137,8 @@ class PropertyController extends Controller
         return redirect()->back()->with('message','Property removed successfully');
     }
 
-    public function viewProperty($id){
-        $property = Property::find($id);
+    public function viewProperty($slug){
+        $property = Property::where('slug',$slug)->first();
         if(!$property) abort(404);
         $images = Image::where('property_id',$property->id)->get();
         return view('admin.property-details',compact('property','images'));

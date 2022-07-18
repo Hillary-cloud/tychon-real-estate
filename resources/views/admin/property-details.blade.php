@@ -128,7 +128,7 @@
             </div>
             <div class="property-description">
               <p class="description color-text-a">
-                {{$property->description}}
+                {{ucfirst($property->description)}}
               </p>
               <h3 class="mt-5"><strong>Sub Images</strong></h3>
               @foreach ($images as $image)

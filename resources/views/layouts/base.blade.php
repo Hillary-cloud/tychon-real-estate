@@ -147,16 +147,16 @@
       <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="{{route('/')}}">Home</a>
+            <a class="nav-link {{Request::is('/') ? 'active':''}}" href="{{route('/')}}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{route('about')}}">About</a>
+            <a class="nav-link {{Request::is('about') ? 'active':''}}" href="{{route('about')}}">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{route('agent')}}">Agent</a>
+            <a class="nav-link {{Request::is('agent') ? 'active':''}}" href="{{route('agent')}}">Agent</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{route('blog')}}">Blog</a>
+            <a class="nav-link {{Request::is('blog') ? 'active':''}}" href="{{route('blog')}}">Blog</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -170,7 +170,7 @@
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{route('contact')}}">Contact</a>
+            <a class="nav-link {{Request::is('contact') ? 'active':''}}" href="{{route('contact')}}">Contact</a>
           </li>
           @if (Route::has('login'))
           @auth

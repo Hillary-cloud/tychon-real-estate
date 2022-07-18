@@ -59,7 +59,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/admin/property/add', [PropertyController::class, 'create'])->name('admin.addProperty');
     Route::post('/admin/property/add', [PropertyController::class, 'storeProperty'])->name('admin.storeProperty');
     Route::delete('/admin/property/delete/{id}', [PropertyController::class, 'deleteProperty'])->name('admin.deleteProperty');
-    Route::get('/admin/property/property-detail/{id}', [PropertyController::class, 'viewProperty'])->name('admin.viewProperty');
+    Route::get('/admin/property/property-detail/{slug}', [PropertyController::class, 'viewProperty'])->name('admin.viewProperty');
     Route::get('/admin/property/edit/{id}', [PropertyController::class, 'editProperty'])->name('admin.editProperty');
     Route::put('/admin/property/edit/{id}', [PropertyController::class, 'updateProperty'])->name('admin.updateProperty');
     Route::delete('/admin/property/edit/delete-sub-image/{id}', [PropertyController::class, 'deleteSubImage'])->name('admin.deleteSubImage');
