@@ -15,6 +15,8 @@ class SlideController extends Controller
         where('name', 'like', '%'.$request->input('query').'%')
         ->orWhere('slug', 'like', '%'.$request->input('query').'%')
         ->orWhere('status', 'like', '%'.$request->input('query').'%')
+        ->orWhere('price', 'like', '%'.$request->input('query').'%')
+        ->orWhere('property_type', 'like', '%'.$request->input('query').'%')
         ->orWhere('created_at', 'like', '%'.$request->input('query').'%')
         ->orderBy('created_at', 'DESC')->paginate(10);
         return view('admin.slide',compact('slides'));
@@ -28,6 +30,8 @@ class SlideController extends Controller
         $this->validate($request,[
             'name' => 'required',
             'slug' => 'required',
+            'price' => 'required',
+            'property_type' => 'required',
             'image' => 'required',
             'status' => 'required',
         ]);
@@ -40,6 +44,8 @@ class SlideController extends Controller
 
         $slide->slug = Str::slug($request->slug);
         $slide->image = $imageName;
+        $slide->price = $request->price;
+        $slide->property_type = $request->property_type;
         $slide->status = $request->status;
         $slide->save();
         }
@@ -57,12 +63,16 @@ class SlideController extends Controller
         $this->validate($request,[
             'name' => 'required',
             'slug' => 'required',
+            'price' => 'required',
+            'property_type' => 'required',
             'status' => 'required',
         ]);
      
             $slide = Slide::find($id);
             $slide->name = $request->name;
             $slide->slug = Str::slug($request->slug);
+            $slide->price = $request->price;
+            $slide->property_type = $request->property_type;
             $slide->status = $request->status;
             $image=$request->file('image');
 

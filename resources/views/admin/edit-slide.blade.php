@@ -35,6 +35,24 @@
                                 @enderror
                         </div>
                         <div class="form-group">
+                            <label class="" for="">Price</label>
+                                <input type="text" class="form-control" name="price" value="{{$slide->price}}" placeholder="Price">
+                                @error('price')
+                                    <p class="text-danger">{{$message}}</p>
+                                @enderror
+                        </div>
+                        <div class="form-group">
+                            <label class="" for="">Property Type</label>
+                            <select name="property_type" class="form-control" id="">
+                                <option value="{{$slide->property_type}}">{{$slide->property_type}}</option>
+                                <option value="Buy">Buy</option>
+                                <option value="Rent">Rent</option>
+                            </select>
+                                @error('property_type')
+                                    <p class="text-danger">{{$message}}</p>
+                                @enderror
+                        </div>
+                        <div class="form-group">
                             <label class="" for="">Choose Slide Image</label>
                                 <input type="file" class="form-control" accept="image/*" name="image">
                                 <img src="/slide_images/{{$slide->image}}" width="25%" class="mt-2" alt="">

@@ -18,6 +18,8 @@ return new class extends Migration
             $table->string('name')->nullable();
             $table->string('slug')->nullable();
             $table->string('image')->nullable();
+            $table->string('price')->nullable();
+            $table->string('property_type')->nullable();
             $table->string('status')->nullable();
             $table->timestamps();
         });

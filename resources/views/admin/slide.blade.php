@@ -47,6 +47,8 @@
                                     <th>Image</th>
                                     <th>Slide Name</th>
                                     <th>Slug</th>
+                                    <th>Price</th>
+                                    <th>Property Type</th>
                                     <th>Status</th>
                                     <th>Date Created</th>
                                     <th>Action</th>
@@ -62,6 +64,8 @@
                                 <td><img src="/slide_images/{{$slide->image}}" alt="" width="100px"></td>
                                 <td>{{$slide->name}}</td>
                                 <td>{{$slide->slug}}</td>
+                                <td>{{$slide->price}}</td>
+                                <td>{{$slide->property_type}}</td>
                                 <td>{{$slide->status}}</td>
                                 <td>{{$slide->created_at}}</td>
                                 <td>
