@@ -44,7 +44,7 @@ class LocationController extends Controller
      public function updateLocation(Request $request, $id){
         $location = Location::find($id);
         $location->name = $request->name;
-        $location->slug = $request->slug;
+        $location->slug = Str::slug($request->slug);
         $location->save();
 
         return redirect()->back()->with('message','Location updated successfully');

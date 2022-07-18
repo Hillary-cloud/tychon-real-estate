@@ -79,7 +79,11 @@
                                         <a href="{{route('admin.editProperty',$property->id)}}" class="ml-1"><i class="fa fa-edit fa-2x text-success"></i></a>
                                     </td>
                                     <td>
-                                        <a href="{{route('admin.confirmProperty',$property->id)}}" class="ml-1 btn btn-success btn-sm" onclick="return confirm('You are about to confirm that this property has been bought or rented')">Confirm</a>                                            
+                                        @if ($property->status == 'Bought' || $property->status == 'Rented')
+                                            <p class="text-warning">Confirmed</p>
+                                        @else
+                                            <a href="{{route('admin.confirmProperty',$property->id)}}" class="ml-1 btn btn-success btn-sm" onclick="return confirm('You are about to confirm that this property has been bought or rented')">Confirm</a>           
+                                        @endif                                 
                                     </td>
                                     <td>
                                         <form action="{{route('admin.deleteProperty',$property->id)}}" method="post">

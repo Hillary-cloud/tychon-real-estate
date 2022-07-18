@@ -25,7 +25,7 @@ return new class extends Migration
             $table->string('price');
             $table->foreignIdFor(Category::class);
             $table->string('property_type');
-            $table->enum('status', ['instock','outofstock']);
+            $table->string('status');
             $table->string('landlord_name')->nullable();
             $table->string('landlord_phone')->nullable();
             $table->string('agent_name')->nullable();

@@ -44,7 +44,7 @@ class CategoryController extends Controller
      public function updateCategory(Request $request, $id){
         $category = Category::find($id);
         $category->name = $request->name;
-        $category->slug = $request->slug;
+        $category->slug = Str::slug($request->slug);
         $category->save();
 
         return redirect()->back()->with('message','Category updated successfully');

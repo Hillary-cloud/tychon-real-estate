@@ -5,7 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\LocationController;
 use App\Http\Controllers\Admin\PropertyController;
-
+use App\Http\Controllers\Admin\SlideController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -66,6 +66,14 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/admin/property/confirm/{id}', [PropertyController::class, 'confirmProperty'])->name('admin.confirmProperty');
     //to delete main image
     //Route::delete('/admin/property/edit/delete-main-image/{id}', [PropertyController::class, 'deleteMainImage'])->name('admin.deleteMainImage');
+
+    //slide
+    Route::get('/admin/slides', [SlideController::class, 'index'])->name('admin.slides');
+    Route::get('/admin/slide/add', [SlideController::class, 'create'])->name('admin.addSlide');
+    Route::post('/admin/slide/add', [SlideController::class, 'storeSlide'])->name('admin.storeSlide');
+    Route::get('/admin/slide/edit/{id}', [SlideController::class, 'editSlide'])->name('admin.editSlide');
+    Route::put('/admin/slide/edit/{id}', [SlideController::class, 'updateSlide'])->name('admin.updateSlide');
+    Route::get('/admin/slide/delete/{id}', [SlideController::class, 'deleteSlide'])->name('admin.deleteSlide');
 });
 
 
