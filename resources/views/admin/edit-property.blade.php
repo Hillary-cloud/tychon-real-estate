@@ -152,14 +152,7 @@
     
                                         <div class="form-group">
                                             <label class="" for="">Property Status</label>
-                                                <select name="status" class="form-control" id="">
-                                                    <option value="{{$property->status}}">{{$property->status}}</option>
-                                                    <option value="instock">Instock</option>
-                                                    <option value="outofstock">Outofstock</option>
-                                                </select>
-                                                @error('status')
-                                                    <p class="text-danger">{{$message}}</p>
-                                                @enderror
+                                                <input type="text" class="form-control" name="status" value="{{$property->status}}" readonly>
                                         </div>
     
                                         <div class="form-group">

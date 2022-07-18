@@ -91,8 +91,8 @@
                                         <label class="" for="">Property type</label>
                                             <select name="property_type" class="form-control" id="">
                                                 <option value="">--Select Property Type--</option>
-                                                <option value="sale">Buy</option>
-                                                <option value="rent">Rent</option>
+                                                <option value="Buy">Buy</option>
+                                                <option value="Rent">Rent</option>
                                             </select>
                                             @error('property_type')
                                                 <p class="text-danger">{{$message}}</p>
@@ -120,18 +120,6 @@
                                     <div class="form-group">
                                         <label class="" for="">Agent's Number(Optional)</label>
                                             <input type="text" class="form-control" name="agent_phone" value="{{old('agent_phone')}}" placeholder="Enter Agent's Number">
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="" for="">Property Status</label>
-                                            <select name="status" class="form-control" id="">
-                                                <option value="">--Select Property Status--</option>
-                                                <option value="instock">Instock</option>
-                                                <option value="outofstock">Outofstock</option>
-                                            </select>
-                                            @error('status')
-                                                <p class="text-danger">{{$message}}</p>
-                                            @enderror
                                     </div>
 
                                     <div class="form-group">

@@ -63,6 +63,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/admin/property/edit/{id}', [PropertyController::class, 'editProperty'])->name('admin.editProperty');
     Route::put('/admin/property/edit/{id}', [PropertyController::class, 'updateProperty'])->name('admin.updateProperty');
     Route::delete('/admin/property/edit/delete-sub-image/{id}', [PropertyController::class, 'deleteSubImage'])->name('admin.deleteSubImage');
+    Route::get('/admin/property/confirm/{id}', [PropertyController::class, 'confirmProperty'])->name('admin.confirmProperty');
     //to delete main image
     //Route::delete('/admin/property/edit/delete-main-image/{id}', [PropertyController::class, 'deleteMainImage'])->name('admin.deleteMainImage');
 });

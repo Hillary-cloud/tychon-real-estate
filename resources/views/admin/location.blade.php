@@ -61,8 +61,8 @@
                                 <td>{{$location->slug}}</td>
                                 <td>{{$location->created_at}}</td>
                                 <td>
-                                    <a href="{{route('admin.editLocation',$location->id)}}"><i class="fa fa-edit fa-1x text-success"></i></a>
-                                    <a href="{{route('admin.deleteLocation', $location->id)}}" onclick="return confirm('You are about to delete this location')" style="margin-left: 10px;"><i class="fa fa-trash fa-1x text-danger"></i></a>
+                                    <a href="{{route('admin.editLocation',$location->id)}}"><i class="fa fa-edit fa-2x text-success"></i></a>
+                                    <a href="{{route('admin.deleteLocation', $location->id)}}" onclick="return confirm('You are about to delete this location')" style="margin-left: 10px;"><i class="fa fa-trash fa-2x text-danger"></i></a>
                                 </td>
                             </tr>
                             @endforeach

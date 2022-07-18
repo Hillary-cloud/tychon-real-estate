@@ -45,7 +45,6 @@ class PropertyController extends Controller
           'price' => 'required',
           'category_id' => 'required',
           'property_type' => 'required',
-          'status' => 'required',
           'main_image' => 'required',
     ]); 
 //adding main image
@@ -67,7 +66,12 @@ class PropertyController extends Controller
             $property->landlord_phone = $request->landlord_phone;
             $property->agent_name = $request->agent_name;
             $property->agent_phone = $request->agent_phone;
-            $property->status = $request->status;
+            if ($property->property_type == 'Buy') {
+                $property->status = 'Not Bought';
+            }else  {
+                $property->status = 'Not Rented';
+            }
+            
             $property->main_image = $imageName;
             $property->save();
         };
@@ -86,39 +90,6 @@ class PropertyController extends Controller
  
         return redirect()->back()->with('message', 'Property added successfully');
     }
-    // public function addProduct(Request $request){
-    //     $this->validate($request,[
-    //         'title' => 'required',
-    //         'price' => 'required',
-    //         'image' => 'required',
-            
-    //     ]);
-        
-    //     if ($request->hasFile('image')) {
-    //         $file = $request->file('image');
-    //         $imageName = '-image-'.Carbon::now()->timestamp. '.'. rand(1,1000).'.'.$file->extension();
-    //         $file->move(\public_path('product/'),$imageName);
-
-    //         $product = new Product;
-    //         $product->title = $request->title;
-    //         $product->price = $request->price;
-    //         $product->image = $imageName;
-    //         $product->save();
-    //     };
-    //     if($request->hasFile('images')){
-    //         $files = $request->file('images');
-    //         foreach($files as $file){
-    //             $imageName = '-image-'.Carbon::now()->timestamp. '.' . rand(1,1000).'.'.$file->extension();
-    //             $file->move(\public_path('\product_images'),$imageName);
-    //             Image::create([
-    //                 'product_id'=>$product->id,
-    //                 'image'=>$imageName
-    //             ]);
-              
-    //         }
-    //     };
-    //     return redirect()->back()->with('message', 'image added successfully');
-    // }
 
     public function deleteProperty($id){
         $property = Property::find($id);
@@ -162,7 +133,6 @@ class PropertyController extends Controller
             'price' => 'required',
             'category_id' => 'required',
             'property_type' => 'required',
-            'status' => 'required',
       ]); 
 
         $property = Property::findOrFail($id);
@@ -223,6 +193,17 @@ class PropertyController extends Controller
     //     }
     //     return back();
     // }
+
+    public function confirmProperty($id){
+        $property = Property::find($id);
+        if ($property->property_type == 'Buy') {
+            $property->status = 'Bought';
+        }else{
+            $property->status = 'Rented';
+        }
+        $property->save();
+        return redirect()->back();
+    }
 
 
 }

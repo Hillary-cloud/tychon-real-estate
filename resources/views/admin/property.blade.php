@@ -71,24 +71,19 @@
                                     <td class="text-center">{{$property->property_type}}</td>
                                     <td class="text-center">{{$property->landlord_name}}</td>
                                     <td class="text-center">{{$property->agent_name}}</td>
-                                    <td class="text-center">{{$property->status}}</td>
+                                    <td class="text-center text-primary">{{$property->status}}</td>
                                     <td class="text-center">
-                                        <a href="{{route('admin.viewProperty',$property->slug)}}" class="ml-1"><i class="fa fa-eye fa-1x text-primary"></i></a>
+                                        <a href="{{route('admin.viewProperty',$property->slug)}}" class="ml-1"><i class="fa fa-eye fa-2x text-primary"></i></a>
                                     </td>
                                     <td>
-                                        <a href="{{route('admin.editProperty',$property->id)}}" class="ml-1"><i class="fa fa-edit fa-1x text-success"></i></a>
+                                        <a href="{{route('admin.editProperty',$property->id)}}" class="ml-1"><i class="fa fa-edit fa-2x text-success"></i></a>
                                     </td>
                                     <td>
-                                        <form action="" method="post">
-                                            <button class="ml-1 btn btn-success btn-sm" onclick="return confirm('You are about to confirm that this property has been sold or rented')">Confirm</button>                                            
-                                            @csrf
-                                            @method('delete')
-                                            
-                                        </form>
+                                        <a href="{{route('admin.confirmProperty',$property->id)}}" class="ml-1 btn btn-success btn-sm" onclick="return confirm('You are about to confirm that this property has been bought or rented')">Confirm</a>                                            
                                     </td>
                                     <td>
                                         <form action="{{route('admin.deleteProperty',$property->id)}}" method="post">
-                                            <button class="ml-1" onclick="return confirm('You are about to delete this property')"><i class="fa fa-trash fa-1x text-danger"></i></button>                                            
+                                            <button class="ml-1" onclick="return confirm('You are about to delete this property')"><i class="fa fa-trash fa-2x text-danger"></i></button>                                            
                                             @csrf
                                             @method('delete')
                                             

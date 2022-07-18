@@ -61,8 +61,8 @@
                                 <td>{{$category->slug}}</td>
                                 <td>{{$category->created_at}}</td>
                                 <td>
-                                    <a href="{{route('admin.editCategory',$category->id)}}"><i class="fa fa-edit fa-1x text-success"></i></a>
-                                    <a href="{{route('admin.deleteCategory', $category->id)}}" onclick="return confirm('You are about to delete this category')" style="margin-left: 10px;"><i class="fa fa-trash fa-1x text-danger"></i></a>
+                                    <a href="{{route('admin.editCategory',$category->id)}}"><i class="fa fa-edit fa-2x text-success"></i></a>
+                                    <a href="{{route('admin.deleteCategory', $category->id)}}" onclick="return confirm('You are about to delete this category')" style="margin-left: 10px;"><i class="fa fa-trash fa-2x text-danger"></i></a>
                                 </td>
                             </tr>
                             @endforeach
