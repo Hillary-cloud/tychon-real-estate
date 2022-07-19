@@ -36,8 +36,15 @@
                         </div>
                         <div class="form-group">
                             <label class="" for="">Price</label>
-                                <input type="text" class="form-control" name="price" value="{{$slide->price}}" placeholder="Price">
+                                <input type="text" class="form-control" name="price" value="{{$slide->price}}">
                                 @error('price')
+                                    <p class="text-danger">{{$message}}</p>
+                                @enderror
+                        </div>
+                        <div class="form-group">
+                            <label class="" for="">Short Description</label>
+                                <input type="text" class="form-control" value="{{$slide->short_description}}" name="short_description">
+                                @error('short_description')
                                     <p class="text-danger">{{$message}}</p>
                                 @enderror
                         </div>

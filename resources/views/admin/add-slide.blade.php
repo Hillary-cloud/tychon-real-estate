@@ -42,6 +42,14 @@
                                 @enderror
                         </div>
                         <div class="form-group">
+                            <label class="" for="">Short Description</label>
+                                <input type="text" class="form-control" name="short_description" placeholder="Short Description">
+                                @error('short_description')
+                                    <p class="text-danger">{{$message}}</p>
+                                @enderror
+                        </div>
+                        
+                        <div class="form-group">
                             <label class="" for="">Property Type</label>
                                 <select name="property_type" class="form-control" id="">
                                     <option value="">--Select Property Type--</option>

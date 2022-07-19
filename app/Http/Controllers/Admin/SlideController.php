@@ -31,6 +31,7 @@ class SlideController extends Controller
             'name' => 'required',
             'slug' => 'required',
             'price' => 'required',
+            'short_description' => 'required',
             'property_type' => 'required',
             'image' => 'required',
             'status' => 'required',
@@ -45,6 +46,7 @@ class SlideController extends Controller
         $slide->slug = Str::slug($request->slug);
         $slide->image = $imageName;
         $slide->price = $request->price;
+        $slide->short_description = $request->short_description;
         $slide->property_type = $request->property_type;
         $slide->status = $request->status;
         $slide->save();
@@ -64,6 +66,7 @@ class SlideController extends Controller
             'name' => 'required',
             'slug' => 'required',
             'price' => 'required',
+            'short_description' => 'required',
             'property_type' => 'required',
             'status' => 'required',
         ]);
@@ -72,6 +75,7 @@ class SlideController extends Controller
             $slide->name = $request->name;
             $slide->slug = Str::slug($request->slug);
             $slide->price = $request->price;
+            $slide->short_description = $request->short_description;
             $slide->property_type = $request->property_type;
             $slide->status = $request->status;
             $image=$request->file('image');
