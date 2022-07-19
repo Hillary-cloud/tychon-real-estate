@@ -4,12 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Slide;
-
+use App\Models\Property;
+use App\Models\Image;
 class HomeController extends Controller
 {
     public function index(){
-        $slides = Slide::all();
-        return view('index',compact('slides'));
+        $slides = Slide::orderBy('created_at', 'DESC')->get();
+        $properties = Property::orderBy('created_at', 'DESC')->paginate(10);
+        return view('index',compact('slides','properties'));
     }
 
     public function about(){
@@ -37,8 +39,10 @@ class HomeController extends Controller
     public function contact(){
         return view('contact');
     }
-    public function propertyDetail(){
-        return view('property-detail');
+    public function propertyDetail($slug){
+        $property = Property::where('slug',$slug)->first();
+        $images = Image::where('property_id',$property->id)->get();
+        return view('property-detail',compact('property','images'));
     }
 
     public function allProperties(){

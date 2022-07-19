@@ -4,9 +4,11 @@
  <!--/ Carousel Star /-->
  <div class="intro intro-carousel">
   <div id="carousel" class="owl-carousel owl-theme">
+
    @foreach ($slides as $slide)
-       
-    <div class="carousel-item-a intro-item bg-image" style="background-image: url(assets/img/slide-3.jpg)">
+       @if ($slide->status == 'Active')
+           
+    <div class="carousel-item-a intro-item bg-image" style="background-image: url(slide_images/{{$slide->image}})">
       <div class="overlay overlay-a"></div>
       <div class="intro-content display-table">
         <div class="table-cell">
@@ -16,11 +18,13 @@
                 <div class="intro-body">
                   {{-- <p class="intro-title-top">Doral, Florida
                     <br> 78345</p> --}}
-                  <h1 class="intro-title mb-4">
-                    <span class="color-b">204 </span> Alira
-                    <br>{{$slide->name}}</h1>
+                  <h1 class="intro-title mb-2">
+                    <span class="color-b">{{$slide->name}} </span>
+                  </h1>
+
+                    <br><h2 class="text-light">{{$slide->short_description}}</h2>
                   <p class="intro-subtitle intro-price">
-                    <a href="#"><span class="price-a">rent | $ 12.000</span></a>
+                    <a href="#"><span class="price-a">{{$slide->property_type}} | $ {{$slide->price}}</span></a>
                   </p>
                 </div>
               </div>
@@ -29,6 +33,7 @@
         </div>
       </div>
     </div>
+    @endif
    @endforeach
   </div>
 </div>
@@ -64,11 +69,6 @@
               nec, egestas non nisi.
             </p>
           </div>
-          <div class="card-footer-c">
-            <a href="#" class="link-c link-icon">Read more
-              <span class="ion-ios-arrow-forward"></span>
-            </a>
-          </div>
         </div>
       </div>
       <div class="col-md-4">
@@ -88,11 +88,6 @@
               nibh pulvinar a.
             </p>
           </div>
-          <div class="card-footer-c">
-            <a href="#" class="link-c link-icon">Read more
-              <span class="ion-ios-arrow-forward"></span>
-            </a>
-          </div>
         </div>
       </div>
       <div class="col-md-4">
@@ -111,11 +106,6 @@
               convallis a pellentesque
               nec, egestas non nisi.
             </p>
-          </div>
-          <div class="card-footer-c">
-            <a href="#" class="link-c link-icon">Read more
-              <span class="ion-ios-arrow-forward"></span>
-            </a>
           </div>
         </div>
       </div>
@@ -142,196 +132,50 @@
       </div>
     </div>
     <div id="property-carousel" class="owl-carousel owl-theme">
+
+      @foreach ($properties as $property)
       <div class="carousel-item-b">
         <div class="card-box-a card-shadow">
           <div class="img-box-a">
-            <img src="assets/img/property-6.jpg" alt="" class="img-a img-fluid">
+            <img src="property_main_images/{{$property->main_image}}" alt="" class="img-a img-fluid">
           </div>
           <div class="card-overlay">
             <div class="card-overlay-a-content">
               <div class="card-header-a">
                 <h2 class="card-title-a">
-                  <a href="{{route('property-detail')}}">206 Mount
-                    <br /> Olive Road Two</a>
+                  <a href="{{route('property-detail',$property->slug)}}">{{ucfirst($property->category->name)}}
+                    <br />{{ucfirst($property->title)}}</a>
                 </h2>
               </div>
               <div class="card-body-a">
                 <div class="price-box d-flex">
-                  <span class="price-a">rent | $ 12.000</span>
+                  <span class="price-a">{{$property->property_type}} | $ {{$property->price}}</span>
                 </div>
-                <a href="{{route('property-detail')}}" class="link-a">Click here to view
-                  <span class="ion-ios-arrow-forward"></span>
-                </a>
-              </div>
-              <div class="card-footer-a">
-                <ul class="card-info d-flex justify-content-around">
-                  
-                  <li>
-                    <h4 class="card-info-title">Beds</h4>
-                    <span>2</span>
-                  </li>
-                  <li>
-                    <h4 class="card-info-title">Baths</h4>
-                    <span>4</span>
-                  </li>
-                  <li>
-                    <h4 class="card-info-title">Garages</h4>
-                    <span>1</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item-b">
-        <div class="card-box-a card-shadow">
-          <div class="img-box-a">
-            <img src="assets/img/property-3.jpg" alt="" class="img-a img-fluid">
-          </div>
-          <div class="card-overlay">
-            <div class="card-overlay-a-content">
-              <div class="card-header-a">
-                <h2 class="card-title-a">
-                  <a href="{{route('property-detail')}}">157 West
-                    <br /> Central Park</a>
-                </h2>
-              </div>
-              <div class="card-body-a">
-                <div class="price-box d-flex">
-                  <span class="price-a">rent | $ 12.000</span>
-                </div>
-                <a href="{{route('property-detail')}}" class="link-a">Click here to view
+                <a href="{{route('property-detail',$property->slug)}}" class="link-a">Click here to view
                   <span class="ion-ios-arrow-forward"></span>
                 </a>
               </div>
               <div class="card-footer-a">
                 <ul class="card-info d-flex justify-content-around">
                   <li>
-                    <h4 class="card-info-title">Area</h4>
-                    <span>340m
-                      <sup>2</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <h4 class="card-info-title">Beds</h4>
-                    <span>2</span>
-                  </li>
-                  <li>
-                    <h4 class="card-info-title">Baths</h4>
-                    <span>4</span>
-                  </li>
-                  <li>
-                    <h4 class="card-info-title">Garages</h4>
-                    <span>1</span>
-                  </li>
+                    <h4 class="card-info-title">Location</h4>
+                    <span>{{ucfirst($property->location->name)}}</span>
+                  </li>  
                 </ul>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="carousel-item-b">
-        <div class="card-box-a card-shadow">
-          <div class="img-box-a">
-            <img src="assets/img/property-7.jpg" alt="" class="img-a img-fluid">
-          </div>
-          <div class="card-overlay">
-            <div class="card-overlay-a-content">
-              <div class="card-header-a">
-                <h2 class="card-title-a">
-                  <a href="{{route('property-detail')}}">245 Azabu
-                    <br /> Nishi Park let</a>
-                </h2>
-              </div>
-              <div class="card-body-a">
-                <div class="price-box d-flex">
-                  <span class="price-a">rent | $ 12.000</span>
-                </div>
-                <a href="{{route('property-detail')}}" class="link-a">Click here to view
-                  <span class="ion-ios-arrow-forward"></span>
-                </a>
-              </div>
-              <div class="card-footer-a">
-                <ul class="card-info d-flex justify-content-around">
-                  <li>
-                    <h4 class="card-info-title">Area</h4>
-                    <span>340m
-                      <sup>2</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <h4 class="card-info-title">Beds</h4>
-                    <span>2</span>
-                  </li>
-                  <li>
-                    <h4 class="card-info-title">Baths</h4>
-                    <span>4</span>
-                  </li>
-                  <li>
-                    <h4 class="card-info-title">Garages</h4>
-                    <span>1</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item-b">
-        <div class="card-box-a card-shadow">
-          <div class="img-box-a">
-            <img src="assets/img/property-10.jpg" alt="" class="img-a img-fluid">
-          </div>
-          <div class="card-overlay">
-            <div class="card-overlay-a-content">
-              <div class="card-header-a">
-                <h2 class="card-title-a">
-                  <a href="{{route('property-detail')}}">204 Montal
-                    <br /> South Bela Two</a>
-                </h2>
-              </div>
-              <div class="card-body-a">
-                <div class="price-box d-flex">
-                  <span class="price-a">rent | $ 12.000</span>
-                </div>
-                <a href="{{route('property-detail')}}" class="link-a">Click here to view
-                  <span class="ion-ios-arrow-forward"></span>
-                </a>
-              </div>
-              <div class="card-footer-a">
-                <ul class="card-info d-flex justify-content-around">
-                  <li>
-                    <h4 class="card-info-title">Area</h4>
-                    <span>340m
-                      <sup>2</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <h4 class="card-info-title">Beds</h4>
-                    <span>2</span>
-                  </li>
-                  <li>
-                    <h4 class="card-info-title">Baths</h4>
-                    <span>4</span>
-                  </li>
-                  <li>
-                    <h4 class="card-info-title">Garages</h4>
-                    <span>1</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      @endforeach
+    
     </div>
   </div>
 </section>
 <!--/ Property End /-->
 
 <!--/ Agents Star /-->
-<section class="section-agents section-t8">
+{{-- <section class="section-agents section-t8">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
@@ -527,7 +371,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> --}}
 <!--/ Agents End /-->
 
 <!--/ News Star /-->
@@ -646,7 +490,7 @@
 <!--/ News End /-->
 
 <!--/ Testimonials Star /-->
-<section class="section-testimonials section-t8 nav-arrow-a">
+{{-- <section class="section-testimonials section-t8 nav-arrow-a">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
@@ -714,7 +558,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> --}}
 <!--/ Testimonials End /-->
 
 

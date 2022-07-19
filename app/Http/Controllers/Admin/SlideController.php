@@ -40,7 +40,7 @@ class SlideController extends Controller
             $slide = new Slide;
             $slide->name = $request->name;
             $file = $request->file('image');
-            $imageName = $slide->name.'-image-'.Carbon::now()->timestamp.'.'. rand(1,1000).'.'.$file->extension();
+            $imageName = Carbon::now()->timestamp.'.'. rand(1,1000).'.'.$file->extension();
             $file->move(public_path('slide_images'),$imageName);
 
         $slide->slug = Str::slug($request->slug);
@@ -81,7 +81,7 @@ class SlideController extends Controller
             $image=$request->file('image');
 
             if ($image) {
-                $imageName = $slide->name.'-image-'.time().'.'.$image->getClientOriginalExtension();
+                $imageName = time().'.'.$image->getClientOriginalExtension();
                 $image->move(public_path('slide_images'), $imageName);
                 $slide->image = $imageName;
             }
