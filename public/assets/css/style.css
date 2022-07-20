@@ -891,6 +891,12 @@ a:hover {
 .intro .carousel-item-a {
   position: relative;
   height: 100vh;
+  min-height: 190px;
+}
+
+.intro .carousel-item-c {
+  position: relative;
+  height: 70vh;
 }
 
 .intro .carousel-item-a.bg-image {
@@ -1098,7 +1104,7 @@ a:hover {
 
 .property-grid .grid-option .custom-select {
   border-radius: 0;
-  width: 200px;
+  width: 110px;
   border-color: #313131;
 }
 

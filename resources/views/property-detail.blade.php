@@ -18,6 +18,9 @@
               <a href="{{route('/')}}">Home</a>
             </li>
             <li class="breadcrumb-item active" aria-current="page">
+              {{$property->category->name}}
+          </li>
+            <li class="breadcrumb-item active" aria-current="page">
                 {{$property->title}}
             </li>
           </ol>
@@ -34,7 +37,7 @@
     <div class="row">
       <div class="col-sm-12">
           <div class="mb-5">
-            <img src="/property_main_images/{{$property->main_image}}" class="mr-auto ml-auto" style="display: block" width="100%" alt="">
+            <img src="/property_main_images/{{$property->main_image}}" class="mr-auto ml-auto" style="display: block" width="70%" alt="">
           </div>
         <div class="row justify-content-between">
           <div class="col-md-5 col-lg-4">
@@ -98,7 +101,7 @@
 
                 @foreach ($images as $image)
                         
-                  <div class="carousel-item-a intro-item bg-image " width="50%" style="background-image: url(property_sub_images/{{$image->image}})">
+                  <div class="carousel-item-c intro-item bg-image" width="50%" style="background-image: url(property_sub_images/{{$image->image}})">
                   </div>
                 @endforeach
                 </div>

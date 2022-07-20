@@ -96,7 +96,7 @@
     
                                         <div class="form-group">
                                             <label class="" for="">Price</label>
-                                                <input type="number" class="form-control" name="price" value="{{$property->price}}">
+                                                <input type="text" class="form-control" name="price" value="{{$property->price}}">
                                                 @error('price')
                                                     <p class="text-danger">{{$message}}</p>
                                                 @enderror

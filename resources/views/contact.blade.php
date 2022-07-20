@@ -28,20 +28,14 @@
 <!--/ Intro Single End /-->
 
 <!--/ Contact Star /-->
+
 <section class="contact">
   <div class="container">
     <div class="row">
-      <div class="col-sm-12">
-        <div class="contact-map box">
-          <div id="map" class="contact-map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.1422937950147!2d-73.98731968482413!3d40.75889497932681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes+Square!5e0!3m2!1ses-419!2sve!4v1510329142834"
-              width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
       <div class="col-sm-12 section-t8">
         <div class="row">
           <div class="col-md-7">
+            <h2>Contact Us</h2>
             <form class="form-a contactForm" action="" method="post" role="form">
               <div id="sendmessage">Your message has been sent. Thank you!</div>
               <div id="errormessage"></div>
@@ -159,34 +153,6 @@
   </div>
 </section>
 <!--/ Contact End /-->
-    <div class="container"> 
-      <span class="pull-right"><a href="#">Home</a> / Contact Us</span>
-      <h2>Contact Us</h2>
-  </div>
   </div>
   <!-- banner -->
-  
-  
-  <div class="container">
-  <div class="spacer">
-  <div class="row contact">
-    <div class="col-lg-6 col-sm-6 ">
-  
-  
-                  <input type="text" class="form-control" placeholder="Full Name">
-                  <input type="text" class="form-control" placeholder="Email Address">
-                  <input type="text" class="form-control" placeholder="Contact Number">
-                  <textarea rows="6" class="form-control" placeholder="Message"></textarea>
-        <button type="submit" class="btn btn-success" name="Submit">Send Message</button>
-            
-  
-  
-                  
-          </div>
-    <div class="col-lg-6 col-sm-6 ">
-    <div class="well"><iframe width="100%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Pulchowk,+Patan,+Central+Region,+Nepal&amp;aq=0&amp;oq=pulch&amp;sll=37.0625,-95.677068&amp;sspn=39.371738,86.572266&amp;ie=UTF8&amp;hq=&amp;hnear=Pulchowk,+Patan+Dhoka,+Patan,+Bagmati,+Central+Region,+Nepal&amp;ll=27.678236,85.316853&amp;spn=0.001347,0.002642&amp;t=m&amp;z=14&amp;output=embed"></iframe></div>
-    </div>
-  </div>
-  </div>
-  </div>
 @endsection

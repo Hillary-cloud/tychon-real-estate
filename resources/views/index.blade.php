@@ -1,13 +1,20 @@
 @extends('layouts.base')
 @section('content')
 
+<style>
+  nav svg{
+      height: 20px;
+  }
+  nav .hidden{
+      display: block !important;
+  }
+</style>
  <!--/ Carousel Star /-->
  <div class="intro intro-carousel">
   <div id="carousel" class="owl-carousel owl-theme">
 
    @foreach ($slides as $slide)
-       @if ($slide->status == 'Active')
-           
+      @if ($slide->status == 'Active')
     <div class="carousel-item-a intro-item bg-image" style="background-image: url(slide_images/{{$slide->image}})">
       <div class="overlay overlay-a"></div>
       <div class="intro-content display-table">
@@ -19,10 +26,10 @@
                   {{-- <p class="intro-title-top">Doral, Florida
                     <br> 78345</p> --}}
                   <h1 class="intro-title mb-2">
-                    <span class="color-b">{{$slide->name}} </span>
+                    <span class="color-b">{{ucfirst($slide->name)}} </span>
                   </h1>
 
-                    <br><h2 class="text-light">{{$slide->short_description}}</h2>
+                    <br><h2 class="text-light">{{ucfirst($slide->short_description)}}</h2>
                   <p class="intro-subtitle intro-price">
                     <a href="#"><span class="price-a">{{$slide->property_type}} | $ {{$slide->price}}</span></a>
                   </p>
@@ -114,19 +121,100 @@
 </section>
 <!--/ Services End /-->
 
+
+
+<section class="property-grid grid mt-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="title-box">
+          <h2 class="title-a">Our Amazing Properties</h2>
+        </div>
+        <div class="grid-option">
+          <form>
+            <select class="custom-select">
+              <option selected>Type</option>
+              <option value="Rent"> Rent</option>
+              <option value="Buy"> Buy</option>
+            </select>
+            <select class="custom-select m-1">
+              <option selected>Location</option>
+              @foreach ($locations as $location)
+                <option value="{{$location->id}}">{{ucfirst($location->name)}}</option>
+              @endforeach 
+            </select>
+            <select class="custom-select m-1">
+              <option selected>Price</option>
+              <option value="1">50,000 - 100,000</option>
+              <option value="2">100,000 - 150,000</option>
+              <option value="3">150,000 - 200,000</option>
+              <option value="4">200,000 and above</option>
+            </select>
+            <select class="custom-select m-1">
+              <option selected>Category</option>
+              @foreach ($categories as $category)
+                  <option value="{{$category->id}}">{{ucfirst($category->name)}}</option>
+              @endforeach
+            </select>
+            <button class="btn btn-success m-1">Find Property</button>
+          </form>
+        </div>
+      </div>
+      @foreach ($properties as $property)
+      <div class="col-md-4">
+        <div class="card-box-b card-shadow ">
+          <div class="img-box-a">
+            <img src="property_main_images/{{$property->main_image}}" alt="" class="img-a img-fluid">
+          </div>
+          <div class="card-overlay">
+            <div class="card-overlay-a-content">
+              <div class="card-header-a">
+                <h2 class="card-title-a">
+                  <a href="{{route('property-detail',$property->slug)}}">{{ucfirst($property->title)}}
+                  
+                    <h5 class="text-light">{{ucfirst($property->category->name)}}</h5>
+                  <h6 class="text-light">{{ucfirst($property->location->name)}}</h6></a>
+                </h2>
+              </div>
+              <div class="card-body-a">
+                <div class="price-box d-flex">
+                  <span class="price-a">{{$property->property_type}} | $ {{$property->price}}</span>
+                </div>
+                <a href="{{route('property-detail',$property->slug)}}" class="link-a">Click here to view
+                  <span class="ion-ios-arrow-forward"></span>
+                </a>
+              </div>
+              <div class="card-footer-a">
+                <ul class="card-info d-flex justify-content-around">
+                  <li>
+                    <h4 class="card-info-title">Category</h4>
+                    <span>{{ucfirst($property->category->name)}}</span>
+                  </li>  
+                  <li>
+                    <h4 class="card-info-title">Location</h4>
+                    <span>{{ucfirst($property->location->name)}}</span>
+                  </li>  
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      @endforeach
+    </div>
+    {{$properties->links()}}
+  </div>
+  
+</section>
+
 <!--/ Property Star /-->
-<section class="section-property section-t8">
+{{-- <section class="section-property section-t8">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
         <div class="title-wrap d-flex justify-content-between">
           <div class="title-box">
             <h2 class="title-a">Latest Properties</h2>
-          </div>
-          <div class="title-link">
-            <a href="{{route('all-properties')}}">All Property
-              <span class="ion-ios-arrow-forward"></span>
-            </a>
           </div>
         </div>
       </div>
@@ -143,8 +231,8 @@
             <div class="card-overlay-a-content">
               <div class="card-header-a">
                 <h2 class="card-title-a">
-                  <a href="{{route('property-detail',$property->slug)}}">{{ucfirst($property->category->name)}}
-                    <br />{{ucfirst($property->title)}}</a>
+                  <a href="{{route('property-detail',$property->slug)}}">{{ucfirst($property->title)}}
+                    <br /> <h5 class="text-light">{{ucfirst($property->location->name)}}</h5></a>
                 </h2>
               </div>
               <div class="card-body-a">
@@ -157,6 +245,10 @@
               </div>
               <div class="card-footer-a">
                 <ul class="card-info d-flex justify-content-around">
+                  <li>
+                    <h4 class="card-info-title">Category</h4>
+                    <span>{{ucfirst($property->category->name)}}</span>
+                  </li>  
                   <li>
                     <h4 class="card-info-title">Location</h4>
                     <span>{{ucfirst($property->location->name)}}</span>
@@ -171,7 +263,7 @@
     
     </div>
   </div>
-</section>
+</section> --}}
 <!--/ Property End /-->
 
 <!--/ Agents Star /-->
@@ -375,7 +467,7 @@
 <!--/ Agents End /-->
 
 <!--/ News Star /-->
-<section class="section-news section-t8">
+{{-- <section class="section-news section-t8">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
@@ -450,7 +542,7 @@
               </div>
               <div class="card-title-b">
                 <h2 class="title-2">
-                  <a href="blog-single.html">Park is comming
+                  <a href="blog-single.html">Park is coming
                     <br> new</a>
                 </h2>
               </div>
@@ -486,7 +578,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> --}}
 <!--/ News End /-->
 
 <!--/ Testimonials Star /-->

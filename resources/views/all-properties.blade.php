@@ -60,7 +60,7 @@
                   <div class="price-box d-flex">
                     <span class="price-a">rent | $ 12.000</span>
                   </div>
-                  <a href="{{route('property-detail')}}" class="link-a">Click here to view
+                  <a href="" class="link-a">Click here to view
                     <span class="ion-ios-arrow-forward"></span>
                   </a>
                 </div>
@@ -107,7 +107,7 @@
                   <div class="price-box d-flex">
                     <span class="price-a">rent | $ 12.000</span>
                   </div>
-                  <a href="{{route('property-detail')}}" class="link-a">Click here to view
+                  <a href="" class="link-a">Click here to view
                     <span class="ion-ios-arrow-forward"></span>
                   </a>
                 </div>
@@ -154,7 +154,7 @@
                   <div class="price-box d-flex">
                     <span class="price-a">rent | $ 12.000</span>
                   </div>
-                  <a href="{{route('property-detail')}}" class="link-a">Click here to view
+                  <a href="" class="link-a">Click here to view
                     <span class="ion-ios-arrow-forward"></span>
                   </a>
                 </div>
@@ -201,7 +201,7 @@
                   <div class="price-box d-flex">
                     <span class="price-a">rent | $ 12.000</span>
                   </div>
-                  <a href="{{route('property-detail')}}" class="link-a">Click here to view
+                  <a href="" class="link-a">Click here to view
                     <span class="ion-ios-arrow-forward"></span>
                   </a>
                 </div>
@@ -248,7 +248,7 @@
                   <div class="price-box d-flex">
                     <span class="price-a">rent | $ 12.000</span>
                   </div>
-                  <a href="{{route('property-detail')}}" class="link-a">Click here to view
+                  <a href="" class="link-a">Click here to view
                     <span class="ion-ios-arrow-forward"></span>
                   </a>
                 </div>
@@ -287,7 +287,7 @@
               <div class="card-overlay-a-content">
                 <div class="card-header-a">
                   <h2 class="card-title-a">
-                    <a href="{{route('property-detail')}}">204 Mount
+                    <a href="">204 Mount
                       <br /> Olive Road Two</a>
                   </h2>
                 </div>
@@ -295,7 +295,7 @@
                   <div class="price-box d-flex">
                     <span class="price-a">rent | $ 12.000</span>
                   </div>
-                  <a href="{{route('property-detail')}}" class="link-a">Click here to view
+                  <a href="" class="link-a">Click here to view
                     <span class="ion-ios-arrow-forward"></span>
                   </a>
                 </div>

@@ -6,12 +6,17 @@ use Illuminate\Http\Request;
 use App\Models\Slide;
 use App\Models\Property;
 use App\Models\Image;
+use App\Models\Location;
+use App\Models\Category;
+
 class HomeController extends Controller
 {
     public function index(){
         $slides = Slide::orderBy('created_at', 'DESC')->get();
-        $properties = Property::orderBy('created_at', 'DESC')->paginate(10);
-        return view('index',compact('slides','properties'));
+        $properties = Property::orderBy('created_at', 'DESC')->paginate(6);
+        $locations = Location::all();
+        $categories = Category::all();
+        return view('index',compact('slides','properties','locations','categories'));
     }
 
     public function about(){

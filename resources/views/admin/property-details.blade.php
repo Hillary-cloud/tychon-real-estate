@@ -22,6 +22,9 @@
               <a href="{{route('admin.properties')}}">Properties</a>
             </li>
             <li class="breadcrumb-item active" aria-current="page">
+              {{$property->category->name}}
+          </li>
+            <li class="breadcrumb-item active" aria-current="page">
                 {{$property->title}}
             </li>
           </ol>

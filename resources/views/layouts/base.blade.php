@@ -36,7 +36,7 @@
 
 <body>
 
-  <div class="click-closed"></div>
+  {{-- <div class="click-closed"></div>
   <!--/ Form Search Star /-->
   <div class="box-collapse">
     <div class="title-box-d">
@@ -56,10 +56,9 @@
             <div class="form-group">
               <label for="Type">Type</label>
               <select class="form-control form-control-lg form-control-a" id="Type">
-                <option>All Type</option>
-                <option>For Rent</option>
-                <option>For Sale</option>
-                <option>Open House</option>
+                <option selected>Type</option>
+                <option value="Rent"> Rent</option>
+                <option value="Buy"> Buy</option>
               </select>
             </div>
           </div>
@@ -127,7 +126,7 @@
         </div>
       </form>
     </div>
-  </div>
+  </div> --}}
   <!--/ Form Search End /-->
 
   <!--/ Nav Star /-->
@@ -152,7 +151,7 @@
           <li class="nav-item">
             <a class="nav-link {{Request::is('about') ? 'active':''}}" href="{{route('about')}}">About</a>
           </li>
-          <li class="nav-item">
+          {{-- <li class="nav-item">
             <a class="nav-link {{Request::is('agent') ? 'active':''}}" href="{{route('agent')}}">Agent</a>
           </li>
           <li class="nav-item">
@@ -168,7 +167,7 @@
               <a class="dropdown-item" href="{{route('rent')}}">Rent Property</a>
               <a class="dropdown-item" href="{{route('all-properties')}}">All Properties</a>
             </div>
-          </li>
+          </li> --}}
           <li class="nav-item">
             <a class="nav-link {{Request::is('contact') ? 'active':''}}" href="{{route('contact')}}">Contact</a>
           </li>
@@ -224,10 +223,10 @@
 
         </ul>
       </div>
-      <button type="button" class="btn btn-b-n navbar-toggle-box-collapse d-none d-md-block" data-toggle="collapse"
+      {{-- <button type="button" class="btn btn-b-n navbar-toggle-box-collapse d-none d-md-block" data-toggle="collapse"
         data-target="#navbarTogglerDemo01" aria-expanded="false">
         <span class="fa fa-search" aria-hidden="true"></span>
-      </button>
+      </button> --}}
     </div>
   </nav>
   <!--/ Nav End /-->
