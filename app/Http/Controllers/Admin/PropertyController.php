@@ -15,17 +15,18 @@ use Illuminate\Support\Str;
 class PropertyController extends Controller
 {
     public function index(Request $request){
-        $properties = Property::
-        where('title', 'like', '%'.$request->input('query').'%')
-        ->orWhere('price', 'like', '%'.$request->input('query').'%')
-        ->orWhere('location_id', 'like', '%'.$request->input('query').'%')
-        ->orWhere('category_id', 'like', '%'.$request->input('query').'%')
-        ->orWhere('property_type', 'like', '%'.$request->input('query').'%')
-        ->orWhere('landlord_name', 'like', '%'.$request->input('query').'%')
-        ->orWhere('agent_name', 'like', '%'.$request->input('query').'%')
-        ->orWhere('status', 'like', '%'.$request->input('query').'%')
-        ->orWhere('created_at', 'like', '%'.$request->input('query').'%')
-        ->orderBy('created_at', 'DESC')->paginate(10);
+        $properties = Property::join('categories','categories.id', '=' , 'properties.category_id')
+        ->join('locations','locations.id', '=' , 'properties.location_id')
+        ->where('properties.title', 'like', '%'.$request->input('query').'%')
+        ->orWhere('properties.price', 'like', '%'.$request->input('query').'%')
+        ->orWhere('locations.name', 'like', '%'.$request->input('query').'%')
+        ->orWhere('categories.name', 'like', '%'.$request->input('query').'%')
+        ->orWhere('properties.property_type', 'like', '%'.$request->input('query').'%')
+        ->orWhere('properties.landlord_name', 'like', '%'.$request->input('query').'%')
+        ->orWhere('properties.agent_name', 'like', '%'.$request->input('query').'%')
+        ->orWhere('properties.status', 'like', '%'.$request->input('query').'%')
+        ->orWhere('properties.created_at', 'like', '%'.$request->input('query').'%')
+        ->orderBy('properties.created_at', 'DESC')->paginate(10);
         return view('admin.property',compact('properties'));
     }
 

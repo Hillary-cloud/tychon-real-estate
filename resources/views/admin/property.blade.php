@@ -41,7 +41,7 @@
                         
                             @else
                         <div class="table-responsive ">
-                            <table class="table table-striped table-hover table-bordered">
+                            <table class="table table-striped table-hover table-bordered" align="center">
                                 <thead>
                                     <tr>
                                         <th class="text-center ">Image</th>
