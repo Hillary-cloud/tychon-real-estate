@@ -36,7 +36,7 @@
                         </div>
                         <div class="form-group">
                             <label class="" for="">Price</label>
-                                <input type="text" class="form-control" name="price" value="{{$slide->price}}">
+                                <input type="number" class="form-control" name="price" value="{{$slide->price}}">
                                 @error('price')
                                     <p class="text-danger">{{$message}}</p>
                                 @enderror

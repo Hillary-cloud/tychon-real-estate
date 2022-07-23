@@ -41,17 +41,20 @@
     <div class="row">
       <div class="col-sm-12">
           <div class="mb-5">
-            <img src="/property_main_images/{{$property->main_image}}" class="mr-auto ml-auto" style="display: block" width="50%" alt="">
+            <div class="container">
+              <div class="carousel-item-c " id="main" style="background-image: url(property_main_images/{{$property->main_image}})">
+              </div>
+            </div>
           </div>
         <div class="row justify-content-between">
           <div class="col-md-5 col-lg-4">
             <div class="property-price d-flex justify-content-center foo">
               <div class="card-header-c d-flex">
                 <div class="card-box-ico">
-                  <span class="ion-money">$</span>
+                  <span class="ion-money">&#8358</span>
                 </div>
                 <div class="card-title-c align-self-center">
-                  <h5 class="title-c">{{$property->price}}</h5>
+                  <h5 class="title-c">{{number_format($property->price)}}</h5>
                 </div>
               </div>
             </div>
@@ -133,7 +136,7 @@
               <p class="description color-text-a">
                 {{ucfirst($property->description)}}
               </p>
-              <h3 class="mt-5"><strong>Sub Images</strong></h3>
+              <h3 class="mt-5"><strong>More Photos</strong></h3>
               @foreach ($images as $image)
               <img src="/property_sub_images/{{$image->image}}" width="200px" alt="">
              @endforeach

@@ -15,7 +15,34 @@
 
         <!-- Validation Errors -->
         <x-auth-validation-errors class="mb-4" :errors="$errors" />
+        <div class="container" style=" display: flex; margin-top: 5%; align-items: center; flex-direction: column;">
+            <div class="row">
+                <div class="card">
+                    <div class="card-body">
+                        <form action="{{route('login')}}" method="POST">
+                            @csrf
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" class="form-control m-2" :value="old('email')" required autofocus >
+                            <label for="password">Password</label>
+                            <input id="password" class="form-control m-2"
+                            type="password"
+                            name="password"
+                            required autocomplete="current-password" />
+                            <label for="remember_me">Remember me</label>
+                            <input type="checkbox" name="remember" class="form-control mt-2">
+                            @if (Route::has('password.request'))
+                            <a class="btn btn-primary" href="{{ route('password.request') }}">
+                                {{ __('Forgot your password?') }}
+                            </a>
+                            @endif
+                            <button class="btn btn-success" type="submit">Login</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+{{-- 
         <form method="POST" action="{{ route('login') }}">
             @csrf
 
@@ -55,7 +82,8 @@
                     {{ __('Log in') }}
                 </x-button>
             </div>
-        </form>
+         
+        </form> --}}
     </x-auth-card>
 </x-guest-layout>
 @endsection

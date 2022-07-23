@@ -65,7 +65,7 @@
                                 <td><img src="/slide_images/{{$slide->image}}" alt="" width="100px"></td>
                                 <td>{{$slide->name}}</td>
                                 <td>{{$slide->slug}}</td>
-                                <td>{{$slide->price}}</td>
+                                <td>&#8358 {{number_format($slide->price)}}</td>
                                 <td>{{$slide->short_description}}</td>
                                 <td>{{$slide->property_type}}</td>
                                 <td>{{$slide->status}}</td>

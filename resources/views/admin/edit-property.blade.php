@@ -23,7 +23,7 @@
                                 <div class="form-group">
                                     <label class="" for=""><h3><strong>Main image</strong></h3></label>
             
-                                        <img src="/property_main_images/{{$property->main_image}}" alt="" style="display: block" width="50%" class="mt-2 img-responsive">
+                                        <img src="/property_main_images/{{$property->main_image}}" alt="" style="display: block" width="70%" class="mt-2 img-responsive">
                                         {{-- <form action="{{route('admin.deleteMainImage',$property->id)}}" method="POST"  >
                                             <button class="btn btn-danger btn-sm mt-1">Delete</button>
                                             @csrf
@@ -96,7 +96,7 @@
     
                                         <div class="form-group">
                                             <label class="" for="">Price</label>
-                                                <input type="text" class="form-control" name="price" value="{{$property->price}}">
+                                                <input type="number" class="form-control" name="price" value="{{$property->price}}">
                                                 @error('price')
                                                     <p class="text-danger">{{$message}}</p>
                                                 @enderror

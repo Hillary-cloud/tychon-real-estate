@@ -139,10 +139,10 @@
         <span></span>
       </button>
       <a class="navbar-brand text-brand" href="{{route('/')}}"><img src="assets/img/logo.png" alt=""></a>
-      <button type="button" class="btn btn-link nav-search navbar-toggle-box-collapse d-md-none" data-toggle="collapse"
+      {{-- <button type="button" class="btn btn-link nav-search navbar-toggle-box-collapse d-md-none" data-toggle="collapse"
         data-target="#navbarTogglerDemo01" aria-expanded="false">
         <span class="fa fa-search" aria-hidden="true"></span>
-      </button>
+      </button> --}}
       <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
         <ul class="navbar-nav">
           <li class="nav-item">
@@ -150,6 +150,9 @@
           </li>
           <li class="nav-item">
             <a class="nav-link {{Request::is('about') ? 'active':''}}" href="{{route('about')}}">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {{Request::is('all-properties') ? 'active':''}}" href="{{route('all-properties')}}">Properties</a>
           </li>
           {{-- <li class="nav-item">
             <a class="nav-link {{Request::is('agent') ? 'active':''}}" href="{{route('agent')}}">Agent</a>
@@ -233,6 +236,12 @@
 
 
 @yield("content")
+
+<div class="whatsapp-chat">
+  <a href="https://wa.me/+2348147078588?text=I'm%20interested%20in%20your%20car%20for%20sale" target="_blank">
+    <img src="{{asset('assets/img/whatsapp.png')}}" width="80px" height="80px" class="m-2" alt="">
+  </a>
+</div>
 
 
  <!--/ footer Star /-->
@@ -400,6 +409,8 @@
 <div id="preloader"></div>
 
 <!-- JavaScript Libraries -->
+{{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> --}}
+
 <script src="assets/lib/jquery/jquery.min.js"></script>
 <script src="assets/lib/jquery/jquery-migrate.min.js"></script>
 <script src="assets/lib/popper/popper.min.js"></script>
@@ -412,6 +423,20 @@
 
 <!-- Template Main Javascript File -->
 <script src="assets/js/main.js"></script>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/62d88afb37898912e95ed4d7/1g8ettqqm';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  <!--End of Tawk.to Script-->
+  
 
 </body>
 </html>

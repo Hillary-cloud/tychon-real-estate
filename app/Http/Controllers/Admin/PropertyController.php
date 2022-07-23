@@ -15,8 +15,9 @@ use Illuminate\Support\Str;
 class PropertyController extends Controller
 {
     public function index(Request $request){
-        $properties = Property::join('categories','categories.id', '=' , 'properties.category_id')
-        ->join('locations','locations.id', '=' , 'properties.location_id')
+        $properties = Property::
+        join('categories','categories.id', '=' , 'properties.category_id')->select('properties.*','categories.name')
+        ->join('locations','locations.id', '=' , 'properties.location_id')->select('properties.*','locations.name')
         ->where('properties.title', 'like', '%'.$request->input('query').'%')
         ->orWhere('properties.price', 'like', '%'.$request->input('query').'%')
         ->orWhere('locations.name', 'like', '%'.$request->input('query').'%')
@@ -203,7 +204,7 @@ class PropertyController extends Controller
             $property->status = 'Rented';
         }
         $property->save();
-        return redirect()->back();
+        return redirect()->back()->with('message','This property has been bought or rented out');
     }
 
 

@@ -20,7 +20,7 @@
                         <div class="col-md-6">
                             <form action="{{route('admin.properties')}}" method="GET">
                                 @csrf
-                                <input type="text" name="query" value="" class="form-control" placeholder="Search here...">
+                                    <input type="text" name="query" value="" class="form-control" placeholder="Search here...">
                                 <button type="submit" class="btn btn-default">Search</button>
                             </form>
                             <a href="{{route('admin.addProperty')}}" class="pull-right btn btn-primary">Add Property</a>
@@ -65,7 +65,7 @@
                                 <tr>
                                     <td class="text-center"><img src="/property_main_images/{{$property->main_image}}" width="50px" class="img-responsive" alt=""></td>
                                     <td class="text-center">{{$property->title}}</td>
-                                    <td class="text-center">{{$property->price}}</td>
+                                    <td class="text-center">&#8358 {{number_format($property->price)}}</td>
                                     <td class="text-center">{{$property->location->name}}</td>
                                     <td class="text-center">{{$property->category->name}}</td>
                                     <td class="text-center">{{$property->property_type}}</td>
@@ -79,10 +79,15 @@
                                         <a href="{{route('admin.editProperty',$property->id)}}" class="ml-1"><i class="fa fa-edit fa-2x text-success"></i></a>
                                     </td>
                                     <td>
-                                        @if ($property->status == 'Bought' || $property->status == 'Rented')
-                                            <p class="text-warning">Confirmed</p>
+                                        @if ($property->status == 'Not Bought' || $property->status == 'Not Rented')
+                                        <form action="{{route('admin.confirmProperty',$property->id)}}" method="GET">
+                                            <button class="ml-1 btn btn-sm btn-success" onclick="return confirm('You are about to confirm that this property has been bought or rented')">Confirm</button>                                            
+                                            @csrf
+                                            
+                                        </form>
+                                            
                                         @else
-                                            <a href="{{route('admin.confirmProperty',$property->id)}}" class="ml-1 btn btn-success btn-sm" onclick="return confirm('You are about to confirm that this property has been bought or rented')">Confirm</a>           
+                                        <p class="text-warning">Confirmed</p>
                                         @endif                                 
                                     </td>
                                     <td>
@@ -107,5 +112,4 @@
        </div>
    </div>
 </div>
-
 @endsection

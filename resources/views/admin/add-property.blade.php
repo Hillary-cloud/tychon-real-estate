@@ -68,7 +68,7 @@
 
                                     <div class="form-group">
                                         <label class="" for="">Price</label>
-                                            <input type="text" class="form-control" name="price" value="{{old('price')}}" placeholder="Enter Price">
+                                            <input type="number" class="form-control" name="price" value="{{old('price')}}" placeholder="Enter Price">
                                             @error('price')
                                                 <p class="text-danger">{{$message}}</p>
                                             @enderror

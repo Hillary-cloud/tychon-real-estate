@@ -36,7 +36,7 @@
                         </div>
                         <div class="form-group">
                             <label class="" for="">Price</label>
-                                <input type="text" class="form-control" name="price" placeholder="Price">
+                                <input type="number" class="form-control" name="price" placeholder="Price">
                                 @error('price')
                                     <p class="text-danger">{{$message}}</p>
                                 @enderror

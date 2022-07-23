@@ -13,6 +13,12 @@ body {
   font-family: 'Poppins', sans-serif;
   color: #555555;
 }
+.whatsapp-chat{
+  bottom: 10px;
+  left: 10px;
+  position: fixed;
+  z-index: 5;
+}
 
 h1,
 h2,
@@ -860,7 +866,7 @@ a:hover {
 ======================================*/
 
 .intro {
-  height: 100vh;
+  /* height: 100vh; */
   position: relative;
   color: #ffffff;
 }
@@ -888,15 +894,29 @@ a:hover {
   padding-top: 2rem;
 }
 
-.intro .carousel-item-a {
-  position: relative;
-  height: 100vh;
-  min-height: 190px;
+#main {
+  height: 500px;
+  background-position: center center;
+  background-size: cover;
 }
+#slide1 {
+  height: 600px;
+  position: relative;
+  background-position: center center;
+  background-size: cover;
+} 
+
+/* .intro .carousel-item-a {
+
+ position: relative;
+ height: 70vh;
+
+} */
 
 .intro .carousel-item-c {
-  position: relative;
-  height: 70vh;
+  height: 400px;
+  background-position: center center;
+  background-size: cover;
 }
 
 .intro .carousel-item-a.bg-image {
@@ -1973,6 +1993,7 @@ footer .credits {
   .text-brand {
     font-size: 1.8rem;
   }
+  
 
   .section-t8 {
     padding-top: 4rem;
@@ -2025,6 +2046,7 @@ footer .credits {
 @media (max-width: 575px) {
   .box-collapse .title-box-d {
     left: 35px;
+    
   }
 
   .box-collapse .title-box-d .title-d {

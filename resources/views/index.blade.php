@@ -14,24 +14,24 @@
   <div id="carousel" class="owl-carousel owl-theme">
 
    @foreach ($slides as $slide)
-      @if ($slide->status == 'Active')
-    <div class="carousel-item-a intro-item bg-image" style="background-image: url(slide_images/{{$slide->image}})">
-      <div class="overlay overlay-a"></div>
+    <div class="carousel-item-a intro-item bg-image"  id="slide1" style="background-image: url(slide_images/{{$slide->image}})">
+      <div class="overlay overlay-a">
+ 
+      </div>
       <div class="intro-content display-table">
         <div class="table-cell">
           <div class="container">
             <div class="row">
               <div class="col-lg-8">
                 <div class="intro-body">
-                  {{-- <p class="intro-title-top">Doral, Florida
-                    <br> 78345</p> --}}
+                 
                   <h1 class="intro-title mb-2">
                     <span class="color-b">{{ucfirst($slide->name)}} </span>
                   </h1>
 
                     <br><h2 class="text-light">{{ucfirst($slide->short_description)}}</h2>
                   <p class="intro-subtitle intro-price">
-                    <a href="#"><span class="price-a">{{$slide->property_type}} | $ {{$slide->price}}</span></a>
+                    <a href="#"><span class="price-a">{{$slide->property_type}} | &#8358 {{number_format($slide->price)}}</span></a>
                   </p>
                 </div>
               </div>
@@ -40,11 +40,44 @@
         </div>
       </div>
     </div>
-    @endif
    @endforeach
   </div>
 </div>
 <!--/ Carousel end /-->
+
+<div class="container" style=" display: flex; margin-top: 3%; align-items: center; flex-direction: column;" >
+  <h2 class="title-a">Search Properties</h2>
+  <div class="grid-option" >
+    <form action="{{route('all-properties')}}" method="GET">
+      @csrf
+      <select name="type" class="custom-select m-1">
+        <option selected>Property Type</option>
+        <option value="Rent"> Rent</option>
+        <option value="Buy"> Buy</option>
+      </select>
+      <select name="locate" class="custom-select m-1">
+        <option selected>Location</option>
+        @foreach ($locations as $location)
+          <option value="{{$location->id}}">{{ucfirst($location->name)}}</option>
+        @endforeach 
+      </select>
+      <select class="custom-select m-1">
+        <option selected>Price Range</option>
+        <option value="1">&#8358 50,000 - &#8358 100,000</option>
+        <option value="2">&#8358 100,000 - &#8358 150,000</option>
+        <option value="3">&#8358 150,000 - &#8358 200,000</option>
+        <option value="4">&#8358 200,000 and above</option>
+      </select>
+      <select class="custom-select m-1">
+        <option selected>Category</option>
+        @foreach ($categories as $category)
+            <option value="{{$category->id}}">{{ucfirst($category->name)}}</option>
+        @endforeach
+      </select>
+      <button class="btn btn-success m-1">Find Property</button>
+    </form>
+  </div>
+</div>
 
 <!--/ Services Star /-->
 <section class="section-services section-t8">
@@ -123,42 +156,14 @@
 
 
 
-<section class="property-grid grid mt-4">
+{{-- <section class="property-grid grid mt-4">
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
         <div class="title-box">
           <h2 class="title-a">Our Amazing Properties</h2>
         </div>
-        <div class="grid-option">
-          <form>
-            <select class="custom-select">
-              <option selected>Type</option>
-              <option value="Rent"> Rent</option>
-              <option value="Buy"> Buy</option>
-            </select>
-            <select class="custom-select m-1">
-              <option selected>Location</option>
-              @foreach ($locations as $location)
-                <option value="{{$location->id}}">{{ucfirst($location->name)}}</option>
-              @endforeach 
-            </select>
-            <select class="custom-select m-1">
-              <option selected>Price</option>
-              <option value="1">50,000 - 100,000</option>
-              <option value="2">100,000 - 150,000</option>
-              <option value="3">150,000 - 200,000</option>
-              <option value="4">200,000 and above</option>
-            </select>
-            <select class="custom-select m-1">
-              <option selected>Category</option>
-              @foreach ($categories as $category)
-                  <option value="{{$category->id}}">{{ucfirst($category->name)}}</option>
-              @endforeach
-            </select>
-            <button class="btn btn-success m-1">Find Property</button>
-          </form>
-        </div>
+       
       </div>
       @foreach ($properties as $property)
       <div class="col-md-4">
@@ -205,16 +210,21 @@
     {{$properties->links()}}
   </div>
   
-</section>
+</section> --}}
 
 <!--/ Property Star /-->
-{{-- <section class="section-property section-t8">
+<section class="section-property section-t8">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
         <div class="title-wrap d-flex justify-content-between">
           <div class="title-box">
-            <h2 class="title-a">Latest Properties</h2>
+            <h2 class="title-a">Featured Properties</h2>
+          </div>
+          <div class="title-link mt-3">
+            <a href="{{route('all-properties')}}">All Property
+              <span class="ion-ios-arrow-forward"></span>
+            </a>
           </div>
         </div>
       </div>
@@ -237,7 +247,7 @@
               </div>
               <div class="card-body-a">
                 <div class="price-box d-flex">
-                  <span class="price-a">{{$property->property_type}} | $ {{$property->price}}</span>
+                  <span class="price-a">{{$property->property_type}} | &#8358 {{number_format($property->price)}}</span>
                 </div>
                 <a href="{{route('property-detail',$property->slug)}}" class="link-a">Click here to view
                   <span class="ion-ios-arrow-forward"></span>
@@ -263,7 +273,7 @@
     
     </div>
   </div>
-</section> --}}
+</section>
 <!--/ Property End /-->
 
 <!--/ Agents Star /-->

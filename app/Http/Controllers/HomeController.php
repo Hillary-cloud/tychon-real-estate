@@ -8,12 +8,13 @@ use App\Models\Property;
 use App\Models\Image;
 use App\Models\Location;
 use App\Models\Category;
+// use Request;
 
 class HomeController extends Controller
 {
     public function index(){
-        $slides = Slide::orderBy('created_at', 'DESC')->get();
-        $properties = Property::orderBy('created_at', 'DESC')->paginate(6);
+        $slides = Slide::where('status','Active')->orderBy('created_at', 'DESC')->get();
+        $properties = Property::where('status','Not Bought')->orWhere('status','Not Rented')->orderBy('created_at', 'DESC')->paginate(6);
         $locations = Location::all();
         $categories = Category::all();
         return view('index',compact('slides','properties','locations','categories'));
@@ -51,7 +52,15 @@ class HomeController extends Controller
     }
 
     public function allProperties(){
-        return view('all-properties');
+        if(request()->get('sort') == 'price_asc'){
+            $properties = Property::where('status','Not Bought')->orWhere('status','Not Rented')->orderBy('price','ASC')->paginate(9);
+        }elseif (request()->get('sort') == 'price_desc') {
+            $properties = Property::where('status','Not Bought')->orWhere('status','Not Rented')->orderBy('price','DESC')->paginate(9);
+        }else{
+            $properties = Property::where('status','Not Bought')->orWhere('status','Not Rented')->paginate(9);
+        }
+        
+        return view('all-properties',compact('properties'));
     }
     
 }
