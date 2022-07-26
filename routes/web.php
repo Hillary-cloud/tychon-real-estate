@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\LocationController;
 use App\Http\Controllers\Admin\PropertyController;
 use App\Http\Controllers\Admin\SlideController;
+use App\Http\Controllers\Admin\PriceRangeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -74,6 +75,14 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/admin/slide/edit/{id}', [SlideController::class, 'editSlide'])->name('admin.editSlide');
     Route::put('/admin/slide/edit/{id}', [SlideController::class, 'updateSlide'])->name('admin.updateSlide');
     Route::get('/admin/slide/delete/{id}', [SlideController::class, 'deleteSlide'])->name('admin.deleteSlide');
+
+    Route::get('/admin/price-range', [PriceRangeController::class, 'index'])->name('admin.priceRange');
+    Route::get('/admin/price-range/add', [PriceRangeController::class, 'create'])->name('admin.addPriceRange');
+    Route::post('/admin/price-range/add', [PriceRangeController::class, 'storePriceRange'])->name('admin.storePriceRange');
+    Route::get('/admin/price-range/edit/{id}', [PriceRangeController::class, 'editPriceRange'])->name('admin.editPriceRange');
+    Route::put('/admin/price-range/edit/{id}', [PriceRangeController::class, 'updatePriceRange'])->name('admin.updatePriceRange');
+    Route::get('/admin/price-range/delete/{id}', [PriceRangeController::class, 'deletePriceRange'])->name('admin.deletePriceRange');
+
 });
 
 

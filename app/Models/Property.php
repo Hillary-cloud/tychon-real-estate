@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Category;
 use App\Models\Location;
+use App\Models\PriceRange;
+
 
 class Property extends Model
 {
@@ -17,5 +19,8 @@ class Property extends Model
     }
     public function location(){
         return $this->belongsTo(Location::class, 'location_id');
+    }
+    public function price_range(){
+        return $this->belongsTo(priceRange::class, 'price_range_id');
     }
 }

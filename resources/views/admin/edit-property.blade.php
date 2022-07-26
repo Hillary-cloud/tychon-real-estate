@@ -101,6 +101,20 @@
                                                     <p class="text-danger">{{$message}}</p>
                                                 @enderror
                                         </div>
+
+                                        
+                                        <div class="form-group">
+                                            <label class="" for="">Price Range</label>
+                                            <select name="price_range_id" class="form-control" id="">
+                                                <option value="{{$property->price_range_id}}">{{ucfirst($property->price_range->price_range)}}</option>
+                                                @foreach ($price_ranges as $price_range)
+                                                    <option value="{{$price_range->id}}">{{ucfirst($price_range->price_range)}}</option>
+                                                @endforeach
+                                            </select>
+                                                @error('price_range_id')
+                                                    <p class="text-danger">{{$message}}</p>
+                                                @enderror
+                                        </div>
     
                                         <div class="form-group">
                                             <label class="" for="">Category</label>

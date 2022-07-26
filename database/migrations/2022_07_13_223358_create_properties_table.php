@@ -5,6 +5,7 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 use App\Models\Location;
 use App\Models\Category;
+use App\Models\PriceRange;
 
 return new class extends Migration
 {
@@ -23,6 +24,7 @@ return new class extends Migration
             $table->foreignIdFor(Location::class);
             $table->string('address')->nullable();
             $table->string('price');
+            $table->foreignIdFor(PriceRange::class);
             $table->foreignIdFor(Category::class);
             $table->string('property_type');
             $table->string('status');

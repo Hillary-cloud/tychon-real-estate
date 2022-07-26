@@ -185,6 +185,7 @@
                   <a class="dropdown-item" href="{{route('admin.locations')}}">Locations</a>
                   <a class="dropdown-item" href="{{route('admin.properties')}}">Properties</a>
                   <a class="dropdown-item" href="{{route('admin.slides')}}">Slides</a>
+                  <a class="dropdown-item" href="{{route('admin.priceRange')}}">Price Range</a>
                   <form method="POST" action="{{ route('logout') }}">
                     @csrf
   

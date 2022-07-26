@@ -34,11 +34,44 @@
   </section>
   <!--/ Intro Single End /-->
 
+  
+
   <!--/ Property Grid Star /-->
   <section class="property-grid grid">
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
+          <div class="grid-option">
+          
+            <form action="{{route('all-properties')}}" method="GET">
+              @csrf
+              <select name="property_type" class="custom-select m-1">
+                <option selected>Property Type</option>
+                <option value="Rent"> Rent</option>
+                <option value="Buy"> Buy</option>
+              </select>
+              <select name="location" class="custom-select m-1">
+                <option selected>Location</option>
+                @foreach ($locations as $location)
+                  <option value="{{$location->id}}">{{ucfirst($location->name)}}</option>
+                @endforeach 
+              </select>
+              <select name="price_range" class="custom-select m-1">
+                <option selected>Price Range(&#8358)</option>
+                @foreach ($price_ranges as $price_range)
+                <option value="{{$price_range->id}}">{{$price_range->price_range}}</option>
+                @endforeach
+              </select>
+              <select name="category" class="custom-select m-1">
+                <option selected>Category</option>
+                @foreach ($categories as $category)
+                    <option value="{{$category->id}}">{{ucfirst($category->name)}}</option>
+                @endforeach
+              </select>
+              <button class="btn btn-success m-1">Find Property</button>
+            </form>
+          </div>
+
           <div class="grip-option pull-right" >
             <li class="nav-item dropdown" style="list-style: none">
               <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"> Sort By</a>
@@ -51,7 +84,7 @@
           </div>
         </div>
         @foreach ($properties as $property)
-        <div class="col-md-4">
+        <div class="col-md-4 col-sm-6">
           <div class="card-box-a card-shadow">
             <div class="img-box-a">
               <img src="property_main_images/{{$property->main_image}}" alt="" class="img-a img-fluid">

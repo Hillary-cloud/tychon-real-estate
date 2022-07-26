@@ -75,8 +75,21 @@
                                     </div>
 
                                     <div class="form-group">
+                                        <label class="" for="">Price Range</label>
+                                        <select name="price_range_id" value="{{old('price_range_id')}}" class="form-control" id="">
+                                            <option value="">--Select Price Range--</option>
+                                            @foreach ($price_ranges as $price_range)
+                                                <option value="{{$price_range->id}}">{{ucfirst($price_range->price_range)}}</option>
+                                            @endforeach
+                                        </select>
+                                            @error('price_range_id')
+                                                <p class="text-danger">{{$message}}</p>
+                                            @enderror
+                                    </div>
+
+                                    <div class="form-group">
                                         <label class="" for="">Category</label>
-                                        <select name="category_id" lue="{{old('category_id')}}" class="form-control" id="">
+                                        <select name="category_id" value="{{old('category_id')}}" class="form-control" id="">
                                             <option value="">--Select Category--</option>
                                             @foreach ($categories as $category)
                                                 <option value="{{$category->id}}">{{ucfirst($category->name)}}</option>

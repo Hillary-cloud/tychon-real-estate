@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Location;
 use App\Models\Category;
 use App\Models\Property;
+use App\Models\PriceRange;
 use Carbon\Carbon;
 use App\Models\Image;
 use Illuminate\Support\Facades\File;
@@ -34,7 +35,8 @@ class PropertyController extends Controller
     public function create(){
         $locations = Location::all();
         $categories = Category::all();
-        return view('admin.add-property',compact('locations','categories'));
+        $price_ranges = PriceRange::all();
+        return view('admin.add-property',compact('locations','categories','price_ranges'));
     }
 
     public function storeProperty(Request $request)
@@ -45,6 +47,7 @@ class PropertyController extends Controller
           'description' => 'required',
           'location_id' => 'required',
           'price' => 'required',
+          'price_range_id' => 'required',
           'category_id' => 'required',
           'property_type' => 'required',
           'main_image' => 'required',
@@ -62,6 +65,7 @@ class PropertyController extends Controller
             $property->location_id = $request->location_id;
             $property->address = $request->address;
             $property->price = $request->price;
+            $property->price_range_id = $request->price_range_id;
             $property->category_id = $request->category_id;
             $property->property_type = $request->property_type;
             $property->landlord_name = $request->landlord_name;
@@ -121,8 +125,9 @@ class PropertyController extends Controller
         $property = Property::find($id);
         $locations = Location::all();
         $categories = Category::all();
+        $price_ranges = PriceRange::all();
         $images = Image::where('property_id',$property->id)->get();
-        return view('admin.edit-property', compact('property','locations','categories','images'));
+        return view('admin.edit-property', compact('property','locations','categories','price_ranges','images'));
     }
 
     public function updateProperty(Request $request, $id)
@@ -154,6 +159,7 @@ class PropertyController extends Controller
             'location_id'=>$request->location_id,
             'address'=>$request->address,
             'price'=>$request->price,
+            'price_range_id'=>$request->price_range_id,
             'category_id'=>$request->category_id,
             'property_type'=>$request->property_type,
             'landlord_name'=>$request->landlord_name,

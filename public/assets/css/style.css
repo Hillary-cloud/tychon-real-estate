@@ -1118,13 +1118,13 @@ a:hover {
 /*------/ Property Grid /-----*/
 
 .property-grid .grid-option {
-  text-align: right;
+  text-align: center;
   margin-bottom: 2rem;
 }
 
 .property-grid .grid-option .custom-select {
   border-radius: 0;
-  width: 110px;
+  width: 157px;
   border-color: #313131;
 }
 

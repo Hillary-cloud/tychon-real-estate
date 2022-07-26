@@ -8,6 +8,7 @@ use App\Models\Property;
 use App\Models\Image;
 use App\Models\Location;
 use App\Models\Category;
+use App\Models\PriceRange;
 // use Request;
 
 class HomeController extends Controller
@@ -17,7 +18,8 @@ class HomeController extends Controller
         $properties = Property::where('status','Not Bought')->orWhere('status','Not Rented')->orderBy('created_at', 'DESC')->paginate(6);
         $locations = Location::all();
         $categories = Category::all();
-        return view('index',compact('slides','properties','locations','categories'));
+        $price_ranges = PriceRange::all();
+        return view('index',compact('slides','properties','locations','categories','price_ranges'));
     }
 
     public function about(){
@@ -51,16 +53,23 @@ class HomeController extends Controller
         return view('property-detail',compact('property','images'));
     }
 
-    public function allProperties(){
+    public function allProperties(Request $request){
         if(request()->get('sort') == 'price_asc'){
-            $properties = Property::where('status','Not Bought')->orWhere('status','Not Rented')->orderBy('price','ASC')->paginate(9);
+            $properties = Property::where('status','Not Bought')->orWhere('status','Not Rented')->orderBy('price','ASC')->paginate(15);
         }elseif (request()->get('sort') == 'price_desc') {
-            $properties = Property::where('status','Not Bought')->orWhere('status','Not Rented')->orderBy('price','DESC')->paginate(9);
+            $properties = Property::where('status','Not Bought')->orWhere('status','Not Rented')->orderBy('price','DESC')->paginate(15);
         }else{
-            $properties = Property::where('status','Not Bought')->orWhere('status','Not Rented')->paginate(9);
-        }
+            $properties = Property::where('status','Not Bought')->orWhere('status','Not Rented')->paginate(15);
+        };
+        if ($request->has('property_type') || $request->has('location') || $request->has('category') || $request->has('price_range')) {
+            $properties = Property::where('property_type',$request->property_type)
+            ->orWhere('location_id',$request->location)->orWhere('category_id',$request->category)->orWhere('price_range_id',$request->price_range)->paginate(15);
+        };
+        $locations = Location::all();
+        $categories = Category::all();
+        $price_ranges = PriceRange::all();
         
-        return view('all-properties',compact('properties'));
+        return view('all-properties',compact('properties','locations','categories','price_ranges'));
     }
     
 }

@@ -47,28 +47,27 @@
 
 <div class="container" style=" display: flex; margin-top: 3%; align-items: center; flex-direction: column;" >
   <h2 class="title-a">Search Properties</h2>
-  <div class="grid-option" >
+  <div class="grid-option">
     <form action="{{route('all-properties')}}" method="GET">
       @csrf
-      <select name="type" class="custom-select m-1">
+      <select name="property_type" class="custom-select m-1">
         <option selected>Property Type</option>
         <option value="Rent"> Rent</option>
         <option value="Buy"> Buy</option>
       </select>
-      <select name="locate" class="custom-select m-1">
+      <select name="location" class="custom-select m-1">
         <option selected>Location</option>
         @foreach ($locations as $location)
           <option value="{{$location->id}}">{{ucfirst($location->name)}}</option>
         @endforeach 
       </select>
-      <select class="custom-select m-1">
-        <option selected>Price Range</option>
-        <option value="1">&#8358 50,000 - &#8358 100,000</option>
-        <option value="2">&#8358 100,000 - &#8358 150,000</option>
-        <option value="3">&#8358 150,000 - &#8358 200,000</option>
-        <option value="4">&#8358 200,000 and above</option>
+      <select name="price_range" class="custom-select m-1">
+        <option selected>Price Range(&#8358)</option>
+        @foreach ($price_ranges as $price_range)
+        <option value="{{$price_range->id}}">{{$price_range->price_range}}</option>
+        @endforeach
       </select>
-      <select class="custom-select m-1">
+      <select name="category" class="custom-select m-1">
         <option selected>Category</option>
         @foreach ($categories as $category)
             <option value="{{$category->id}}">{{ucfirst($category->name)}}</option>
