@@ -7,11 +7,13 @@
 
         <title>{{ config('app.name', 'Laravel') }}</title>
 
+        <link rel="stylesheet" href="{{asset('build/assets/app.b00e971d.css')}}">
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
+        <script src="{{asset('build/assets/app.a1dd5ee6.js')}}"></script>
 
         <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+        {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">
