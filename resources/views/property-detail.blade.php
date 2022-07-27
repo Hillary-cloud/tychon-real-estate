@@ -40,8 +40,7 @@
             <div class="container">
               <div class="carousel-item-c " id="main" style="background-image: url(property_main_images/{{$property->main_image}})">
               </div>
-            </div>
-            
+            </div>           
           </div>
         <div class="row justify-content-between">
           <div class="col-md-5 col-lg-4">
@@ -102,15 +101,13 @@
                <!--/ Carousel Star /-->
               <div class="intro intro-carousel">
                 <div id="carousel" class="owl-carousel owl-theme">
-
                 @foreach ($images as $image)
                         
-                  <div class="carousel-item-c intro-item bg-image" id="slide1" width="100%" style="background-image: url(property_sub_images/{{$image->image}})">
+                  <div class="carousel-item-c intro-item bg-image" id="" width="100%" style="background-image: url(property_sub_images/{{$image->image}})">
                   </div>
                 @endforeach
                 </div>
               </div>
-<!--/ Carousel end /-->
             </div>
           </div>
         </div>

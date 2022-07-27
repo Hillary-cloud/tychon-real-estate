@@ -915,6 +915,7 @@ a:hover {
 
 .intro .carousel-item-c {
   height: 400px;
+  position: relative;
   background-position: center center;
   background-size: cover;
 }
