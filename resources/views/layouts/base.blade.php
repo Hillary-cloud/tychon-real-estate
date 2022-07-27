@@ -18,6 +18,7 @@
   <link href="assets/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Libraries CSS Files -->
+  <link rel="stylesheet" href="{{asset('build/assets/app.b00e971d.css')}}">
   <link href="assets/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <link href="assets/lib/animate/animate.min.css" rel="stylesheet">
   <link href="assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
@@ -404,6 +405,8 @@
 
 <!-- JavaScript Libraries -->
 {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> --}}
+
+<script src="{{asset('build/assets/app.a1dd5ee6.js')}}"></script>
 
 <script src="assets/lib/jquery/jquery.min.js"></script>
 <script src="assets/lib/jquery/jquery-migrate.min.js"></script>
