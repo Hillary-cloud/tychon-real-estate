@@ -105,7 +105,7 @@
 
                 @foreach ($images as $image)
                         
-                  <div class="carousel-item-c intro-item bg-image" width="100%" style="background-image: url(property_sub_images/{{$image->image}})">
+                  <div class="carousel-item-c intro-item bg-image" id="slide1" width="100%" style="background-image: url(property_sub_images/{{$image->image}})">
                   </div>
                 @endforeach
                 </div>
