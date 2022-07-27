@@ -7,7 +7,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <div class="row">
-                        <div class="col-md-6"><h4><b>Edit Property</b></h4></div>
+                        <div class="col-md-6"><h2><b>Edit Property</b></h2></div>
                         <div class="col-md-6"><a class="pull-right" href="{{route('admin.properties')}}">All Properties</a></div>
                     </div>
                 </div><hr class="text-dark">
@@ -19,11 +19,11 @@
                     @endif
                     <div class="container">
                         <div class="row">
-                            <div class="col-4">
+                            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                                 <div class="form-group">
-                                    <label class="" for=""><h3><strong>Main image</strong></h3></label>
+                                    <label class="" for=""><h3><strong>Cover Photo</strong></h3></label>
             
-                                        <img src="/property_main_images/{{$property->main_image}}" alt="" style="display: block" width="70%" class="mt-2 img-responsive">
+                                        <img src="/property_main_images/{{$property->main_image}}" alt="" style="display: block" width="100%" class="mt-2 img-responsive">
                                         {{-- <form action="{{route('admin.deleteMainImage',$property->id)}}" method="POST"  >
                                             <button class="btn btn-danger btn-sm mt-1">Delete</button>
                                             @csrf
@@ -33,10 +33,10 @@
                                 <hr class="text-dark">
 
                                 <div class="form-group">
-                                    <label class="" for=""><h3><strong>Sub-images</strong></h3></label><br>
+                                    <label class="" for=""><h3><strong>More Photos</strong></h3></label><br>
         
                                         @foreach ($images as $image)
-                                            <img src="/property_sub_images/{{$image->image}}" width="50%" class="img-responsive mt-2" alt="">
+                                            <img src="/property_sub_images/{{$image->image}}" width="100%" class="img-responsive mt-2" alt="">
                                             <form action="{{route('admin.deleteSubImage',$image->id)}}" method="POST"  >
                                                 <button class="btn btn-danger btn-sm mt-1">Delete</button>
                                                 @csrf

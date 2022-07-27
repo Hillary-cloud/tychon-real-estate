@@ -161,7 +161,7 @@
       <div class="col-md-12">
         <div class="title-wrap d-flex justify-content-between">
           <div class="title-box">
-            <h2 class="title-a">Featured Properties</h2>
+            <h4 class="title-a">Featured Properties</h4>
           </div>
           <div class="title-link mt-3">
             <a href="{{route('all-properties')}}">Properties

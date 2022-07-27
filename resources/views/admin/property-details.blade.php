@@ -77,7 +77,7 @@
                     <span>{{$property->slug}}</span>
                   </li>
                   <li class="d-flex justify-content-between">
-                    <strong>Price Range:</strong>
+                    <strong>Price Range(&#8358):</strong>
                     <span>{{$property->price_range->price_range}}</span>
                   </li>
                   <li class="d-flex justify-content-between">

@@ -46,7 +46,7 @@
                                     <tr>
                                         <th class="text-center ">Image</th>
                                         <th class="text-center">Title</th>
-                                        <th class="text-center">Price</th>
+                                        <th class="text-center">Price(&#8358)</th>
                                         <th class="text-center">Location</th>
                                         <th class="text-center">Category</th>
                                         <th class="text-center">Property Type</th>
@@ -65,7 +65,7 @@
                                 <tr>
                                     <td class="text-center"><img src="/property_main_images/{{$property->main_image}}" width="50px" class="img-responsive" alt=""></td>
                                     <td class="text-center">{{$property->title}}</td>
-                                    <td class="text-center">&#8358 {{number_format($property->price)}}</td>
+                                    <td class="text-center">{{number_format($property->price)}}</td>
                                     <td class="text-center">{{$property->location->name}}</td>
                                     <td class="text-center">{{$property->category->name}}</td>
                                     <td class="text-center">{{$property->property_type}}</td>
