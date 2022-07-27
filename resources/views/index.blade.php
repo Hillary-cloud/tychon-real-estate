@@ -44,39 +44,40 @@
   </div>
 </div>
 <!--/ Carousel end /-->
-
-<div class="container" style=" display: flex; margin-top: 3%; align-items: center; flex-direction: column;" >
-  <h2 class="title-a">Search Properties</h2>
-  <div class="grid-option">
-    <form action="{{route('all-properties')}}" method="GET">
-      @csrf
-      <select name="property_type" class="custom-select m-1">
-        <option selected>Property Type</option>
-        <option value="Rent"> Rent</option>
-        <option value="Buy"> Buy</option>
-      </select>
-      <select name="location" class="custom-select m-1">
-        <option selected>Location</option>
-        @foreach ($locations as $location)
-          <option value="{{$location->id}}">{{ucfirst($location->name)}}</option>
-        @endforeach 
-      </select>
-      <select name="price_range" class="custom-select m-1">
-        <option selected>Price Range(&#8358)</option>
-        @foreach ($price_ranges as $price_range)
-        <option value="{{$price_range->id}}">{{$price_range->price_range}}</option>
-        @endforeach
-      </select>
-      <select name="category" class="custom-select m-1">
-        <option selected>Category</option>
-        @foreach ($categories as $category)
-            <option value="{{$category->id}}">{{ucfirst($category->name)}}</option>
-        @endforeach
-      </select>
-      <button class="btn btn-success m-1">Find Property</button>
-    </form>
+<section class="property-grid grid">
+  <div class="container mt-5" >
+    <h2 class="text-center"><strong>Search Properties</strong></h2>
+    <div class="grid-option">
+      <form action="{{route('all-properties')}}" method="GET">
+        @csrf
+        <select name="property_type" class="custom-select m-1">
+          <option selected>Property Type</option>
+          <option value="Rent"> Rent</option>
+          <option value="Buy"> Buy</option>
+        </select>
+        <select name="location" class="custom-select m-1">
+          <option selected>Location</option>
+          @foreach ($locations as $location)
+            <option value="{{$location->id}}">{{ucfirst($location->name)}}</option>
+          @endforeach 
+        </select>
+        <select name="price_range" class="custom-select m-1">
+          <option selected>Price Range(&#8358)</option>
+          @foreach ($price_ranges as $price_range)
+          <option value="{{$price_range->id}}">{{$price_range->price_range}}</option>
+          @endforeach
+        </select>
+        <select name="category" class="custom-select m-1">
+          <option selected>Category</option>
+          @foreach ($categories as $category)
+              <option value="{{$category->id}}">{{ucfirst($category->name)}}</option>
+          @endforeach
+        </select>
+        <button class="btn btn-success ml-1">Search</button>
+      </form>
+    </div>
   </div>
-</div>
+</section>
 
 <!--/ Services Star /-->
 <section class="section-services section-t8">
@@ -153,64 +154,6 @@
 </section>
 <!--/ Services End /-->
 
-
-
-{{-- <section class="property-grid grid mt-4">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="title-box">
-          <h2 class="title-a">Our Amazing Properties</h2>
-        </div>
-       
-      </div>
-      @foreach ($properties as $property)
-      <div class="col-md-4">
-        <div class="card-box-b card-shadow ">
-          <div class="img-box-a">
-            <img src="property_main_images/{{$property->main_image}}" alt="" class="img-a img-fluid">
-          </div>
-          <div class="card-overlay">
-            <div class="card-overlay-a-content">
-              <div class="card-header-a">
-                <h2 class="card-title-a">
-                  <a href="{{route('property-detail',$property->slug)}}">{{ucfirst($property->title)}}
-                  
-                    <h5 class="text-light">{{ucfirst($property->category->name)}}</h5>
-                  <h6 class="text-light">{{ucfirst($property->location->name)}}</h6></a>
-                </h2>
-              </div>
-              <div class="card-body-a">
-                <div class="price-box d-flex">
-                  <span class="price-a">{{$property->property_type}} | $ {{$property->price}}</span>
-                </div>
-                <a href="{{route('property-detail',$property->slug)}}" class="link-a">Click here to view
-                  <span class="ion-ios-arrow-forward"></span>
-                </a>
-              </div>
-              <div class="card-footer-a">
-                <ul class="card-info d-flex justify-content-around">
-                  <li>
-                    <h4 class="card-info-title">Category</h4>
-                    <span>{{ucfirst($property->category->name)}}</span>
-                  </li>  
-                  <li>
-                    <h4 class="card-info-title">Location</h4>
-                    <span>{{ucfirst($property->location->name)}}</span>
-                  </li>  
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      @endforeach
-    </div>
-    {{$properties->links()}}
-  </div>
-  
-</section> --}}
-
 <!--/ Property Star /-->
 <section class="section-property section-t8">
   <div class="container">
@@ -221,7 +164,7 @@
             <h2 class="title-a">Featured Properties</h2>
           </div>
           <div class="title-link mt-3">
-            <a href="{{route('all-properties')}}">All Property
+            <a href="{{route('all-properties')}}">Properties
               <span class="ion-ios-arrow-forward"></span>
             </a>
           </div>

@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>EstateAgency Bootstrap Template</title>
+  <title>Tychon Real Estate Limited</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  {{-- <link href="assets/img/favicon.png" rel="icon"> --}}
+  {{-- <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> --}}
 
   <!-- Google Fonts -->
   <link href="assets/https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
@@ -25,13 +25,6 @@
 
   <!-- Main Stylesheet File -->
   <link href="assets/css/style.css" rel="stylesheet">
-
-  <!-- =======================================================
-    Theme Name: EstateAgency
-    Theme URL: https://bootstrapmade.com/real-estate-agency-bootstrap-template/
-    Author: BootstrapMade.com
-    License: https://bootstrapmade.com/license/
-  ======================================================= -->
 </head>
 
 <body>
@@ -171,9 +164,9 @@
               <a class="dropdown-item" href="{{route('all-properties')}}">All Properties</a>
             </div>
           </li> --}}
-          <li class="nav-item">
+          {{-- <li class="nav-item">
             <a class="nav-link {{Request::is('contact') ? 'active':''}}" href="{{route('contact')}}">Contact</a>
-          </li>
+          </li> --}}
           @if (Route::has('login'))
           @auth
            @if (Auth::user()->user_type === 'ADM')

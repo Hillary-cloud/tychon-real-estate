@@ -21,7 +21,7 @@
           <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
             <ol class="breadcrumb">
               <li class="breadcrumb-item">
-                <a href="#">Home</a>
+                <a href="{{route('/')}}">Home</a>
               </li>
               <li class="breadcrumb-item active" aria-current="page">
                 Properties
@@ -68,7 +68,7 @@
                     <option value="{{$category->id}}">{{ucfirst($category->name)}}</option>
                 @endforeach
               </select>
-              <button class="btn btn-success m-1">Find Property</button>
+              <button class="btn btn-success m-1">Search</button>
             </form>
           </div>
 
@@ -84,6 +84,8 @@
           </div>
         </div>
         @foreach ($properties as $property)
+        @if ($property->status == 'Not Bought' || $property->status == 'Not Rented')
+            
         <div class="col-md-4 col-sm-6">
           <div class="card-box-a card-shadow">
             <div class="img-box-a">
@@ -121,6 +123,7 @@
             </div>
           </div>
         </div>
+        @endif
         @endforeach
       </div>
       {{$properties->links()}}

@@ -37,7 +37,7 @@
             <img src="assets/img/slide-about-1.jpg" alt="" class="img-fluid">
           </div>
           <div class="sinse-box">
-            <h3 class="sinse-title">EstateAgency
+            <h3 class="sinse-title">Tychon Real Estate Limited
               <span></span>
               <br> Sinse 2017</h3>
             <p>Art & Creative</p>
@@ -50,7 +50,7 @@
             </div>
             <div class="col-lg-2  d-none d-lg-block">
               <div class="title-vertical d-flex justify-content-start">
-                <span>EstateAgency Exclusive Property</span>
+                <span>Tychon Real Estate Limited</span>
               </div>
             </div>
             <div class="col-md-6 col-lg-5 section-md-t3">

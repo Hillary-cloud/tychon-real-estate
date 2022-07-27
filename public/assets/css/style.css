@@ -236,7 +236,7 @@ a:hover {
 /*------/ Space Padding /------*/
 
 .section-t8 {
-  padding-top: 8rem;
+  padding-top: 4rem;
 }
 
 .section-t4 {
@@ -1119,7 +1119,7 @@ a:hover {
 
 .property-grid .grid-option {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 0;
 }
 
 .property-grid .grid-option .custom-select {
