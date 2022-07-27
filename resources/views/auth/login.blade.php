@@ -15,7 +15,7 @@
 
         <!-- Validation Errors -->
         <x-auth-validation-errors class="mb-4" :errors="$errors" />
-        <div class="container" style=" display: flex; margin-top: 5%; align-items: center; flex-direction: column;">
+        {{-- <div class="container" style=" display: flex; margin-top: 5%; align-items: center; flex-direction: column;">
             <div class="row">
                 <div class="card">
                     <div class="card-body">
@@ -40,9 +40,9 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
 
-{{-- 
+
         <form method="POST" action="{{ route('login') }}">
             @csrf
 
@@ -83,7 +83,7 @@
                 </x-button>
             </div>
          
-        </form> --}}
+        </form>
     </x-auth-card>
 </x-guest-layout>
 @endsection
