@@ -6,12 +6,14 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>{{ config('app.name', 'Laravel') }}</title>
+        <link rel="stylesheet" href="{{asset('build/assets/app.b00e971d.css')}}">
 
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
 
         <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+        <script src="{{asset('build/assets/app.a1dd5ee6.js')}}"></script>
+        {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
     </head>
     <body>
         <div class="font-sans text-gray-900 antialiased">
