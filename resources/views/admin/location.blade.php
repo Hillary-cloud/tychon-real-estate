@@ -17,14 +17,18 @@
                 <div class="panel-heading">
                     <div class="row">
                         <div class="col-md-6">All Locations</div>
-                        <div class="col-md-6">
-                            <form action="{{route('admin.locations')}}" method="GET">
-                                @csrf
-                                <input type="text" name="query" class="form-control" placeholder="Search here...">
-                                <button type="submit" class="btn btn-default">Search</button>
-                            </form>
-                            <a href="{{route('admin.addLocation')}}" class="pull-right btn btn-primary">Add Location</a>
+                        <div class="container">
+                            <div class="col-md-6 mt-5">
+                                <form action="{{route('admin.locations')}}" method="GET">
+                                    @csrf
+                                    <input type="text" name="query" class="form-control" placeholder="Search here...">
+                                    <button type="submit" class="btn btn-success"><i class="fa fa-search"></i></button>
+                                </form>
+                            </div>
+                                <a href="{{route('admin.addLocation')}}" class="pull-right btn btn-primary">Add Location</a>
+                            
                         </div>
+                        
                     </div>
                 </div>
                     <div class="panel-body">

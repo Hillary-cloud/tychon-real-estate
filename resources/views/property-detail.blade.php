@@ -103,8 +103,7 @@
                 <div id="carousel" class="owl-carousel owl-theme">
                 @foreach ($images as $image)
                         
-                  <div class="carousel-item-c intro-item bg-image" id="" width="100%" style="background-image: url(property_sub_images/{{$image->image}})">
-                  </div>
+                  <p class="carousel-item-c intro-item bg-image" id="" width="100%" style="background-image: url(property_sub_images/{{$image->image}})"></p>
                 @endforeach
                 </div>
               </div>
