@@ -99,13 +99,24 @@
               </p>
               <h3 class="mt-5"><strong>More Photos</strong></h3>
                <!--/ Carousel Star /-->
-              <div class="intro intro-carousel">
+              {{-- <div class="intro intro-carousel">
                 <div id="carousel" class="owl-carousel owl-theme">
                 @foreach ($images as $image)
                         
                   <p class="carousel-item-c intro-item bg-image" id="" width="100%" style="background-image: url(property_sub_images/{{$image->image}})"></p>
                 @endforeach
                 </div>
+              </div> --}}
+              <div id="property-carousel" class="owl-carousel owl-theme">
+                @foreach ($images as $image)
+                <div class="carousel-item-b">
+                  <div class="card-box-a card-shadow">
+                    <div class="img-box-a">
+                      <img src="property_sub_images/{{$image->image}}" alt="" class="img-a img-fluid">
+                    </div>
+                  </div>
+                </div>
+                @endforeach
               </div>
             </div>
           </div>

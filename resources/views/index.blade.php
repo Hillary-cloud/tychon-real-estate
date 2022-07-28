@@ -172,7 +172,6 @@
       </div>
     </div>
     <div id="property-carousel" class="owl-carousel owl-theme">
-
       @foreach ($properties as $property)
       <div class="carousel-item-b">
         <div class="card-box-a card-shadow">
