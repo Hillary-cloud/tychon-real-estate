@@ -141,9 +141,20 @@
                 {{ucfirst($property->description)}}
               </p>
               <h3 class="mt-5"><strong>More Photos</strong></h3>
-              @foreach ($images as $image)
+              {{-- @foreach ($images as $image)
               <img src="/property_sub_images/{{$image->image}}" width="200px" alt="">
-             @endforeach
+             @endforeach --}}
+             <div id="property-carousel" class="owl-carousel owl-theme">
+              @foreach ($images as $image)
+              <div class="carousel-item-b">
+                <div class="card-box-a card-shadow">
+                  <div class="img-box-a">
+                    <img src="property_sub_images/{{$image->image}}" alt="" class="img-a img-fluid">
+                  </div>
+                </div>
+              </div>
+              @endforeach
+            </div>
             </div>
           </div>
         </div>
