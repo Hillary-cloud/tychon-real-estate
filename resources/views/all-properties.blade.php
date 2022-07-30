@@ -72,6 +72,13 @@
             </form>
           </div>
 
+          @if ($properties->isNotEmpty())
+          {{-- @if (request()->get('property_type'))
+            <p>{{request()->get('property_type')}}</p>
+          @elseif (request()->get('location.id'))
+          <p>{{request()->get('location.name')}}</p>
+          @endif
+   --}}
           <div class="grip-option pull-right" >
             <li class="nav-item dropdown" style="list-style: none">
               <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"> Sort By</a>
@@ -83,6 +90,7 @@
             </li>
           </div>
         </div>
+       
         @foreach ($properties as $property)
         @if ($property->status == 'Not Bought' || $property->status == 'Not Rented')
             
@@ -125,6 +133,13 @@
         </div>
         @endif
         @endforeach
+        @else
+        <div class="container">
+          <div>
+            <p class="text-danger text-center">No Property found</p>
+          </div>
+        </div>
+        @endif
       </div>
       {{$properties->links()}}
 

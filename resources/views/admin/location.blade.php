@@ -25,12 +25,15 @@
                                     <button type="submit" class="btn btn-success"><i class="fa fa-search"></i></button>
                                 </form>
                             </div>
+                            <div class="container">
                                 <a href="{{route('admin.addLocation')}}" class="pull-right btn btn-primary">Add Location</a>
+                            </div>
                             
                         </div>
                         
                     </div>
                 </div>
+                <div class="container">
                     <div class="panel-body">
                         @if (session('message'))
                             <div class="alert alert-success">
@@ -39,19 +42,20 @@
                         @endif
                         @php
                         use App\Models\Location;
-                    @endphp
+                        @endphp
                         @if (Location::count() < 1)
                             <p class="text-danger text-center">No Location found</p>
                         
                             @else
-                        <table class="table table-striped table-hover">
+                        <table class="table table-striped table-bordered table-hover">
                             <thead>
                                 <tr>
                                     <th>Id</th>
                                     <th>Location Name</th>
                                     <th>Slug</th>
                                     <th>Date Created</th>
-                                    <th>Action</th>
+                                    <th>Edit</th>
+                                    <th>Delete</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -66,6 +70,8 @@
                                 <td>{{$location->created_at}}</td>
                                 <td>
                                     <a href="{{route('admin.editLocation',$location->id)}}"><i class="fa fa-edit fa-2x text-success"></i></a>
+                                </td>
+                                <td>
                                     <a href="{{route('admin.deleteLocation', $location->id)}}" onclick="return confirm('You are about to delete this location')" style="margin-left: 10px;"><i class="fa fa-trash fa-2x text-danger"></i></a>
                                 </td>
                             </tr>
@@ -75,6 +81,8 @@
                         @endif
                         {{$locations->links()}}
                     </div>
+                </div>
+                    
                 </div>
             </div>
        </div>

@@ -25,8 +25,10 @@
                                     <button type="submit" class="btn btn-success"><i class="fa fa-search"></i></button>
                                 </form>
                             </div>
+                            <div class="container">
+                                <a href="{{route('admin.addProperty')}}" class="pull-right btn btn-primary">Add Property</a>
+                            </div>
                         
-                            <a href="{{route('admin.addProperty')}}" class="pull-right btn btn-primary">Add Property</a>
                         </div>
                     </div>
                 </div>
@@ -46,6 +48,8 @@
                             @else
                            
                                 <div class="table-responsive ">
+                                    @if ($properties->isNotEmpty())
+                                    
                                     <table class="table table-striped table-hover table-bordered" align="center">
                                         <thead>
                                             <tr>
@@ -65,7 +69,7 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                        
+                                    
                                         @foreach ($properties as $property)
                                         <tr>
                                             <td class="text-center"><img src="/property_main_images/{{$property->main_image}}" width="50px" class="img-responsive" alt=""></td>
@@ -105,6 +109,11 @@
                                             </td>
                                         </tr>
                                         @endforeach
+                                        @else
+                                        <div>
+                                            <p class="text-danger text-center">No Property found</p>
+                                        </div>
+                                        @endif
                                         </tbody>
                                     </table>
                                 </div> 

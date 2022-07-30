@@ -13,6 +13,10 @@ body {
   font-family: 'Poppins', sans-serif;
   color: #555555;
 }
+.card {
+  background-color: rgba(89, 226, 112, 0.5);
+
+}
 .whatsapp-chat{
   bottom: 10px;
   left: 10px;
@@ -1125,7 +1129,7 @@ a:hover {
 
 .property-grid .grid-option .custom-select {
   border-radius: 0;
-  width: 157px;
+  width: 240px;
   border-color: #313131;
 }
 
