@@ -28,7 +28,7 @@ class PropertyController extends Controller
         ->orWhere('properties.agent_name', 'like', '%'.$request->input('query').'%')
         ->orWhere('properties.status', 'like', '%'.$request->input('query').'%')
         ->orWhere('properties.created_at', 'like', '%'.$request->input('query').'%')
-        ->orderBy('properties.created_at', 'DESC')->paginate(10);
+        ->orderBy('properties.created_at', 'DESC')->paginate(20);
         return view('admin.property',compact('properties'));
     }
 

@@ -3,7 +3,7 @@
 @section('content')
 
     <x-guest-layout>
-        <div class="container" style=" display: flex; align-items: center; margin-top: 100px; flex-direction: column;">
+        <div class="container" style=" display: flex; align-items: center; margin-top: 130px; flex-direction: column;">
         <x-auth-card>
             <x-slot name="logo">
                 <a href="/">

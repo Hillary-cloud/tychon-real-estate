@@ -233,7 +233,7 @@
 @yield("content")
 
 <div class="whatsapp-chat">
-  <a href="https://wa.me/+2348147078588?text=I'm%20interested%20in%20your%20car%20for%20sale" target="_blank">
+  <a href="https://wa.me/+2348147078588?text=I'm%20interested%20in%20your%20property%20for%20sale" target="_blank">
     <img src="{{asset('assets/img/whatsapp.png')}}" width="80px" height="80px" class="m-2" alt="">
   </a>
 </div>
@@ -250,38 +250,29 @@
           </div>
           <div class="w-body-a">
             <p class="w-text-a color-text-a">
-              Enim minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip exea commodo consequat duis
-              sed aute irure.
+              Tychon Real Estate Limited (TREL) is a real estate company built out of the necessity of providing mankind with the best of real estate services and properties all across the country.
             </p>
-          </div>
-          <div class="w-footer-a">
-            <ul class="list-unstyled">
-              <li class="color-a">
-                <span class="color-text-a">Phone .</span> contact@example.com</li>
-              <li class="color-a">
-                <span class="color-text-a">Email .</span> +54 356 945234</li>
-            </ul>
           </div>
         </div>
       </div>
       <div class="col-sm-12 col-md-4 section-md-t3">
         <div class="widget-a">
           <div class="w-header-a">
-            <h3 class="w-title-a text-brand">The Company</h3>
+            <h3 class="w-title-a text-brand">Quick Links</h3>
           </div>
           <div class="w-body-a">
             <div class="w-body-a">
               <ul class="list-unstyled">
                 <li class="item-list-a">
-                  <i class="fa fa-angle-right"></i> <a href="#">Site Map</a>
+                  <i class="fa fa-angle-right"></i> <a href="{{route('/')}}">Home</a>
                 </li>
                 <li class="item-list-a">
-                  <i class="fa fa-angle-right"></i> <a href="#">Legal</a>
+                  <i class="fa fa-angle-right"></i> <a href="{{route('about')}}">About</a>
                 </li>
                 <li class="item-list-a">
-                  <i class="fa fa-angle-right"></i> <a href="#">Agent Admin</a>
+                  <i class="fa fa-angle-right"></i> <a href="{{route('all-properties')}}">Properties</a>
                 </li>
-                <li class="item-list-a">
+                {{-- <li class="item-list-a">
                   <i class="fa fa-angle-right"></i> <a href="#">Careers</a>
                 </li>
                 <li class="item-list-a">
@@ -289,7 +280,7 @@
                 </li>
                 <li class="item-list-a">
                   <i class="fa fa-angle-right"></i> <a href="#">Privacy Policy</a>
-                </li>
+                </li> --}}
               </ul>
             </div>
           </div>
@@ -298,28 +289,16 @@
       <div class="col-sm-12 col-md-4 section-md-t3">
         <div class="widget-a">
           <div class="w-header-a">
-            <h3 class="w-title-a text-brand">International sites</h3>
+            <h3 class="w-title-a text-brand">Contact Us</h3>
           </div>
-          <div class="w-body-a">
+          <div class="w-footer-a">
             <ul class="list-unstyled">
-              <li class="item-list-a">
-                <i class="fa fa-angle-right"></i> <a href="#">Venezuela</a>
-              </li>
-              <li class="item-list-a">
-                <i class="fa fa-angle-right"></i> <a href="#">China</a>
-              </li>
-              <li class="item-list-a">
-                <i class="fa fa-angle-right"></i> <a href="#">Hong Kong</a>
-              </li>
-              <li class="item-list-a">
-                <i class="fa fa-angle-right"></i> <a href="#">Argentina</a>
-              </li>
-              <li class="item-list-a">
-                <i class="fa fa-angle-right"></i> <a href="#">Singapore</a>
-              </li>
-              <li class="item-list-a">
-                <i class="fa fa-angle-right"></i> <a href="#">Philippines</a>
-              </li>
+              <li class="color-a">
+                <span class="color-text-a">Address :</span> No.10 Obollo Road, Nsukka Local Government Area, Enugu State.</li>
+              <li class="color-a">
+                <span class="color-text-a">Phone :</span> +234 (0) 8115920875</li>
+              <li class="color-a">
+                <span class="color-text-a">Email :</span> Tychonrealestatelimited@gmail.com</li>
             </ul>
           </div>
         </div>
@@ -331,7 +310,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <nav class="nav-footer">
+        {{-- <nav class="nav-footer">
           <ul class="list-inline">
             <li class="list-inline-item">
               <a href="#">Home</a>
@@ -349,7 +328,7 @@
               <a href="#">Contact</a>
             </li>
           </ul>
-        </nav>
+        </nav> --}}
         <div class="socials-a">
           <ul class="list-inline">
             <li class="list-inline-item">
@@ -382,7 +361,7 @@
         <div class="copyright-footer">
           <p class="copyright color-text-a">
             &copy; Copyright
-            <span class="color-a">EstateAgency</span> All Rights Reserved.
+            <span class="color-a">2022.</span> All Rights Reserved.
           </p>
         </div>
         <div class="credits">
