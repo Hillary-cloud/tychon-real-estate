@@ -63,7 +63,7 @@
                             <div class="form-group">
                                 <label class="" for="">Choose Slide Image</label>
                                     <input type="file" class="form-control" accept="image/*" name="image">
-                                    <img src="/slide_images/{{$slide->image}}" width="25%" class="mt-2" alt="">
+                                    <img src="/slide_images/{{$slide->image}}" width="150px" class="mt-2" alt="">
                                 
                                 @error('image')
                                     <p class="text-danger">{{$message}}</p>
